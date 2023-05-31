@@ -1,0 +1,143 @@
+
+package mn.gov.ema.emongolia.data.XypGovernment;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for covid19InternationalCertRequestData complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="covid19InternationalCertRequestData"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://government.xyp.gov.mn/}serviceRequest"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="firstnameEng" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="lastnameEng" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="passportNum" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="regnum" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "covid19InternationalCertRequestData", propOrder = {
+    "firstnameEng",
+    "lastnameEng",
+    "passportNum",
+    "regnum"
+})
+public class Covid19InternationalCertRequestData
+    extends ServiceRequest
+{
+
+    protected String firstnameEng;
+    protected String lastnameEng;
+    protected String passportNum;
+    protected String regnum;
+
+    /**
+     * Gets the value of the firstnameEng property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFirstnameEng() {
+        return firstnameEng;
+    }
+
+    /**
+     * Sets the value of the firstnameEng property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFirstnameEng(String value) {
+        this.firstnameEng = value;
+    }
+
+    /**
+     * Gets the value of the lastnameEng property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getLastnameEng() {
+        return lastnameEng;
+    }
+
+    /**
+     * Sets the value of the lastnameEng property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLastnameEng(String value) {
+        this.lastnameEng = value;
+    }
+
+    /**
+     * Gets the value of the passportNum property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPassportNum() {
+        return passportNum;
+    }
+
+    /**
+     * Sets the value of the passportNum property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPassportNum(String value) {
+        this.passportNum = value;
+    }
+
+    /**
+     * Gets the value of the regnum property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getRegnum() {
+        return regnum;
+    }
+
+    /**
+     * Sets the value of the regnum property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setRegnum(String value) {
+        this.regnum = value;
+    }
+
+}

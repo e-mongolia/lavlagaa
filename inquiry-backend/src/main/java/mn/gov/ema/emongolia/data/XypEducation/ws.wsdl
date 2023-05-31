@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://education.xyp.gov.mn/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="EducationServiceService" targetNamespace="http://education.xyp.gov.mn/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://education.xyp.gov.mn/" elementFormDefault="unqualified" targetNamespace="http://education.xyp.gov.mn/" version="1.0">
+
+  <xs:element name="WS400101_ueeReferenceService" type="tns:WS400101_ueeReferenceService"/>
+
+  <xs:element name="WS400101_ueeReferenceServiceResponse" type="tns:WS400101_ueeReferenceServiceResponse"/>
+
+  <xs:element name="WS400102_kindergartenDescription" type="tns:WS400102_kindergartenDescription"/>
+
+  <xs:element name="WS400102_kindergartenDescriptionResponse" type="tns:WS400102_kindergartenDescriptionResponse"/>
+
+  <xs:element name="WS400103_childrenInfoByParentCivilId" type="tns:WS400103_childrenInfoByParentCivilId"/>
+
+  <xs:element name="WS400103_childrenInfoByParentCivilIdResponse" type="tns:WS400103_childrenInfoByParentCivilIdResponse"/>
+
+  <xs:element name="WS400104_sendKindergartenEnrollment" type="tns:WS400104_sendKindergartenEnrollment"/>
+
+  <xs:element name="WS400104_sendKindergartenEnrollmentResponse" type="tns:WS400104_sendKindergartenEnrollmentResponse"/>
+
+  <xs:element name="WS400105_checkKindergartenEnrollment" type="tns:WS400105_checkKindergartenEnrollment"/>
+
+  <xs:element name="WS400105_checkKindergartenEnrollmentResponse" type="tns:WS400105_checkKindergartenEnrollmentResponse"/>
+
+  <xs:complexType name="WS400103_childrenInfoByParentCivilId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:registrationCivilIdRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="registrationCivilIdRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:registrationBasicRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parentCivilid" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="registrationBasicRequest">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orgCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="orgName" type="xs:string"/>
+          <xs:element minOccurs="0" name="orgPassword" type="xs:string"/>
+          <xs:element minOccurs="0" name="orgToken" type="xs:string"/>
+          <xs:element minOccurs="0" name="serviceCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auth" type="tns:authorizationData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="citizen" type="tns:authorizationEntity"/>
+      <xs:element minOccurs="0" name="operator" type="tns:authorizationEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appAuthToken" type="xs:string"/>
+      <xs:element minOccurs="0" name="authAppName" type="xs:string"/>
+      <xs:element minOccurs="0" name="certFingerprint" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="fingerprint" type="xs:base64Binary"/>
+      <xs:element name="otp" type="xs:int"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="signature" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS400103_childrenInfoByParentCivilIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="xs:anyType"/>
+      <xs:element minOccurs="0" name="requestId" type="xs:string"/>
+      <xs:element minOccurs="0" name="response" type="xs:anyType"/>
+      <xs:element name="resultCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="resultMessage" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="childrenInfoByParentCivilIdData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:childrenInfoByParentCivilIdDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="childrenInfoByParentCivilIdDetailData">
+    <xs:sequence>
+      <xs:element name="addressApartmentId" type="xs:long"/>
+      <xs:element minOccurs="0" name="addressApartmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressDetail" type="xs:string"/>
+      <xs:element name="addressId" type="xs:long"/>
+      <xs:element name="addressRegionId" type="xs:long"/>
+      <xs:element minOccurs="0" name="addressRegionName" type="xs:string"/>
+      <xs:element name="addressStreetId" type="xs:long"/>
+      <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+      <xs:element name="addressTownId" type="xs:long"/>
+      <xs:element minOccurs="0" name="addressTownName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressTypeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="arrivedDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="cityCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="cityName" type="xs:string"/>
+      <xs:element name="civilId" type="xs:long"/>
+      <xs:element minOccurs="0" name="districtCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="districtName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="fullAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="khorooCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="khorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS400105_checkKindergartenEnrollment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:civilIdRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="civilIdRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS400105_checkKindergartenEnrollmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkKindergartenEnrollmentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressChangeFlag" type="xs:string"/>
+      <xs:element minOccurs="0" name="admitAcademicYear" type="xs:string"/>
+      <xs:element minOccurs="0" name="arrivedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="birthDate" type="xs:dateTime"/>
+      <xs:element name="civilId" type="xs:long"/>
+      <xs:element minOccurs="0" name="contactPhone" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="fullAddress" type="xs:string"/>
+      <xs:element name="institutionId" type="xs:int"/>
+      <xs:element minOccurs="0" name="institutionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element name="personId" type="xs:long"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element name="requestId" type="xs:long"/>
+      <xs:element minOccurs="0" name="requestStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="requestStatusName" type="xs:string"/>
+      <xs:element minOccurs="0" name="responseStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="responseStatusDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="responseStatusName" type="xs:string"/>
+      <xs:element minOccurs="0" name="ubLocationFlag" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS400101_ueeReferenceService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:ueeReferenceRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ueeReferenceRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS400101_ueeReferenceServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ueeReferenceData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="globalResultList" nillable="true" type="tns:ueeGlobalScoreDetail"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="monTestResult" type="tns:ueeLocalScoreDetail"/>
+      <xs:element minOccurs="0" name="referenceId" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ueeResultList" nillable="true" type="tns:ueeLocalScoreDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ueeGlobalScoreDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="examDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="examDateString" type="xs:string"/>
+      <xs:element name="examType" type="xs:int"/>
+      <xs:element minOccurs="0" name="lessonName" type="xs:string"/>
+      <xs:element name="programExamScore" type="xs:double"/>
+      <xs:element minOccurs="0" name="programLessonName" type="xs:string"/>
+      <xs:element minOccurs="0" name="programName" type="xs:string"/>
+      <xs:element name="scaledCalcScore" type="xs:double"/>
+      <xs:element minOccurs="0" name="textCalcScore" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ueeLocalScoreDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="achiScore" type="xs:string"/>
+      <xs:element name="actualScore" type="xs:double"/>
+      <xs:element minOccurs="0" name="examDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="examDateString" type="xs:string"/>
+      <xs:element name="examType" type="xs:int"/>
+      <xs:element minOccurs="0" name="lessonName" type="xs:string"/>
+      <xs:element name="percentCore" type="xs:double"/>
+      <xs:element name="scaleScore" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS400102_kindergartenDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:regnumRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="regnumRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS400102_kindergartenDescriptionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="kindergartenDescriptionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="academicLevelName" type="xs:string"/>
+      <xs:element minOccurs="0" name="academicYearFrom" type="xs:string"/>
+      <xs:element minOccurs="0" name="academicYearTo" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element name="institutionId" type="xs:int"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element name="personId" type="xs:long"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="schoolName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS400104_sendKindergartenEnrollment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:kindergartenEnrollmentRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="kindergartenEnrollmentRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="addressApartmentId" type="xs:int"/>
+          <xs:element minOccurs="0" name="addressApartmentName" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressDetail" type="xs:string"/>
+          <xs:element name="addressId" type="xs:int"/>
+          <xs:element name="addressRegionId" type="xs:int"/>
+          <xs:element minOccurs="0" name="addressRegionName" type="xs:string"/>
+          <xs:element name="addressStreetId" type="xs:int"/>
+          <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+          <xs:element name="addressTownId" type="xs:int"/>
+          <xs:element minOccurs="0" name="addressTownName" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressTypeCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressTypeName" type="xs:string"/>
+          <xs:element minOccurs="0" name="arrivedDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="birthDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="cityCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="cityName" type="xs:string"/>
+          <xs:element minOccurs="0" name="civilId" type="xs:long"/>
+          <xs:element minOccurs="0" name="contactCivilId" type="xs:long"/>
+          <xs:element minOccurs="0" name="contactGuardianType" type="xs:string"/>
+          <xs:element minOccurs="0" name="contactPersonId" type="xs:long"/>
+          <xs:element minOccurs="0" name="contactPhone" type="xs:string"/>
+          <xs:element minOccurs="0" name="contactRegnum" type="xs:string"/>
+          <xs:element minOccurs="0" name="districtCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="districtName" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+          <xs:element minOccurs="0" name="fullAddress" type="xs:string"/>
+          <xs:element name="institutionId" type="xs:int"/>
+          <xs:element minOccurs="0" name="institutionName" type="xs:string"/>
+          <xs:element minOccurs="0" name="khorooCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="khorooName" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+          <xs:element minOccurs="0" name="personId" type="xs:long"/>
+          <xs:element minOccurs="0" name="recruiterFlag" type="xs:string"/>
+          <xs:element minOccurs="0" name="recruiterId" type="xs:long"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element minOccurs="0" name="requestStatus" type="xs:string"/>
+          <xs:element minOccurs="0" name="ubLocationFlag" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS400104_sendKindergartenEnrollmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="kindergartenEnrollmentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resultMsg" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WS400102_kindergartenDescription">
+    <wsdl:part element="tns:WS400102_kindergartenDescription" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS400103_childrenInfoByParentCivilIdResponse">
+    <wsdl:part element="tns:WS400103_childrenInfoByParentCivilIdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS400103_childrenInfoByParentCivilId">
+    <wsdl:part element="tns:WS400103_childrenInfoByParentCivilId" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS400102_kindergartenDescriptionResponse">
+    <wsdl:part element="tns:WS400102_kindergartenDescriptionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS400105_checkKindergartenEnrollment">
+    <wsdl:part element="tns:WS400105_checkKindergartenEnrollment" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS400101_ueeReferenceService">
+    <wsdl:part element="tns:WS400101_ueeReferenceService" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS400101_ueeReferenceServiceResponse">
+    <wsdl:part element="tns:WS400101_ueeReferenceServiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS400104_sendKindergartenEnrollmentResponse">
+    <wsdl:part element="tns:WS400104_sendKindergartenEnrollmentResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS400104_sendKindergartenEnrollment">
+    <wsdl:part element="tns:WS400104_sendKindergartenEnrollment" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS400105_checkKindergartenEnrollmentResponse">
+    <wsdl:part element="tns:WS400105_checkKindergartenEnrollmentResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="EducationService">
+    <wsdl:operation name="WS400103_childrenInfoByParentCivilId">
+      <wsdl:input message="tns:WS400103_childrenInfoByParentCivilId" name="WS400103_childrenInfoByParentCivilId">
+    </wsdl:input>
+      <wsdl:output message="tns:WS400103_childrenInfoByParentCivilIdResponse" name="WS400103_childrenInfoByParentCivilIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS400105_checkKindergartenEnrollment">
+      <wsdl:input message="tns:WS400105_checkKindergartenEnrollment" name="WS400105_checkKindergartenEnrollment">
+    </wsdl:input>
+      <wsdl:output message="tns:WS400105_checkKindergartenEnrollmentResponse" name="WS400105_checkKindergartenEnrollmentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS400101_ueeReferenceService">
+      <wsdl:input message="tns:WS400101_ueeReferenceService" name="WS400101_ueeReferenceService">
+    </wsdl:input>
+      <wsdl:output message="tns:WS400101_ueeReferenceServiceResponse" name="WS400101_ueeReferenceServiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS400102_kindergartenDescription">
+      <wsdl:input message="tns:WS400102_kindergartenDescription" name="WS400102_kindergartenDescription">
+    </wsdl:input>
+      <wsdl:output message="tns:WS400102_kindergartenDescriptionResponse" name="WS400102_kindergartenDescriptionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS400104_sendKindergartenEnrollment">
+      <wsdl:input message="tns:WS400104_sendKindergartenEnrollment" name="WS400104_sendKindergartenEnrollment">
+    </wsdl:input>
+      <wsdl:output message="tns:WS400104_sendKindergartenEnrollmentResponse" name="WS400104_sendKindergartenEnrollmentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EducationServiceServiceSoapBinding" type="tns:EducationService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WS400103_childrenInfoByParentCivilId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS400103_childrenInfoByParentCivilId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS400103_childrenInfoByParentCivilIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS400105_checkKindergartenEnrollment">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS400105_checkKindergartenEnrollment">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS400105_checkKindergartenEnrollmentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS400101_ueeReferenceService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS400101_ueeReferenceService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS400101_ueeReferenceServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS400102_kindergartenDescription">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS400102_kindergartenDescription">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS400102_kindergartenDescriptionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS400104_sendKindergartenEnrollment">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS400104_sendKindergartenEnrollment">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS400104_sendKindergartenEnrollmentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EducationServiceService">
+    <wsdl:port binding="tns:EducationServiceServiceSoapBinding" name="EducationServicePort">
+      <soap:address location="http://xyp.gov.mn/education-1.5.0/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

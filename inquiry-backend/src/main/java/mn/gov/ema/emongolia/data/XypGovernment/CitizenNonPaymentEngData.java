@@ -1,0 +1,442 @@
+
+package mn.gov.ema.emongolia.data.XypGovernment;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
+/**
+ * <p>Java class for citizenNonPaymentEngData complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="citizenNonPaymentEngData"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="caseNum" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="caseStatusId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="caseStatusName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="companyRegnum" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="decisionDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
+ *         &lt;element name="decisionNum" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="decisionTypeName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="firstname" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="lastname" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="outputResult" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="receivedDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
+ *         &lt;element name="regnum" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="sheetNum" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="tollBalance" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="tollValue" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "citizenNonPaymentEngData", propOrder = {
+    "caseNum",
+    "caseStatusId",
+    "caseStatusName",
+    "companyRegnum",
+    "decisionDate",
+    "decisionNum",
+    "decisionTypeName",
+    "firstname",
+    "lastname",
+    "outputResult",
+    "receivedDate",
+    "regnum",
+    "sheetNum",
+    "tollBalance",
+    "tollValue"
+})
+public class CitizenNonPaymentEngData {
+
+    protected String caseNum;
+    protected String caseStatusId;
+    protected String caseStatusName;
+    protected String companyRegnum;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar decisionDate;
+    protected String decisionNum;
+    protected String decisionTypeName;
+    protected String firstname;
+    protected String lastname;
+    protected String outputResult;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar receivedDate;
+    protected String regnum;
+    protected String sheetNum;
+    protected String tollBalance;
+    protected String tollValue;
+
+    /**
+     * Gets the value of the caseNum property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCaseNum() {
+        return caseNum;
+    }
+
+    /**
+     * Sets the value of the caseNum property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCaseNum(String value) {
+        this.caseNum = value;
+    }
+
+    /**
+     * Gets the value of the caseStatusId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCaseStatusId() {
+        return caseStatusId;
+    }
+
+    /**
+     * Sets the value of the caseStatusId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCaseStatusId(String value) {
+        this.caseStatusId = value;
+    }
+
+    /**
+     * Gets the value of the caseStatusName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCaseStatusName() {
+        return caseStatusName;
+    }
+
+    /**
+     * Sets the value of the caseStatusName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCaseStatusName(String value) {
+        this.caseStatusName = value;
+    }
+
+    /**
+     * Gets the value of the companyRegnum property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCompanyRegnum() {
+        return companyRegnum;
+    }
+
+    /**
+     * Sets the value of the companyRegnum property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCompanyRegnum(String value) {
+        this.companyRegnum = value;
+    }
+
+    /**
+     * Gets the value of the decisionDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getDecisionDate() {
+        return decisionDate;
+    }
+
+    /**
+     * Sets the value of the decisionDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setDecisionDate(XMLGregorianCalendar value) {
+        this.decisionDate = value;
+    }
+
+    /**
+     * Gets the value of the decisionNum property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDecisionNum() {
+        return decisionNum;
+    }
+
+    /**
+     * Sets the value of the decisionNum property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDecisionNum(String value) {
+        this.decisionNum = value;
+    }
+
+    /**
+     * Gets the value of the decisionTypeName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDecisionTypeName() {
+        return decisionTypeName;
+    }
+
+    /**
+     * Sets the value of the decisionTypeName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDecisionTypeName(String value) {
+        this.decisionTypeName = value;
+    }
+
+    /**
+     * Gets the value of the firstname property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFirstname() {
+        return firstname;
+    }
+
+    /**
+     * Sets the value of the firstname property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFirstname(String value) {
+        this.firstname = value;
+    }
+
+    /**
+     * Gets the value of the lastname property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getLastname() {
+        return lastname;
+    }
+
+    /**
+     * Sets the value of the lastname property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLastname(String value) {
+        this.lastname = value;
+    }
+
+    /**
+     * Gets the value of the outputResult property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getOutputResult() {
+        return outputResult;
+    }
+
+    /**
+     * Sets the value of the outputResult property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setOutputResult(String value) {
+        this.outputResult = value;
+    }
+
+    /**
+     * Gets the value of the receivedDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getReceivedDate() {
+        return receivedDate;
+    }
+
+    /**
+     * Sets the value of the receivedDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setReceivedDate(XMLGregorianCalendar value) {
+        this.receivedDate = value;
+    }
+
+    /**
+     * Gets the value of the regnum property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getRegnum() {
+        return regnum;
+    }
+
+    /**
+     * Sets the value of the regnum property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setRegnum(String value) {
+        this.regnum = value;
+    }
+
+    /**
+     * Gets the value of the sheetNum property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getSheetNum() {
+        return sheetNum;
+    }
+
+    /**
+     * Sets the value of the sheetNum property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSheetNum(String value) {
+        this.sheetNum = value;
+    }
+
+    /**
+     * Gets the value of the tollBalance property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTollBalance() {
+        return tollBalance;
+    }
+
+    /**
+     * Sets the value of the tollBalance property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTollBalance(String value) {
+        this.tollBalance = value;
+    }
+
+    /**
+     * Gets the value of the tollValue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTollValue() {
+        return tollValue;
+    }
+
+    /**
+     * Sets the value of the tollValue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTollValue(String value) {
+        this.tollValue = value;
+    }
+
+}

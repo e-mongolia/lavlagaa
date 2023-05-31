@@ -1,0 +1,45 @@
+stages:
+  - deploy-staging
+  - deploy-prod
+
+variables:
+  ITC_GROUP_ID: 'mn.gov.itc.emongolia'
+  ITC_ARTIFACT_ID: 'emongolia-enquiry-service'
+  LABEL: 'worker'
+  NETWORK: 'etax_network'
+
+deploy-staging:
+  stage: deploy-staging
+  variables:
+    PROFILE: 'stag'
+    ITC_VERSION: '1.0.0-SNAPSHOT'
+    DOCKER_ENV: "-e JAVA_OPTS=-Dspring.profiles.active=${PROFILE} -e ITC_GROUP_ID=${ITC_GROUP_ID} -e ITC_ARTIFACT_ID=${ITC_ARTIFACT_ID} -e ITC_VERSION=${1.0.0-SNAPSHOT}"
+    DOCKER_HOST: '192.168.88.12:2375'
+    DOCKER_DNS: '192.168.88.250'
+    DOCKER_DNS: '192.168.88.251'
+    DOCKER_REPLICAS: 1
+  script:
+    - mvn clean package deploy -e
+    - docker -H ${DOCKER_HOST} service update --detach=true --force --env-add ITC_VERSION=${ITC_VERSION} --image hub.itc.gov.mn/itc-app:11 ${ITC_ARTIFACT_ID} || docker -H ${DOCKER_HOST} service create --with-registry-auth --replicas ${DOCKER_REPLICAS} --mount type=bind,source=/etc/timezone,destination=/etc/timezone --mount type=bind,source=/etc/localtime,destination=/etc/localtime --constraint node.labels.etax==${LABEL} ${DOCKER_ENV} --dns ${DOCKER_DNS} --network ${NETWORK} --name ${ITC_ARTIFACT_ID} hub.itc.gov.mn/itc-app:11
+  tags:
+    - itc-runner
+  only:
+    - tags
+
+deploy-prod:
+  stage: deploy-prod
+  variables:
+    PROFILE: 'prod'
+    DOCKER_ENV: "-e JAVA_OPTS=-Dspring.profiles.active=${PROFILE} -e ITC_GROUP_ID=${ITC_GROUP_ID} -e ITC_ARTIFACT_ID=${ITC_ARTIFACT_ID} -e ITC_VERSION=${CI_COMMIT_TAG}"
+    DOCKER_HOST: '10.2.115.32:2375'
+    DOCKER_DNS: '203.26.189.189'
+    DOCKER_REPLICAS: 1
+  script:
+    - mvn versions:set -DnewVersion=$CI_COMMIT_TAG
+    - mvn clean package deploy -e
+    - docker -H ${DOCKER_HOST} service update --detach=true --force --env-add ITC_VERSION=${CI_COMMIT_TAG} --image hub.itc.gov.mn/itc-app:11 ${ITC_ARTIFACT_ID} || docker -H ${DOCKER_HOST} service create --with-registry-auth --replicas ${DOCKER_REPLICAS} --mount type=bind,source=/etc/timezone,destination=/etc/timezone --mount type=bind,source=/etc/localtime,destination=/etc/localtime --constraint node.labels.etax==${LABEL} ${DOCKER_ENV} --dns ${DOCKER_DNS} --network ${NETWORK} --name ${ITC_ARTIFACT_ID} hub.itc.gov.mn/itc-app:11
+  when: manual
+  tags:
+    - emongolia-app-prod
+  only:
+    - tags

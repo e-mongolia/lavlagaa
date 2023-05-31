@@ -1,0 +1,105 @@
+
+package mn.gov.ema.emongolia.data.XypProperty;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for propertyDataOnlyMinor complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="propertyDataOnlyMinor"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://property.xyp.gov.mn/}propertyBaseData"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="listCoOwner" type="{http://property.xyp.gov.mn/}coOwnerDetailData" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="processList" type="{http://property.xyp.gov.mn/}propertyProcessData" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "propertyDataOnlyMinor", propOrder = {
+    "listCoOwner",
+    "processList"
+})
+public class PropertyDataOnlyMinor
+    extends PropertyBaseData
+{
+
+    @XmlElement(nillable = true)
+    protected List<CoOwnerDetailData> listCoOwner;
+    @XmlElement(nillable = true)
+    protected List<PropertyProcessData> processList;
+
+    /**
+     * Gets the value of the listCoOwner property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the listCoOwner property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getListCoOwner().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link CoOwnerDetailData }
+     * 
+     * 
+     */
+    public List<CoOwnerDetailData> getListCoOwner() {
+        if (listCoOwner == null) {
+            listCoOwner = new ArrayList<CoOwnerDetailData>();
+        }
+        return this.listCoOwner;
+    }
+
+    /**
+     * Gets the value of the processList property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the processList property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getProcessList().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PropertyProcessData }
+     * 
+     * 
+     */
+    public List<PropertyProcessData> getProcessList() {
+        if (processList == null) {
+            processList = new ArrayList<PropertyProcessData>();
+        }
+        return this.processList;
+    }
+
+}

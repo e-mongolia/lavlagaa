@@ -1,0 +1,2760 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://property.xyp.gov.mn/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="PropertyServiceService" targetNamespace="http://property.xyp.gov.mn/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://property.xyp.gov.mn/" elementFormDefault="unqualified" targetNamespace="http://property.xyp.gov.mn/" version="1.0">
+
+  <xs:element name="WS100201_getPropertyInfo" type="tns:WS100201_getPropertyInfo"/>
+
+  <xs:element name="WS100201_getPropertyInfoResponse" type="tns:WS100201_getPropertyInfoResponse"/>
+
+  <xs:element name="WS100202_getPropertyList" type="tns:WS100202_getPropertyList"/>
+
+  <xs:element name="WS100202_getPropertyListResponse" type="tns:WS100202_getPropertyListResponse"/>
+
+  <xs:element name="WS100203_isPropertyCheck" type="tns:WS100203_isPropertyCheck"/>
+
+  <xs:element name="WS100203_isPropertyCheckResponse" type="tns:WS100203_isPropertyCheckResponse"/>
+
+  <xs:element name="WS100204_insertLandOwningInfo" type="tns:WS100204_insertLandOwningInfo"/>
+
+  <xs:element name="WS100204_insertLandOwningInfoResponse" type="tns:WS100204_insertLandOwningInfoResponse"/>
+
+  <xs:element name="WS100205_insertLandSuitorInfo" type="tns:WS100205_insertLandSuitorInfo"/>
+
+  <xs:element name="WS100205_insertLandSuitorInfoResponse" type="tns:WS100205_insertLandSuitorInfoResponse"/>
+
+  <xs:element name="WS100206_insertLandDirectionInfo" type="tns:WS100206_insertLandDirectionInfo"/>
+
+  <xs:element name="WS100206_insertLandDirectionInfoResponse" type="tns:WS100206_insertLandDirectionInfoResponse"/>
+
+  <xs:element name="WS100207_getApprovedLandRequestInfo" type="tns:WS100207_getApprovedLandRequestInfo"/>
+
+  <xs:element name="WS100207_getApprovedLandRequestInfoResponse" type="tns:WS100207_getApprovedLandRequestInfoResponse"/>
+
+  <xs:element name="WS100208_getPropertyInfoOnlyMinor" type="tns:WS100208_getPropertyInfoOnlyMinor"/>
+
+  <xs:element name="WS100208_getPropertyInfoOnlyMinorResponse" type="tns:WS100208_getPropertyInfoOnlyMinorResponse"/>
+
+  <xs:element name="WS100209_getPropertyOwnerMovedInfo" type="tns:WS100209_getPropertyOwnerMovedInfo"/>
+
+  <xs:element name="WS100209_getPropertyOwnerMovedInfoResponse" type="tns:WS100209_getPropertyOwnerMovedInfoResponse"/>
+
+  <xs:element name="WS100210_getPropertyToObligateInfo" type="tns:WS100210_getPropertyToObligateInfo"/>
+
+  <xs:element name="WS100210_getPropertyToObligateInfoResponse" type="tns:WS100210_getPropertyToObligateInfoResponse"/>
+
+  <xs:element name="WS100211_getCollateralPropertyInfo" type="tns:WS100211_getCollateralPropertyInfo"/>
+
+  <xs:element name="WS100211_getCollateralPropertyInfoResponse" type="tns:WS100211_getCollateralPropertyInfoResponse"/>
+
+  <xs:element name="WS100212_getPropertyChangeOwnerInfo" type="tns:WS100212_getPropertyChangeOwnerInfo"/>
+
+  <xs:element name="WS100212_getPropertyChangeOwnerInfoResponse" type="tns:WS100212_getPropertyChangeOwnerInfoResponse"/>
+
+  <xs:element name="WS100213_getPropertyRentContractInfo" type="tns:WS100213_getPropertyRentContractInfo"/>
+
+  <xs:element name="WS100213_getPropertyRentContractInfoResponse" type="tns:WS100213_getPropertyRentContractInfoResponse"/>
+
+  <xs:element name="WS100214_getPropertyInfoAddress" type="tns:WS100214_getPropertyInfoAddress"/>
+
+  <xs:element name="WS100214_getPropertyInfoAddressResponse" type="tns:WS100214_getPropertyInfoAddressResponse"/>
+
+  <xs:element name="WS100215_insertHotelInfo" type="tns:WS100215_insertHotelInfo"/>
+
+  <xs:element name="WS100215_insertHotelInfoResponse" type="tns:WS100215_insertHotelInfoResponse"/>
+
+  <xs:element name="WS100216_propertyRightsInfo" type="tns:WS100216_propertyRightsInfo"/>
+
+  <xs:element name="WS100216_propertyRightsInfoResponse" type="tns:WS100216_propertyRightsInfoResponse"/>
+
+  <xs:element name="WS100217_propertyLandOwnerInfo" type="tns:WS100217_propertyLandOwnerInfo"/>
+
+  <xs:element name="WS100217_propertyLandOwnerInfoResponse" type="tns:WS100217_propertyLandOwnerInfoResponse"/>
+
+  <xs:element name="WS100218_landOwningCertificateInfo" type="tns:WS100218_landOwningCertificateInfo"/>
+
+  <xs:element name="WS100218_landOwningCertificateInfoResponse" type="tns:WS100218_landOwningCertificateInfoResponse"/>
+
+  <xs:element name="WS100219_landOwningContractInfo" type="tns:WS100219_landOwningContractInfo"/>
+
+  <xs:element name="WS100219_landOwningContractInfoResponse" type="tns:WS100219_landOwningContractInfoResponse"/>
+
+  <xs:element name="WS100220_landCadastralMapInfo" type="tns:WS100220_landCadastralMapInfo"/>
+
+  <xs:element name="WS100220_landCadastralMapInfoResponse" type="tns:WS100220_landCadastralMapInfoResponse"/>
+
+  <xs:element name="WS100221_landOwningDecisionInfo" type="tns:WS100221_landOwningDecisionInfo"/>
+
+  <xs:element name="WS100221_landOwningDecisionInfoResponse" type="tns:WS100221_landOwningDecisionInfoResponse"/>
+
+  <xs:element name="WS100222_getCadastralMap" type="tns:WS100222_getCadastralMap"/>
+
+  <xs:element name="WS100222_getCadastralMapResponse" type="tns:WS100222_getCadastralMapResponse"/>
+
+  <xs:element name="WS100223_getPropertyBasicInfo" type="tns:WS100223_getPropertyBasicInfo"/>
+
+  <xs:element name="WS100223_getPropertyBasicInfoResponse" type="tns:WS100223_getPropertyBasicInfoResponse"/>
+
+  <xs:element name="WS100224_propertyInfoBetweenDate" type="tns:WS100224_propertyInfoBetweenDate"/>
+
+  <xs:element name="WS100224_propertyInfoBetweenDateResponse" type="tns:WS100224_propertyInfoBetweenDateResponse"/>
+
+  <xs:element name="WS100225_propertyValueInfo" type="tns:WS100225_propertyValueInfo"/>
+
+  <xs:element name="WS100225_propertyValueInfoResponse" type="tns:WS100225_propertyValueInfoResponse"/>
+
+  <xs:element name="WS100226_checkLandMortgage" type="tns:WS100226_checkLandMortgage"/>
+
+  <xs:element name="WS100226_checkLandMortgageResponse" type="tns:WS100226_checkLandMortgageResponse"/>
+
+  <xs:element name="WS100227_landOfficialLetterInfo" type="tns:WS100227_landOfficialLetterInfo"/>
+
+  <xs:element name="WS100227_landOfficialLetterInfoResponse" type="tns:WS100227_landOfficialLetterInfoResponse"/>
+
+  <xs:element name="WS100228_addressMoreInfo" type="tns:WS100228_addressMoreInfo"/>
+
+  <xs:element name="WS100228_addressMoreInfoResponse" type="tns:WS100228_addressMoreInfoResponse"/>
+
+  <xs:element name="WS100229_addressListInfo" type="tns:WS100229_addressListInfo"/>
+
+  <xs:element name="WS100229_addressListInfoResponse" type="tns:WS100229_addressListInfoResponse"/>
+
+  <xs:element name="WS100230_landRelatedUsersInfo" type="tns:WS100230_landRelatedUsersInfo"/>
+
+  <xs:element name="WS100230_landRelatedUsersInfoResponse" type="tns:WS100230_landRelatedUsersInfoResponse"/>
+
+  <xs:element name="WS100231_landValuationInfo" type="tns:WS100231_landValuationInfo"/>
+
+  <xs:element name="WS100231_landValuationInfoResponse" type="tns:WS100231_landValuationInfoResponse"/>
+
+  <xs:element name="WS100232_landOwningInfoByPersonId" type="tns:WS100232_landOwningInfoByPersonId"/>
+
+  <xs:element name="WS100232_landOwningInfoByPersonIdResponse" type="tns:WS100232_landOwningInfoByPersonIdResponse"/>
+
+  <xs:element name="WS100233_landRelatedInfoByParcelId" type="tns:WS100233_landRelatedInfoByParcelId"/>
+
+  <xs:element name="WS100233_landRelatedInfoByParcelIdResponse" type="tns:WS100233_landRelatedInfoByParcelIdResponse"/>
+
+  <xs:element name="WS100234_landCadastreAgreementInfo" type="tns:WS100234_landCadastreAgreementInfo"/>
+
+  <xs:element name="WS100234_landCadastreAgreementInfoResponse" type="tns:WS100234_landCadastreAgreementInfoResponse"/>
+
+  <xs:element name="WS100235_landCadastreApplicantInfo" type="tns:WS100235_landCadastreApplicantInfo"/>
+
+  <xs:element name="WS100235_landCadastreApplicantInfoResponse" type="tns:WS100235_landCadastreApplicantInfoResponse"/>
+
+  <xs:element name="WS100236_landCadastreQR" type="tns:WS100236_landCadastreQR"/>
+
+  <xs:element name="WS100236_landCadastreQRResponse" type="tns:WS100236_landCadastreQRResponse"/>
+
+  <xs:element name="WS100237_cadastreApplicantStatusInfo" type="tns:WS100237_cadastreApplicantStatusInfo"/>
+
+  <xs:element name="WS100237_cadastreApplicantStatusInfoResponse" type="tns:WS100237_cadastreApplicantStatusInfoResponse"/>
+
+  <xs:element name="WS100238_landCadastreVicinityInfo" type="tns:WS100238_landCadastreVicinityInfo"/>
+
+  <xs:element name="WS100238_landCadastreVicinityInfoResponse" type="tns:WS100238_landCadastreVicinityInfoResponse"/>
+
+  <xs:element name="WS100239_propertyDetailsBetweenDate" type="tns:WS100239_propertyDetailsBetweenDate"/>
+
+  <xs:element name="WS100239_propertyDetailsBetweenDateResponse" type="tns:WS100239_propertyDetailsBetweenDateResponse"/>
+
+  <xs:element name="WS100240_landInfoByPersonIdAndParcelId" type="tns:WS100240_landInfoByPersonIdAndParcelId"/>
+
+  <xs:element name="WS100240_landInfoByPersonIdAndParcelIdResponse" type="tns:WS100240_landInfoByPersonIdAndParcelIdResponse"/>
+
+  <xs:element name="WS100241_landSettlementAct" type="tns:WS100241_landSettlementAct"/>
+
+  <xs:element name="WS100241_landSettlementActResponse" type="tns:WS100241_landSettlementActResponse"/>
+
+  <xs:complexType name="WS100219_landOwningContractInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:landOwningRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOwningRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auth" type="tns:authorizationData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="citizen" type="tns:authorizationEntity"/>
+      <xs:element minOccurs="0" name="operator" type="tns:authorizationEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appAuthToken" type="xs:string"/>
+      <xs:element minOccurs="0" name="authAppName" type="xs:string"/>
+      <xs:element minOccurs="0" name="certFingerprint" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="fingerprint" type="xs:base64Binary"/>
+      <xs:element name="otp" type="xs:int"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="signature" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100219_landOwningContractInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="xs:anyType"/>
+      <xs:element minOccurs="0" name="requestId" type="xs:string"/>
+      <xs:element minOccurs="0" name="response" type="xs:anyType"/>
+      <xs:element name="resultCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="resultMessage" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOwningContractData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:landOwningContractDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOwningContractDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="approvedDuration" type="xs:string"/>
+      <xs:element minOccurs="0" name="areaM2" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="certificateNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="contactOfficerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionLevelName" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="departmentAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="departmentPhone" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="landuseType" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+      <xs:element name="paymentQuarterFour" type="xs:double"/>
+      <xs:element name="paymentQuarterOne" type="xs:double"/>
+      <xs:element name="paymentQuarterThree" type="xs:double"/>
+      <xs:element name="paymentQuarterTwo" type="xs:double"/>
+      <xs:element name="paymentTotalAmount" type="xs:double"/>
+      <xs:element minOccurs="0" name="propertyNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100208_getPropertyInfoOnlyMinor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:propertyRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="propertyNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100208_getPropertyInfoOnlyMinorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyDataOnlyMinor">
+    <xs:complexContent>
+      <xs:extension base="tns:propertyBaseData">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="listCoOwner" nillable="true" type="tns:coOwnerDetailData"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="processList" nillable="true" type="tns:propertyProcessData"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="propertyBaseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressApartmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressDetail" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressRegionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressTownName" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="intent" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+      <xs:element minOccurs="0" name="square" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="coOwnerDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element name="status" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyProcessData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ownerDataLlist" nillable="true" type="tns:propertyOwnerData"/>
+      <xs:element minOccurs="0" name="serviceID" type="xs:string"/>
+      <xs:element minOccurs="0" name="serviceName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyOwnerData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="forename" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="ofldcNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="pblinstt" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100236_landCadastreQR">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:checkLandMortgageRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkLandMortgageRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100236_landCadastreQRResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landCadastreQRData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="stringQr" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100206_insertLandDirectionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:landDirectionRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landDirectionRequest">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="archiveDir" type="xs:string"/>
+          <xs:element minOccurs="0" name="docTypeCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="docTypeName" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100206_insertLandDirectionInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOwningData">
+    <xs:sequence>
+      <xs:element name="success" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100237_cadastreApplicantStatusInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:checkLandMortgageRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100237_cadastreApplicantStatusInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cadastreApplicantStatusData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:cadastreApplicantStatusDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cadastreApplicantStatusDetailData">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:int"/>
+      <xs:element minOccurs="0" name="appNo" type="xs:string"/>
+      <xs:element name="code" type="xs:int"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element name="employeeId" type="xs:int"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element name="mobilephone" type="xs:int"/>
+      <xs:element minOccurs="0" name="statusDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="statusDesc" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100221_landOwningDecisionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:landOwningRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100221_landOwningDecisionInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOwningDecisionData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:landOwningDecisionDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOwningDecisionDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionLevelName" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100231_landValuationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:checkLandMortgageRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100231_landValuationInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landValuationData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:landValuationDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landValuationDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="areaM2" type="xs:string"/>
+      <xs:element minOccurs="0" name="auctionAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="basePrice" type="xs:string"/>
+      <xs:element minOccurs="0" name="basePriceM2" type="xs:string"/>
+      <xs:element minOccurs="0" name="confidence" type="xs:string"/>
+      <xs:element minOccurs="0" name="discountPercent" type="xs:string"/>
+      <xs:element name="landuseTypeCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="levelName" type="xs:string"/>
+      <xs:element name="levelNo" type="xs:int"/>
+      <xs:element name="levelType" type="xs:int"/>
+      <xs:element minOccurs="0" name="levelTypeName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100223_getPropertyBasicInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getPropertyBasicRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPropertyBasicRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="propertyNumber" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100223_getPropertyBasicInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPropertyBasicData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:getPropertyBasicDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPropertyBasicDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="fullAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownerStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertySize" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyType" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyValue" type="xs:string"/>
+      <xs:element minOccurs="0" name="purpose" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="serviceType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100232_landOwningInfoByPersonId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:landOwningInfoByPersonIdRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOwningInfoByPersonIdRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="personId" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100232_landOwningInfoByPersonIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOwningInfoByPersonIdData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:landOwningInfoByPersonIdDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOwningInfoByPersonIdDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressKhashaa" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+      <xs:element name="contractActive" type="xs:boolean"/>
+      <xs:element name="contractNum" type="xs:int"/>
+      <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+      <xs:element name="rightType" type="xs:int"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100227_landOfficialLetterInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:checkLandMortgageRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100227_landOfficialLetterInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOfficialLetterData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:landOfficialLetterDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOfficialLetterDetailData">
+    <xs:sequence>
+      <xs:element name="appStatusCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="appStatusDesc" type="xs:string"/>
+      <xs:element name="appTypeCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="appTypeDesc" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="decisionDate" type="xs:dateTime"/>
+      <xs:element name="decisionId" type="xs:int"/>
+      <xs:element minOccurs="0" name="decisionLevel" type="xs:string"/>
+      <xs:element name="decisionLevelCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="decisionNumber" type="xs:string"/>
+      <xs:element name="docId" type="xs:int"/>
+      <xs:element minOccurs="0" name="docNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="parcel" type="xs:string"/>
+      <xs:element minOccurs="0" name="rightDesc" type="xs:string"/>
+      <xs:element name="rightType" type="xs:int"/>
+      <xs:element minOccurs="0" name="tmpParcel" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100229_addressListInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:addressListRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addressListRequestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aimagCityCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictCode" type="xs:string"/>
+      <xs:element name="type" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100229_addressListInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addressListData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="list" nillable="true" type="tns:addressListDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addressListDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressData" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100225_propertyValueInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getPropertyBasicRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100225_propertyValueInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyValueData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyValue" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100211_getCollateralPropertyInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:propertyNumberRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyNumberRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="propertyNumber" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100211_getCollateralPropertyInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collateralPropertyInfoData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:collateralPropertyInfoDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collateralPropertyInfoDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contractNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractPrice" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractTermFrom" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractTermTo" type="xs:string"/>
+      <xs:element minOccurs="0" name="personNmCorpNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="registDe" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100214_getPropertyInfoAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:propertyAddressRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyAddressRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="addressApartment" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressEtc" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressRegion" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressStreet" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressTown" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressType" type="xs:string"/>
+          <xs:element minOccurs="0" name="city" type="xs:string"/>
+          <xs:element minOccurs="0" name="district" type="xs:string"/>
+          <xs:element minOccurs="0" name="khoroo" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100214_getPropertyInfoAddressResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyInfoAddressData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:propertyInfoAddressDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyInfoAddressDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fullAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="personCorpIdno" type="xs:string"/>
+      <xs:element minOccurs="0" name="personNmCorpNn" type="xs:string"/>
+      <xs:element minOccurs="0" name="personSurnm" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="registDe" type="xs:string"/>
+      <xs:element minOccurs="0" name="tuluv" type="xs:string"/>
+      <xs:element minOccurs="0" name="zoriulalt" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100202_getPropertyList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:servicePropertyListRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="servicePropertyListRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100202_getPropertyListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyListData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:propertyListDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyListDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" type="xs:string"/>
+      <xs:element minOccurs="0" name="codeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="fullAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element name="movedCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="movedDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="movedJustification" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownershipId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownershipStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="personCorpId" type="xs:string"/>
+      <xs:element minOccurs="0" name="personNameCorp" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyNationRegisterNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyServiceId" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertySize" type="xs:string"/>
+      <xs:element minOccurs="0" name="serviceDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="serviceName" type="xs:string"/>
+      <xs:element minOccurs="0" name="serviceType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100210_getPropertyToObligateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:propertyToObligateRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyToObligateRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="propertyNum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100210_getPropertyToObligateInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyToObligateData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="price" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyOwnerInfo" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyServiceId" type="xs:string"/>
+      <xs:element minOccurs="0" name="regDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="rightStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="serviceName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100209_getPropertyOwnerMovedInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:servicePropertyListRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100209_getPropertyOwnerMovedInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyOwnerMovedData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fullAddress" type="xs:string"/>
+      <xs:element name="personCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="personType" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyOwnerType" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertySize" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyType" type="xs:string"/>
+      <xs:element minOccurs="0" name="purpose" type="xs:string"/>
+      <xs:element minOccurs="0" name="regDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="serviceName" type="xs:string"/>
+      <xs:element minOccurs="0" name="subPurpose" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100233_landRelatedInfoByParcelId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:landRelatedInfoByParcelIdRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landRelatedInfoByParcelIdRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+          <xs:element minOccurs="0" name="personId" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100233_landRelatedInfoByParcelIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landRelatedInfoByParcelIdData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressKhashaa" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="appNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="appStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="appType" type="xs:string"/>
+      <xs:element name="approvedDuration" type="xs:int"/>
+      <xs:element name="areaM2" type="xs:int"/>
+      <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="certificateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractEnd" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractStart" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractStatus" type="xs:string"/>
+      <xs:element name="court" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="courtDecisionNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionLevel" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="endMortgagePeriod" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="geom" type="xs:string"/>
+      <xs:element minOccurs="0" name="geometry" type="xs:string"/>
+      <xs:element minOccurs="0" name="impositionDesc" type="xs:string"/>
+      <xs:element name="impositionYear" type="xs:int"/>
+      <xs:element minOccurs="0" name="landuseType" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element name="mortgage" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="paidTotalAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="paidYearAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+      <xs:element minOccurs="0" name="personRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="personType" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="remainingAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="rightType" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+      <xs:element minOccurs="0" name="totalAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="yearAmount" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100240_landInfoByPersonIdAndParcelId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:landInfoByPersonParcelIdsRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landInfoByPersonParcelIdsRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+          <xs:element minOccurs="0" name="personId" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100240_landInfoByPersonIdAndParcelIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landInfoByPersonParcelIdsData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressKhashaa" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element name="appId" type="xs:int"/>
+      <xs:element minOccurs="0" name="appNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="appStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="appType" type="xs:string"/>
+      <xs:element name="approvedDuration" type="xs:int"/>
+      <xs:element name="areaM2" type="xs:int"/>
+      <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="certificateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractEnd" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractStart" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractStatus" type="xs:string"/>
+      <xs:element name="court" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="courtDecisionNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionLevel" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="endMortgagePeriod" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="geom" type="xs:string"/>
+      <xs:element minOccurs="0" name="geometry" type="xs:string"/>
+      <xs:element minOccurs="0" name="impositionDesc" type="xs:string"/>
+      <xs:element name="impositionYear" type="xs:int"/>
+      <xs:element minOccurs="0" name="landuseType" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element name="mortgage" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="paidTotalAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="paidYearAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="paymentDataList" nillable="true" type="tns:landValuationDetailData"/>
+      <xs:element minOccurs="0" name="personRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="personType" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="qrcode" type="xs:string"/>
+      <xs:element minOccurs="0" name="remainingAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="rightType" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+      <xs:element minOccurs="0" name="totalAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="yearAmount" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100213_getPropertyRentContractInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:propertyNumberRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100213_getPropertyRentContractInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyRentContractInfoData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:propertyRentContractDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyRentContractDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contractPrice" type="xs:string"/>
+      <xs:element minOccurs="0" name="personCorpIdno" type="xs:string"/>
+      <xs:element minOccurs="0" name="personNmCorpNn" type="xs:string"/>
+      <xs:element minOccurs="0" name="personSurnm" type="xs:string"/>
+      <xs:element minOccurs="0" name="properyNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="registDe" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100204_insertLandOwningInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:landOwningRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOwningRequest">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="addressKhashaa" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+          <xs:element name="aimagCityCode" type="xs:int"/>
+          <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+          <xs:element minOccurs="0" name="appDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="appNo" type="xs:string"/>
+          <xs:element name="appTypeCode" type="xs:int"/>
+          <xs:element minOccurs="0" name="appTypeName" type="xs:string"/>
+          <xs:element name="approvedDuration" type="xs:int"/>
+          <xs:element name="areaM2" type="xs:float"/>
+          <xs:element minOccurs="0" name="bagKhorooCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+          <xs:element minOccurs="0" name="decisionDate" type="xs:dateTime"/>
+          <xs:element name="decisionLevelCode" type="xs:int"/>
+          <xs:element minOccurs="0" name="decisionLevelName" type="xs:string"/>
+          <xs:element minOccurs="0" name="decisionNo" type="xs:string"/>
+          <xs:element name="landuseTypeCode" type="xs:int"/>
+          <xs:element minOccurs="0" name="landuseTypeName" type="xs:string"/>
+          <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+          <xs:element minOccurs="0" name="prprtyNo" type="xs:string"/>
+          <xs:element name="rightTypeCode" type="xs:int"/>
+          <xs:element minOccurs="0" name="rightTypeName" type="xs:string"/>
+          <xs:element minOccurs="0" name="soumDistrictCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100204_insertLandOwningInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100215_insertHotelInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:serviceInsertHotelInfoRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceInsertHotelInfoRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="addressdetial" type="xs:string"/>
+          <xs:element name="aimagcitycode" type="xs:int"/>
+          <xs:element name="bagkhoroocode" type="xs:int"/>
+          <xs:element minOccurs="0" name="contactphone1" type="xs:string"/>
+          <xs:element minOccurs="0" name="contactphone2" type="xs:string"/>
+          <xs:element minOccurs="0" name="hotelname" type="xs:string"/>
+          <xs:element name="soumdistrictcode" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100215_insertHotelInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertHotelInfoData">
+    <xs:sequence>
+      <xs:element name="success" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100205_insertLandSuitorInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:landSuitorRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landSuitorRequest">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="suitorRegister" type="xs:string"/>
+          <xs:element name="suitorType" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100205_insertLandSuitorInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100222_getCadastralMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getCadastralMapRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCadastralMapRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100222_getCadastralMapResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCadastralMapData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100203_isPropertyCheck">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:serviceIsPropertyCheckRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceIsPropertyCheckRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100203_isPropertyCheckResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="isPropertyCheckData">
+    <xs:sequence>
+      <xs:element name="propertyCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100218_landOwningCertificateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:landOwningRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100218_landOwningCertificateInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOwningCertificateData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:landOwningCertificateDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landOwningCertificateDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element name="approvedDuration" type="xs:int"/>
+      <xs:element minOccurs="0" name="areaM2" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionLevelName" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="landuseType" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100241_landSettlementAct">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:landSettlementActRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landSettlementActRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="contractId" type="xs:string"/>
+          <xs:element minOccurs="0" name="personId" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100241_landSettlementActResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landSettlementActData">
+    <xs:sequence>
+      <xs:element name="approvedDuration" type="xs:int"/>
+      <xs:element minOccurs="0" name="certificateNo" type="xs:string"/>
+      <xs:element name="contractId" type="xs:int"/>
+      <xs:element minOccurs="0" name="contractNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionLevel" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="feeDueDate" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="impositionBody" nillable="true" type="tns:impositionBodyDetail"/>
+      <xs:element minOccurs="0" name="ownerLegalName" type="xs:string"/>
+      <xs:element minOccurs="0" name="parcelAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="parcelArea" type="xs:string"/>
+      <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+      <xs:element minOccurs="0" name="parcelLanduse" type="xs:string"/>
+      <xs:element minOccurs="0" name="personMobilePhone" type="xs:string"/>
+      <xs:element minOccurs="0" name="personPhone" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyNo" type="xs:string"/>
+      <xs:element name="totalAmount" type="xs:double"/>
+      <xs:element name="totalFee" type="xs:int"/>
+      <xs:element name="totalPaidAmount" type="xs:double"/>
+      <xs:element name="totalPaidYearAmount" type="xs:double"/>
+      <xs:element name="totalPlusAmount" type="xs:double"/>
+      <xs:element minOccurs="0" name="totalYearAmount" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="impositionBodyDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="impositionTotalAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="impositionYearAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="paidTotalAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="paidYearAmount" type="xs:string"/>
+      <xs:element name="plusAmount" type="xs:double"/>
+      <xs:element name="year" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100224_propertyInfoBetweenDate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:propertyInfoBetweenDateRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyInfoBetweenDateRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="endDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="startDate" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100224_propertyInfoBetweenDateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyInfoBetweenDateData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:propertyInfoBetweenDateDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyInfoBetweenDateDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="fullAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownerStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertySize" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyType" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyValue" type="xs:string"/>
+      <xs:element minOccurs="0" name="purpose" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="serviceType" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+      <xs:element minOccurs="0" name="subPurpose" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100228_addressMoreInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:addressMoreRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addressMoreRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="addressAparment" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressRegion" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressStreet" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressTown" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressTypeName" type="xs:string"/>
+          <xs:element minOccurs="0" name="aimagCityCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="bagKhorooCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="soumDistrictCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100228_addressMoreInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addressMoreData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressApartmentId" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressApartmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressId" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressRegionId" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressRegionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressStreetId" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressTownId" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressTownName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressTypeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100207_getApprovedLandRequestInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:landApprovedRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landApprovedRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100207_getApprovedLandRequestInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landApprovedData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="approvedStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+      <xs:element minOccurs="0" name="prprtyNationReqNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="reason" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100201_getPropertyInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:propertyRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100201_getPropertyInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyData">
+    <xs:complexContent>
+      <xs:extension base="tns:propertyBaseData">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="processList" nillable="true" type="tns:propertyProcessData"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100230_landRelatedUsersInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:landOwningRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100230_landRelatedUsersInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landRelatedUsersData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:landRelatedUsersDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landRelatedUsersDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="parentId" type="xs:string"/>
+      <xs:element name="personId" type="xs:int"/>
+      <xs:element minOccurs="0" name="personRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100217_propertyLandOwnerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:propertyLandOwnerRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyLandOwnerRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="propertyNumber" type="xs:string"/>
+          <xs:element name="type" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100217_propertyLandOwnerInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyLandOwnerData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="fullAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="percalId" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="registredDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="rightDetCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="serviceDetCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100238_landCadastreVicinityInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:checkLandMortgageRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100238_landCadastreVicinityInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landCadastreVicinityData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:landCadastreVicinityDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landCadastreVicinityDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressKhashaa" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressStreetname" type="xs:string"/>
+      <xs:element minOccurs="0" name="areaM2" type="xs:string"/>
+      <xs:element minOccurs="0" name="blockNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="boundaryColor" type="xs:string"/>
+      <xs:element minOccurs="0" name="boundaryWidth" type="xs:string"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element minOccurs="0" name="fillColor" type="xs:string"/>
+      <xs:element minOccurs="0" name="geom" type="xs:string"/>
+      <xs:element name="landuse" type="xs:int"/>
+      <xs:element minOccurs="0" name="oldParcelId" type="xs:string"/>
+      <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+      <xs:element minOccurs="0" name="textGeometry" type="xs:string"/>
+      <xs:element minOccurs="0" name="utmGeom" type="xs:string"/>
+      <xs:element minOccurs="0" name="validFrom" type="xs:string"/>
+      <xs:element minOccurs="0" name="validTill" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100212_getPropertyChangeOwnerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:propertyNumberRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100212_getPropertyChangeOwnerInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyChangeOwnerInfoData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:propertyChangeOwnerDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyChangeOwnerDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contractPrice" type="xs:string"/>
+      <xs:element minOccurs="0" name="personCorpIdno" type="xs:string"/>
+      <xs:element minOccurs="0" name="personNmCorpNm" type="xs:string"/>
+      <xs:element minOccurs="0" name="personSurnm" type="xs:string"/>
+      <xs:element minOccurs="0" name="properyNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="registDe" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100226_checkLandMortgage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:checkLandMortgageRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100226_checkLandMortgageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkLandMortgageData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:checkLandMortgageDetailData"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listOptionalData" nillable="true" type="tns:checkLandMortgageDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkLandMortgageDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="docId" type="xs:string"/>
+      <xs:element minOccurs="0" name="docNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="endMortgagePeriod" type="xs:string"/>
+      <xs:element minOccurs="0" name="loanContractNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="morgagerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="mortgageContractNumber" type="xs:string"/>
+      <xs:element name="mortgageStatus" type="xs:int"/>
+      <xs:element minOccurs="0" name="mortgageStatusDesc" type="xs:string"/>
+      <xs:element name="mortgageType" type="xs:int"/>
+      <xs:element minOccurs="0" name="mortgageTypeDesc" type="xs:string"/>
+      <xs:element minOccurs="0" name="mortgagerType" type="xs:string"/>
+      <xs:element minOccurs="0" name="startMortagePeriod" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100220_landCadastralMapInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:landOwningRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100220_landCadastralMapInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landCadastralMapData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:landCadastralMapDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landCadastralMapDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressKhashaa" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressNeighbourhood" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="parcelId" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="rightTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100239_propertyDetailsBetweenDate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:propertyInfoBetweenDateRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100239_propertyDetailsBetweenDateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyDetailsBetweenDateData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:propertyDetailsBetweenDateDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyDetailsBetweenDateDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressType" type="xs:string"/>
+      <xs:element minOccurs="0" name="cityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="districtName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownerStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertySize" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyType" type="xs:string"/>
+      <xs:element minOccurs="0" name="propertyValue" type="xs:string"/>
+      <xs:element minOccurs="0" name="purpose" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="serviceType" type="xs:string"/>
+      <xs:element minOccurs="0" name="subPurpose" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100235_landCadastreApplicantInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:checkLandMortgageRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100235_landCadastreApplicantInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landCadastreApplicantData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:landCadastreApplicantDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landCadastreApplicantDetailData">
+    <xs:sequence>
+      <xs:element name="application" type="xs:int"/>
+      <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element name="gender" type="xs:int"/>
+      <xs:element name="mainApplicant" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="middleName" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="personRegister" type="xs:string"/>
+      <xs:element name="prCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="prDesc" type="xs:string"/>
+      <xs:element name="ptCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="ptDesc" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100234_landCadastreAgreementInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:checkLandMortgageRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100234_landCadastreAgreementInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landCadastreAgreementData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:landCadastreAgreementDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="landCadastreAgreementDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cancelReason" type="xs:string"/>
+      <xs:element minOccurs="0" name="certificateNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="certificateNoEgazar" type="xs:string"/>
+      <xs:element name="code" type="xs:int"/>
+      <xs:element name="confirmCertRequest" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="contractBegin" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="contractDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="contractEnd" type="xs:dateTime"/>
+      <xs:element name="contractId" type="xs:int"/>
+      <xs:element minOccurs="0" name="contractNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element name="egazarConfirm" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100216_propertyRightsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:servicePropertyListRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100216_propertyRightsInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyRightsData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="fullAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="personType" type="xs:string"/>
+      <xs:element minOccurs="0" name="prprtySize" type="xs:string"/>
+      <xs:element minOccurs="0" name="prprtyType" type="xs:string"/>
+      <xs:element minOccurs="0" name="prprtyValue" type="xs:string"/>
+      <xs:element minOccurs="0" name="registrationNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="registredDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="serviceName" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+      <xs:element minOccurs="0" name="subUseKind" type="xs:string"/>
+      <xs:element minOccurs="0" name="useKind" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WS100219_landOwningContractInfo">
+    <wsdl:part element="tns:WS100219_landOwningContractInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100218_landOwningCertificateInfoResponse">
+    <wsdl:part element="tns:WS100218_landOwningCertificateInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100223_getPropertyBasicInfoResponse">
+    <wsdl:part element="tns:WS100223_getPropertyBasicInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100205_insertLandSuitorInfoResponse">
+    <wsdl:part element="tns:WS100205_insertLandSuitorInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100228_addressMoreInfoResponse">
+    <wsdl:part element="tns:WS100228_addressMoreInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100208_getPropertyInfoOnlyMinor">
+    <wsdl:part element="tns:WS100208_getPropertyInfoOnlyMinor" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100233_landRelatedInfoByParcelIdResponse">
+    <wsdl:part element="tns:WS100233_landRelatedInfoByParcelIdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100222_getCadastralMapResponse">
+    <wsdl:part element="tns:WS100222_getCadastralMapResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100240_landInfoByPersonIdAndParcelIdResponse">
+    <wsdl:part element="tns:WS100240_landInfoByPersonIdAndParcelIdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100217_propertyLandOwnerInfoResponse">
+    <wsdl:part element="tns:WS100217_propertyLandOwnerInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100238_landCadastreVicinityInfoResponse">
+    <wsdl:part element="tns:WS100238_landCadastreVicinityInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100235_landCadastreApplicantInfoResponse">
+    <wsdl:part element="tns:WS100235_landCadastreApplicantInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100236_landCadastreQR">
+    <wsdl:part element="tns:WS100236_landCadastreQR" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100234_landCadastreAgreementInfoResponse">
+    <wsdl:part element="tns:WS100234_landCadastreAgreementInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100206_insertLandDirectionInfo">
+    <wsdl:part element="tns:WS100206_insertLandDirectionInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100223_getPropertyBasicInfo">
+    <wsdl:part element="tns:WS100223_getPropertyBasicInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100227_landOfficialLetterInfo">
+    <wsdl:part element="tns:WS100227_landOfficialLetterInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100225_propertyValueInfo">
+    <wsdl:part element="tns:WS100225_propertyValueInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100214_getPropertyInfoAddressResponse">
+    <wsdl:part element="tns:WS100214_getPropertyInfoAddressResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100202_getPropertyList">
+    <wsdl:part element="tns:WS100202_getPropertyList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100209_getPropertyOwnerMovedInfo">
+    <wsdl:part element="tns:WS100209_getPropertyOwnerMovedInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100240_landInfoByPersonIdAndParcelId">
+    <wsdl:part element="tns:WS100240_landInfoByPersonIdAndParcelId" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100213_getPropertyRentContractInfo">
+    <wsdl:part element="tns:WS100213_getPropertyRentContractInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100220_landCadastralMapInfoResponse">
+    <wsdl:part element="tns:WS100220_landCadastralMapInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100209_getPropertyOwnerMovedInfoResponse">
+    <wsdl:part element="tns:WS100209_getPropertyOwnerMovedInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100204_insertLandOwningInfoResponse">
+    <wsdl:part element="tns:WS100204_insertLandOwningInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100204_insertLandOwningInfo">
+    <wsdl:part element="tns:WS100204_insertLandOwningInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100205_insertLandSuitorInfo">
+    <wsdl:part element="tns:WS100205_insertLandSuitorInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100237_cadastreApplicantStatusInfoResponse">
+    <wsdl:part element="tns:WS100237_cadastreApplicantStatusInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100224_propertyInfoBetweenDate">
+    <wsdl:part element="tns:WS100224_propertyInfoBetweenDate" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100221_landOwningDecisionInfoResponse">
+    <wsdl:part element="tns:WS100221_landOwningDecisionInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100207_getApprovedLandRequestInfo">
+    <wsdl:part element="tns:WS100207_getApprovedLandRequestInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100230_landRelatedUsersInfo">
+    <wsdl:part element="tns:WS100230_landRelatedUsersInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100217_propertyLandOwnerInfo">
+    <wsdl:part element="tns:WS100217_propertyLandOwnerInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100212_getPropertyChangeOwnerInfo">
+    <wsdl:part element="tns:WS100212_getPropertyChangeOwnerInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100226_checkLandMortgage">
+    <wsdl:part element="tns:WS100226_checkLandMortgage" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100220_landCadastralMapInfo">
+    <wsdl:part element="tns:WS100220_landCadastralMapInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100235_landCadastreApplicantInfo">
+    <wsdl:part element="tns:WS100235_landCadastreApplicantInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100227_landOfficialLetterInfoResponse">
+    <wsdl:part element="tns:WS100227_landOfficialLetterInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100230_landRelatedUsersInfoResponse">
+    <wsdl:part element="tns:WS100230_landRelatedUsersInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100216_propertyRightsInfo">
+    <wsdl:part element="tns:WS100216_propertyRightsInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100226_checkLandMortgageResponse">
+    <wsdl:part element="tns:WS100226_checkLandMortgageResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100206_insertLandDirectionInfoResponse">
+    <wsdl:part element="tns:WS100206_insertLandDirectionInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100237_cadastreApplicantStatusInfo">
+    <wsdl:part element="tns:WS100237_cadastreApplicantStatusInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100210_getPropertyToObligateInfoResponse">
+    <wsdl:part element="tns:WS100210_getPropertyToObligateInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100221_landOwningDecisionInfo">
+    <wsdl:part element="tns:WS100221_landOwningDecisionInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100231_landValuationInfo">
+    <wsdl:part element="tns:WS100231_landValuationInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100232_landOwningInfoByPersonId">
+    <wsdl:part element="tns:WS100232_landOwningInfoByPersonId" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100229_addressListInfo">
+    <wsdl:part element="tns:WS100229_addressListInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100211_getCollateralPropertyInfoResponse">
+    <wsdl:part element="tns:WS100211_getCollateralPropertyInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100201_getPropertyInfoResponse">
+    <wsdl:part element="tns:WS100201_getPropertyInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100239_propertyDetailsBetweenDateResponse">
+    <wsdl:part element="tns:WS100239_propertyDetailsBetweenDateResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100208_getPropertyInfoOnlyMinorResponse">
+    <wsdl:part element="tns:WS100208_getPropertyInfoOnlyMinorResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100211_getCollateralPropertyInfo">
+    <wsdl:part element="tns:WS100211_getCollateralPropertyInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100214_getPropertyInfoAddress">
+    <wsdl:part element="tns:WS100214_getPropertyInfoAddress" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100210_getPropertyToObligateInfo">
+    <wsdl:part element="tns:WS100210_getPropertyToObligateInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100233_landRelatedInfoByParcelId">
+    <wsdl:part element="tns:WS100233_landRelatedInfoByParcelId" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100215_insertHotelInfoResponse">
+    <wsdl:part element="tns:WS100215_insertHotelInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100203_isPropertyCheckResponse">
+    <wsdl:part element="tns:WS100203_isPropertyCheckResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100212_getPropertyChangeOwnerInfoResponse">
+    <wsdl:part element="tns:WS100212_getPropertyChangeOwnerInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100215_insertHotelInfo">
+    <wsdl:part element="tns:WS100215_insertHotelInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100202_getPropertyListResponse">
+    <wsdl:part element="tns:WS100202_getPropertyListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100213_getPropertyRentContractInfoResponse">
+    <wsdl:part element="tns:WS100213_getPropertyRentContractInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100231_landValuationInfoResponse">
+    <wsdl:part element="tns:WS100231_landValuationInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100222_getCadastralMap">
+    <wsdl:part element="tns:WS100222_getCadastralMap" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100203_isPropertyCheck">
+    <wsdl:part element="tns:WS100203_isPropertyCheck" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100207_getApprovedLandRequestInfoResponse">
+    <wsdl:part element="tns:WS100207_getApprovedLandRequestInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100219_landOwningContractInfoResponse">
+    <wsdl:part element="tns:WS100219_landOwningContractInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100225_propertyValueInfoResponse">
+    <wsdl:part element="tns:WS100225_propertyValueInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100218_landOwningCertificateInfo">
+    <wsdl:part element="tns:WS100218_landOwningCertificateInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100241_landSettlementAct">
+    <wsdl:part element="tns:WS100241_landSettlementAct" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100241_landSettlementActResponse">
+    <wsdl:part element="tns:WS100241_landSettlementActResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100228_addressMoreInfo">
+    <wsdl:part element="tns:WS100228_addressMoreInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100216_propertyRightsInfoResponse">
+    <wsdl:part element="tns:WS100216_propertyRightsInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100236_landCadastreQRResponse">
+    <wsdl:part element="tns:WS100236_landCadastreQRResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100201_getPropertyInfo">
+    <wsdl:part element="tns:WS100201_getPropertyInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100229_addressListInfoResponse">
+    <wsdl:part element="tns:WS100229_addressListInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100238_landCadastreVicinityInfo">
+    <wsdl:part element="tns:WS100238_landCadastreVicinityInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100224_propertyInfoBetweenDateResponse">
+    <wsdl:part element="tns:WS100224_propertyInfoBetweenDateResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100239_propertyDetailsBetweenDate">
+    <wsdl:part element="tns:WS100239_propertyDetailsBetweenDate" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100232_landOwningInfoByPersonIdResponse">
+    <wsdl:part element="tns:WS100232_landOwningInfoByPersonIdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100234_landCadastreAgreementInfo">
+    <wsdl:part element="tns:WS100234_landCadastreAgreementInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PropertyService">
+    <wsdl:operation name="WS100219_landOwningContractInfo">
+      <wsdl:input message="tns:WS100219_landOwningContractInfo" name="WS100219_landOwningContractInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100219_landOwningContractInfoResponse" name="WS100219_landOwningContractInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100208_getPropertyInfoOnlyMinor">
+      <wsdl:input message="tns:WS100208_getPropertyInfoOnlyMinor" name="WS100208_getPropertyInfoOnlyMinor">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100208_getPropertyInfoOnlyMinorResponse" name="WS100208_getPropertyInfoOnlyMinorResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100236_landCadastreQR">
+      <wsdl:input message="tns:WS100236_landCadastreQR" name="WS100236_landCadastreQR">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100236_landCadastreQRResponse" name="WS100236_landCadastreQRResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100206_insertLandDirectionInfo">
+      <wsdl:input message="tns:WS100206_insertLandDirectionInfo" name="WS100206_insertLandDirectionInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100206_insertLandDirectionInfoResponse" name="WS100206_insertLandDirectionInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100237_cadastreApplicantStatusInfo">
+      <wsdl:input message="tns:WS100237_cadastreApplicantStatusInfo" name="WS100237_cadastreApplicantStatusInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100237_cadastreApplicantStatusInfoResponse" name="WS100237_cadastreApplicantStatusInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100221_landOwningDecisionInfo">
+      <wsdl:input message="tns:WS100221_landOwningDecisionInfo" name="WS100221_landOwningDecisionInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100221_landOwningDecisionInfoResponse" name="WS100221_landOwningDecisionInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100231_landValuationInfo">
+      <wsdl:input message="tns:WS100231_landValuationInfo" name="WS100231_landValuationInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100231_landValuationInfoResponse" name="WS100231_landValuationInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100223_getPropertyBasicInfo">
+      <wsdl:input message="tns:WS100223_getPropertyBasicInfo" name="WS100223_getPropertyBasicInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100223_getPropertyBasicInfoResponse" name="WS100223_getPropertyBasicInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100232_landOwningInfoByPersonId">
+      <wsdl:input message="tns:WS100232_landOwningInfoByPersonId" name="WS100232_landOwningInfoByPersonId">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100232_landOwningInfoByPersonIdResponse" name="WS100232_landOwningInfoByPersonIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100227_landOfficialLetterInfo">
+      <wsdl:input message="tns:WS100227_landOfficialLetterInfo" name="WS100227_landOfficialLetterInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100227_landOfficialLetterInfoResponse" name="WS100227_landOfficialLetterInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100229_addressListInfo">
+      <wsdl:input message="tns:WS100229_addressListInfo" name="WS100229_addressListInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100229_addressListInfoResponse" name="WS100229_addressListInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100225_propertyValueInfo">
+      <wsdl:input message="tns:WS100225_propertyValueInfo" name="WS100225_propertyValueInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100225_propertyValueInfoResponse" name="WS100225_propertyValueInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100211_getCollateralPropertyInfo">
+      <wsdl:input message="tns:WS100211_getCollateralPropertyInfo" name="WS100211_getCollateralPropertyInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100211_getCollateralPropertyInfoResponse" name="WS100211_getCollateralPropertyInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100214_getPropertyInfoAddress">
+      <wsdl:input message="tns:WS100214_getPropertyInfoAddress" name="WS100214_getPropertyInfoAddress">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100214_getPropertyInfoAddressResponse" name="WS100214_getPropertyInfoAddressResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100202_getPropertyList">
+      <wsdl:input message="tns:WS100202_getPropertyList" name="WS100202_getPropertyList">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100202_getPropertyListResponse" name="WS100202_getPropertyListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100210_getPropertyToObligateInfo">
+      <wsdl:input message="tns:WS100210_getPropertyToObligateInfo" name="WS100210_getPropertyToObligateInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100210_getPropertyToObligateInfoResponse" name="WS100210_getPropertyToObligateInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100209_getPropertyOwnerMovedInfo">
+      <wsdl:input message="tns:WS100209_getPropertyOwnerMovedInfo" name="WS100209_getPropertyOwnerMovedInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100209_getPropertyOwnerMovedInfoResponse" name="WS100209_getPropertyOwnerMovedInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100233_landRelatedInfoByParcelId">
+      <wsdl:input message="tns:WS100233_landRelatedInfoByParcelId" name="WS100233_landRelatedInfoByParcelId">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100233_landRelatedInfoByParcelIdResponse" name="WS100233_landRelatedInfoByParcelIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100240_landInfoByPersonIdAndParcelId">
+      <wsdl:input message="tns:WS100240_landInfoByPersonIdAndParcelId" name="WS100240_landInfoByPersonIdAndParcelId">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100240_landInfoByPersonIdAndParcelIdResponse" name="WS100240_landInfoByPersonIdAndParcelIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100213_getPropertyRentContractInfo">
+      <wsdl:input message="tns:WS100213_getPropertyRentContractInfo" name="WS100213_getPropertyRentContractInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100213_getPropertyRentContractInfoResponse" name="WS100213_getPropertyRentContractInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100204_insertLandOwningInfo">
+      <wsdl:input message="tns:WS100204_insertLandOwningInfo" name="WS100204_insertLandOwningInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100204_insertLandOwningInfoResponse" name="WS100204_insertLandOwningInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100215_insertHotelInfo">
+      <wsdl:input message="tns:WS100215_insertHotelInfo" name="WS100215_insertHotelInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100215_insertHotelInfoResponse" name="WS100215_insertHotelInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100205_insertLandSuitorInfo">
+      <wsdl:input message="tns:WS100205_insertLandSuitorInfo" name="WS100205_insertLandSuitorInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100205_insertLandSuitorInfoResponse" name="WS100205_insertLandSuitorInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100222_getCadastralMap">
+      <wsdl:input message="tns:WS100222_getCadastralMap" name="WS100222_getCadastralMap">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100222_getCadastralMapResponse" name="WS100222_getCadastralMapResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100203_isPropertyCheck">
+      <wsdl:input message="tns:WS100203_isPropertyCheck" name="WS100203_isPropertyCheck">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100203_isPropertyCheckResponse" name="WS100203_isPropertyCheckResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100218_landOwningCertificateInfo">
+      <wsdl:input message="tns:WS100218_landOwningCertificateInfo" name="WS100218_landOwningCertificateInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100218_landOwningCertificateInfoResponse" name="WS100218_landOwningCertificateInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100241_landSettlementAct">
+      <wsdl:input message="tns:WS100241_landSettlementAct" name="WS100241_landSettlementAct">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100241_landSettlementActResponse" name="WS100241_landSettlementActResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100224_propertyInfoBetweenDate">
+      <wsdl:input message="tns:WS100224_propertyInfoBetweenDate" name="WS100224_propertyInfoBetweenDate">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100224_propertyInfoBetweenDateResponse" name="WS100224_propertyInfoBetweenDateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100228_addressMoreInfo">
+      <wsdl:input message="tns:WS100228_addressMoreInfo" name="WS100228_addressMoreInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100228_addressMoreInfoResponse" name="WS100228_addressMoreInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100207_getApprovedLandRequestInfo">
+      <wsdl:input message="tns:WS100207_getApprovedLandRequestInfo" name="WS100207_getApprovedLandRequestInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100207_getApprovedLandRequestInfoResponse" name="WS100207_getApprovedLandRequestInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100201_getPropertyInfo">
+      <wsdl:input message="tns:WS100201_getPropertyInfo" name="WS100201_getPropertyInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100201_getPropertyInfoResponse" name="WS100201_getPropertyInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100230_landRelatedUsersInfo">
+      <wsdl:input message="tns:WS100230_landRelatedUsersInfo" name="WS100230_landRelatedUsersInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100230_landRelatedUsersInfoResponse" name="WS100230_landRelatedUsersInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100217_propertyLandOwnerInfo">
+      <wsdl:input message="tns:WS100217_propertyLandOwnerInfo" name="WS100217_propertyLandOwnerInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100217_propertyLandOwnerInfoResponse" name="WS100217_propertyLandOwnerInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100238_landCadastreVicinityInfo">
+      <wsdl:input message="tns:WS100238_landCadastreVicinityInfo" name="WS100238_landCadastreVicinityInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100238_landCadastreVicinityInfoResponse" name="WS100238_landCadastreVicinityInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100212_getPropertyChangeOwnerInfo">
+      <wsdl:input message="tns:WS100212_getPropertyChangeOwnerInfo" name="WS100212_getPropertyChangeOwnerInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100212_getPropertyChangeOwnerInfoResponse" name="WS100212_getPropertyChangeOwnerInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100226_checkLandMortgage">
+      <wsdl:input message="tns:WS100226_checkLandMortgage" name="WS100226_checkLandMortgage">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100226_checkLandMortgageResponse" name="WS100226_checkLandMortgageResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100220_landCadastralMapInfo">
+      <wsdl:input message="tns:WS100220_landCadastralMapInfo" name="WS100220_landCadastralMapInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100220_landCadastralMapInfoResponse" name="WS100220_landCadastralMapInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100239_propertyDetailsBetweenDate">
+      <wsdl:input message="tns:WS100239_propertyDetailsBetweenDate" name="WS100239_propertyDetailsBetweenDate">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100239_propertyDetailsBetweenDateResponse" name="WS100239_propertyDetailsBetweenDateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100235_landCadastreApplicantInfo">
+      <wsdl:input message="tns:WS100235_landCadastreApplicantInfo" name="WS100235_landCadastreApplicantInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100235_landCadastreApplicantInfoResponse" name="WS100235_landCadastreApplicantInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100234_landCadastreAgreementInfo">
+      <wsdl:input message="tns:WS100234_landCadastreAgreementInfo" name="WS100234_landCadastreAgreementInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100234_landCadastreAgreementInfoResponse" name="WS100234_landCadastreAgreementInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100216_propertyRightsInfo">
+      <wsdl:input message="tns:WS100216_propertyRightsInfo" name="WS100216_propertyRightsInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100216_propertyRightsInfoResponse" name="WS100216_propertyRightsInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PropertyServiceServiceSoapBinding" type="tns:PropertyService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WS100219_landOwningContractInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100219_landOwningContractInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100219_landOwningContractInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100208_getPropertyInfoOnlyMinor">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100208_getPropertyInfoOnlyMinor">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100208_getPropertyInfoOnlyMinorResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100236_landCadastreQR">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100236_landCadastreQR">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100236_landCadastreQRResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100206_insertLandDirectionInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100206_insertLandDirectionInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100206_insertLandDirectionInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100237_cadastreApplicantStatusInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100237_cadastreApplicantStatusInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100237_cadastreApplicantStatusInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100221_landOwningDecisionInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100221_landOwningDecisionInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100221_landOwningDecisionInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100231_landValuationInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100231_landValuationInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100231_landValuationInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100223_getPropertyBasicInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100223_getPropertyBasicInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100223_getPropertyBasicInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100232_landOwningInfoByPersonId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100232_landOwningInfoByPersonId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100232_landOwningInfoByPersonIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100227_landOfficialLetterInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100227_landOfficialLetterInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100227_landOfficialLetterInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100229_addressListInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100229_addressListInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100229_addressListInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100225_propertyValueInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100225_propertyValueInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100225_propertyValueInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100211_getCollateralPropertyInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100211_getCollateralPropertyInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100211_getCollateralPropertyInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100214_getPropertyInfoAddress">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100214_getPropertyInfoAddress">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100214_getPropertyInfoAddressResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100202_getPropertyList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100202_getPropertyList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100202_getPropertyListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100210_getPropertyToObligateInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100210_getPropertyToObligateInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100210_getPropertyToObligateInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100209_getPropertyOwnerMovedInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100209_getPropertyOwnerMovedInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100209_getPropertyOwnerMovedInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100233_landRelatedInfoByParcelId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100233_landRelatedInfoByParcelId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100233_landRelatedInfoByParcelIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100240_landInfoByPersonIdAndParcelId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100240_landInfoByPersonIdAndParcelId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100240_landInfoByPersonIdAndParcelIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100213_getPropertyRentContractInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100213_getPropertyRentContractInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100213_getPropertyRentContractInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100204_insertLandOwningInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100204_insertLandOwningInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100204_insertLandOwningInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100215_insertHotelInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100215_insertHotelInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100215_insertHotelInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100205_insertLandSuitorInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100205_insertLandSuitorInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100205_insertLandSuitorInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100222_getCadastralMap">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100222_getCadastralMap">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100222_getCadastralMapResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100203_isPropertyCheck">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100203_isPropertyCheck">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100203_isPropertyCheckResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100218_landOwningCertificateInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100218_landOwningCertificateInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100218_landOwningCertificateInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100241_landSettlementAct">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100241_landSettlementAct">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100241_landSettlementActResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100224_propertyInfoBetweenDate">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100224_propertyInfoBetweenDate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100224_propertyInfoBetweenDateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100228_addressMoreInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100228_addressMoreInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100228_addressMoreInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100207_getApprovedLandRequestInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100207_getApprovedLandRequestInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100207_getApprovedLandRequestInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100201_getPropertyInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100201_getPropertyInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100201_getPropertyInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100230_landRelatedUsersInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100230_landRelatedUsersInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100230_landRelatedUsersInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100217_propertyLandOwnerInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100217_propertyLandOwnerInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100217_propertyLandOwnerInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100238_landCadastreVicinityInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100238_landCadastreVicinityInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100238_landCadastreVicinityInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100212_getPropertyChangeOwnerInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100212_getPropertyChangeOwnerInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100212_getPropertyChangeOwnerInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100226_checkLandMortgage">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100226_checkLandMortgage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100226_checkLandMortgageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100220_landCadastralMapInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100220_landCadastralMapInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100220_landCadastralMapInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100239_propertyDetailsBetweenDate">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100239_propertyDetailsBetweenDate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100239_propertyDetailsBetweenDateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100235_landCadastreApplicantInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100235_landCadastreApplicantInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100235_landCadastreApplicantInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100234_landCadastreAgreementInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100234_landCadastreAgreementInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100234_landCadastreAgreementInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100216_propertyRightsInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100216_propertyRightsInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100216_propertyRightsInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PropertyServiceService">
+    <wsdl:port binding="tns:PropertyServiceServiceSoapBinding" name="PropertyServicePort">
+      <soap:address location="http://xyp.gov.mn/property-1.5.0/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

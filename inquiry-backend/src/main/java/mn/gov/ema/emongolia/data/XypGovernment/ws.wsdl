@@ -1,0 +1,2036 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://government.xyp.gov.mn/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="GovernmentServiceService" targetNamespace="http://government.xyp.gov.mn/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://government.xyp.gov.mn/" elementFormDefault="unqualified" targetNamespace="http://government.xyp.gov.mn/" version="1.0">
+
+  <xs:element name="GS10001_citizenDiagnosisInfo" type="tns:GS10001_citizenDiagnosisInfo"/>
+
+  <xs:element name="GS10001_citizenDiagnosisInfoResponse" type="tns:GS10001_citizenDiagnosisInfoResponse"/>
+
+  <xs:element name="GS10002_citizenCovid19EPass" type="tns:GS10002_citizenCovid19EPass"/>
+
+  <xs:element name="GS10002_citizenCovid19EPassResponse" type="tns:GS10002_citizenCovid19EPassResponse"/>
+
+  <xs:element name="GS10003_legalEntityBranchInfo" type="tns:GS10003_legalEntityBranchInfo"/>
+
+  <xs:element name="GS10003_legalEntityBranchInfoResponse" type="tns:GS10003_legalEntityBranchInfoResponse"/>
+
+  <xs:element name="GS10004_legalEntityClosuresInfo" type="tns:GS10004_legalEntityClosuresInfo"/>
+
+  <xs:element name="GS10004_legalEntityClosuresInfoResponse" type="tns:GS10004_legalEntityClosuresInfoResponse"/>
+
+  <xs:element name="GS10005_legalEntityFounderInfo" type="tns:GS10005_legalEntityFounderInfo"/>
+
+  <xs:element name="GS10005_legalEntityFounderInfoResponse" type="tns:GS10005_legalEntityFounderInfoResponse"/>
+
+  <xs:element name="GS10006_legalEntityIndustryInfo" type="tns:GS10006_legalEntityIndustryInfo"/>
+
+  <xs:element name="GS10006_legalEntityIndustryInfoResponse" type="tns:GS10006_legalEntityIndustryInfoResponse"/>
+
+  <xs:element name="GS10007_legalEntityOwnerInfo" type="tns:GS10007_legalEntityOwnerInfo"/>
+
+  <xs:element name="GS10007_legalEntityOwnerInfoResponse" type="tns:GS10007_legalEntityOwnerInfoResponse"/>
+
+  <xs:element name="GS10008_legalEntityGeneralInfo" type="tns:GS10008_legalEntityGeneralInfo"/>
+
+  <xs:element name="GS10008_legalEntityGeneralInfoResponse" type="tns:GS10008_legalEntityGeneralInfoResponse"/>
+
+  <xs:element name="GS10009_legalEntityShareHolderInfo" type="tns:GS10009_legalEntityShareHolderInfo"/>
+
+  <xs:element name="GS10009_legalEntityShareHolderInfoResponse" type="tns:GS10009_legalEntityShareHolderInfoResponse"/>
+
+  <xs:element name="GS10010_legalEntityStakeHolderInfo" type="tns:GS10010_legalEntityStakeHolderInfo"/>
+
+  <xs:element name="GS10010_legalEntityStakeHolderInfoResponse" type="tns:GS10010_legalEntityStakeHolderInfoResponse"/>
+
+  <xs:element name="GS10011_childrenBirthInfo" type="tns:GS10011_childrenBirthInfo"/>
+
+  <xs:element name="GS10011_childrenBirthInfoResponse" type="tns:GS10011_childrenBirthInfoResponse"/>
+
+  <xs:element name="GS10012_citizenAddressArrivedInfo" type="tns:GS10012_citizenAddressArrivedInfo"/>
+
+  <xs:element name="GS10012_citizenAddressArrivedInfoResponse" type="tns:GS10012_citizenAddressArrivedInfoResponse"/>
+
+  <xs:element name="GS10013_citizenChangeNameInfo" type="tns:GS10013_citizenChangeNameInfo"/>
+
+  <xs:element name="GS10013_citizenChangeNameInfoResponse" type="tns:GS10013_citizenChangeNameInfoResponse"/>
+
+  <xs:element name="GS10014_citizenChangeRegnumInfo" type="tns:GS10014_citizenChangeRegnumInfo"/>
+
+  <xs:element name="GS10014_citizenChangeRegnumInfoResponse" type="tns:GS10014_citizenChangeRegnumInfoResponse"/>
+
+  <xs:element name="GS10015_citizenIDCardFirstTimeInfo" type="tns:GS10015_citizenIDCardFirstTimeInfo"/>
+
+  <xs:element name="GS10015_citizenIDCardFirstTimeInfoResponse" type="tns:GS10015_citizenIDCardFirstTimeInfoResponse"/>
+
+  <xs:element name="GS10016_covid19MedicalCertificateInfo" type="tns:GS10016_covid19MedicalCertificateInfo"/>
+
+  <xs:element name="GS10016_covid19MedicalCertificateInfoResponse" type="tns:GS10016_covid19MedicalCertificateInfoResponse"/>
+
+  <xs:element name="GS10017_citizenInternationalCert" type="tns:GS10017_citizenInternationalCert"/>
+
+  <xs:element name="GS10017_citizenInternationalCertResponse" type="tns:GS10017_citizenInternationalCertResponse"/>
+
+  <xs:element name="GS10018_foreignCitizenInternationalCert" type="tns:GS10018_foreignCitizenInternationalCert"/>
+
+  <xs:element name="GS10018_foreignCitizenInternationalCertResponse" type="tns:GS10018_foreignCitizenInternationalCertResponse"/>
+
+  <xs:element name="GS10019_firearmOwnerCertificateInfo" type="tns:GS10019_firearmOwnerCertificateInfo"/>
+
+  <xs:element name="GS10019_firearmOwnerCertificateInfoResponse" type="tns:GS10019_firearmOwnerCertificateInfoResponse"/>
+
+  <xs:element name="GS10020_nonAdultCitizenInfo" type="tns:GS10020_nonAdultCitizenInfo"/>
+
+  <xs:element name="GS10020_nonAdultCitizenInfoResponse" type="tns:GS10020_nonAdultCitizenInfoResponse"/>
+
+  <xs:element name="GS10021_covidVaccineDoseCount" type="tns:GS10021_covidVaccineDoseCount"/>
+
+  <xs:element name="GS10021_covidVaccineDoseCountResponse" type="tns:GS10021_covidVaccineDoseCountResponse"/>
+
+  <xs:element name="GS10022_studentSoldierInfo" type="tns:GS10022_studentSoldierInfo"/>
+
+  <xs:element name="GS10022_studentSoldierInfoResponse" type="tns:GS10022_studentSoldierInfoResponse"/>
+
+  <xs:element name="GS10023_notaryTrustInfo" type="tns:GS10023_notaryTrustInfo"/>
+
+  <xs:element name="GS10023_notaryTrustInfoResponse" type="tns:GS10023_notaryTrustInfoResponse"/>
+
+  <xs:element name="GS10024_notaryVehicleInfo" type="tns:GS10024_notaryVehicleInfo"/>
+
+  <xs:element name="GS10024_notaryVehicleInfoResponse" type="tns:GS10024_notaryVehicleInfoResponse"/>
+
+  <xs:element name="GS10025_notaryTrustArchivedInfo" type="tns:GS10025_notaryTrustArchivedInfo"/>
+
+  <xs:element name="GS10025_notaryTrustArchivedInfoResponse" type="tns:GS10025_notaryTrustArchivedInfoResponse"/>
+
+  <xs:element name="GS10026_citizenIDCardInfoEng" type="tns:GS10026_citizenIDCardInfoEng"/>
+
+  <xs:element name="GS10026_citizenIDCardInfoEngResponse" type="tns:GS10026_citizenIDCardInfoEngResponse"/>
+
+  <xs:element name="GS10027_citizenBirthInfoEng" type="tns:GS10027_citizenBirthInfoEng"/>
+
+  <xs:element name="GS10027_citizenBirthInfoEngResponse" type="tns:GS10027_citizenBirthInfoEngResponse"/>
+
+  <xs:element name="GS10028_citizenNonPaymentEngInfo" type="tns:GS10028_citizenNonPaymentEngInfo"/>
+
+  <xs:element name="GS10028_citizenNonPaymentEngInfoResponse" type="tns:GS10028_citizenNonPaymentEngInfoResponse"/>
+
+  <xs:element name="GS10029_citizenNoMarriageInfoData" type="tns:GS10029_citizenNoMarriageInfoData"/>
+
+  <xs:element name="GS10029_citizenNoMarriageInfoDataResponse" type="tns:GS10029_citizenNoMarriageInfoDataResponse"/>
+
+  <xs:element name="GS10030_citizenMarriageInfoEng" type="tns:GS10030_citizenMarriageInfoEng"/>
+
+  <xs:element name="GS10030_citizenMarriageInfoEngResponse" type="tns:GS10030_citizenMarriageInfoEngResponse"/>
+
+  <xs:element name="GS10031_ssoPhoneCheck" type="tns:GS10031_ssoPhoneCheck"/>
+
+  <xs:element name="GS10031_ssoPhoneCheckResponse" type="tns:GS10031_ssoPhoneCheckResponse"/>
+
+  <xs:complexType name="GS10007_legalEntityOwnerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="beginDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="endDate" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auth" type="tns:authorizationData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="citizen" type="tns:authorizationEntity"/>
+      <xs:element minOccurs="0" name="operator" type="tns:authorizationEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appAuthToken" type="xs:string"/>
+      <xs:element minOccurs="0" name="authAppName" type="xs:string"/>
+      <xs:element minOccurs="0" name="certFingerprint" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="fingerprint" type="xs:base64Binary"/>
+      <xs:element name="otp" type="xs:int"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="signature" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10007_legalEntityOwnerInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="xs:anyType"/>
+      <xs:element minOccurs="0" name="requestId" type="xs:string"/>
+      <xs:element minOccurs="0" name="response" type="xs:anyType"/>
+      <xs:element name="resultCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="resultMessage" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityOwnerData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:ownerDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ownerDetailData">
+    <xs:sequence>
+      <xs:element name="assetPercent" type="xs:double"/>
+      <xs:element name="assetQty" type="xs:double"/>
+      <xs:element minOccurs="0" name="changedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="classification" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyLiability" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalEntityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="owhershipType" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="taxOrg" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10015_citizenIDCardFirstTimeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10015_citizenIDCardFirstTimeInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityStakeHolderData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:stakeHolderDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="stakeHolderDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="changedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="companyLiability" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalEntityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="position" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="taxOrg" type="xs:string"/>
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10028_citizenNonPaymentEngInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:covidVaccineDoseCountRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="covidVaccineDoseCountRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GS10028_citizenNonPaymentEngInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenNonPaymentEngData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="caseNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="caseStatusId" type="xs:string"/>
+      <xs:element minOccurs="0" name="caseStatusName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="decisionNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="outputResult" type="xs:string"/>
+      <xs:element minOccurs="0" name="receivedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="sheetNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="tollBalance" type="xs:string"/>
+      <xs:element minOccurs="0" name="tollValue" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10004_legalEntityClosuresInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10004_legalEntityClosuresInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityClosuresData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:closuresDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="closuresDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyLiability" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionByOrg" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalEntityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="rationale" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="taxOrg" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10029_citizenNoMarriageInfoData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenIDCardInfoEngRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenIDCardInfoEngRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:registrationBasicRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="registrationBasicRequest">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orgCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="orgName" type="xs:string"/>
+          <xs:element minOccurs="0" name="orgPassword" type="xs:string"/>
+          <xs:element minOccurs="0" name="orgToken" type="xs:string"/>
+          <xs:element minOccurs="0" name="serviceCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GS10029_citizenNoMarriageInfoDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenNoMarriageInfoEngData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="citizenship" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="gender" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="nationality" type="xs:string"/>
+      <xs:element minOccurs="0" name="purpose" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10031_ssoPhoneCheck">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:ssoPhoneCheckRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ssoPhoneCheckRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:registrationBasicRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="phoneNum" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GS10031_ssoPhoneCheckResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="resultData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="result" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10001_citizenDiagnosisInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenDiagnosysRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenDiagnosysRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GS10001_citizenDiagnosisInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenDiagnosisData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birthDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="fullAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:covidPCRResultDetailData"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="sex" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="covidPCRResultDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="barcode" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="resultDate" type="xs:dateTime"/>
+      <xs:element name="testResult" type="xs:int"/>
+      <xs:element name="testType" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10021_covidVaccineDoseCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:covidVaccineDoseCountRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10021_covidVaccineDoseCountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="covidVaccineDoseCountData">
+    <xs:sequence>
+      <xs:element name="vaccineDoseCount" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10025_notaryTrustArchivedInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:notaryRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="notaryRequestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="offset" type="xs:string"/>
+      <xs:element minOccurs="0" name="pageSize" type="xs:string"/>
+      <xs:element minOccurs="0" name="regNumberA" type="xs:string"/>
+      <xs:element minOccurs="0" name="regNumberB" type="xs:string"/>
+      <xs:element minOccurs="0" name="vinCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10025_notaryTrustArchivedInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="notaryTrustData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="dataArray" nillable="true" type="tns:notaryTrustDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="notaryTrustDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bookDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="bookId" type="xs:string"/>
+      <xs:element minOccurs="0" name="bookNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="bookYear" type="xs:string"/>
+      <xs:element minOccurs="0" name="employeeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="itemName" type="xs:string"/>
+      <xs:element minOccurs="0" name="physicalPath" type="xs:string"/>
+      <xs:element minOccurs="0" name="privilegeTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="stateRegNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="validDuration" type="xs:string"/>
+      <xs:element minOccurs="0" name="wfmStatusName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10002_citizenCovid19EPass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenCovid19EPassRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenCovid19EPassRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GS10002_citizenCovid19EPassResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenCovid19EPassData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="qrData" type="xs:string"/>
+      <xs:element name="status" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10006_legalEntityIndustryInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10006_legalEntityIndustryInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityIndustryData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:industryDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="industryDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="changedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="companyLiability" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="industryCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="industryName" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalEntityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lisenceNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="lisenced" type="xs:string"/>
+      <xs:element minOccurs="0" name="lisencedByDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="lisencedByOrg" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="taxOrg" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10019_firearmOwnerCertificateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:firearmOwnerCertificateRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="firearmOwnerCertificateRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GS10019_firearmOwnerCertificateInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="firearmOwnerCertificateData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="certificateNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10012_citizenAddressArrivedInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10012_citizenAddressArrivedInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10005_legalEntityFounderInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10005_legalEntityFounderInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityFounderData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:founderDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="founderDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="changedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="classification" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyLiability" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalEntityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="taxOrg" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10017_citizenInternationalCert">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:covid19InternationalCertRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="covid19InternationalCertRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="firstnameEng" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastnameEng" type="xs:string"/>
+          <xs:element minOccurs="0" name="passportNum" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GS10017_citizenInternationalCertResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="covid19InternationalCertData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="countryCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="covid19NatData" type="tns:covid19NatData"/>
+      <xs:element minOccurs="0" name="covid19PersonalData" type="tns:covid19PersonalData"/>
+      <xs:element minOccurs="0" name="id" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listVaccineData" nillable="true" type="tns:vaccineData"/>
+      <xs:element minOccurs="0" name="medicalCertificateData" type="tns:medicalCertificateData"/>
+      <xs:element minOccurs="0" name="qrCodeTime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="signature" type="xs:string"/>
+      <xs:element name="timeZone" type="xs:int"/>
+      <xs:element minOccurs="0" name="vaccineData" type="tns:covid19VaccineData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="covid19NatData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="institution" type="xs:string"/>
+      <xs:element minOccurs="0" name="result" type="xs:string"/>
+      <xs:element name="specimensType" type="xs:int"/>
+      <xs:element minOccurs="0" name="testTime" type="xs:dateTime"/>
+      <xs:element name="testType" type="xs:int"/>
+      <xs:element name="timezone" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="covid19PersonalData">
+    <xs:sequence>
+      <xs:element name="age" type="xs:int"/>
+      <xs:element minOccurs="0" name="birthDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstnameEng" type="xs:string"/>
+      <xs:element minOccurs="0" name="fullName" type="xs:string"/>
+      <xs:element minOccurs="0" name="fullNameEng" type="xs:string"/>
+      <xs:element minOccurs="0" name="language" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastnameEng" type="xs:string"/>
+      <xs:element minOccurs="0" name="nationality" type="xs:string"/>
+      <xs:element minOccurs="0" name="nationalityEng" type="xs:string"/>
+      <xs:element minOccurs="0" name="passportNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="sex" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vaccineData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="approvedDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="dose" type="xs:string"/>
+      <xs:element minOccurs="0" name="doseEng" type="xs:string"/>
+      <xs:element minOccurs="0" name="group" type="xs:string"/>
+      <xs:element minOccurs="0" name="hospitalName" type="xs:string"/>
+      <xs:element minOccurs="0" name="hospitalNameEng" type="xs:string"/>
+      <xs:element minOccurs="0" name="manufacturer" type="xs:string"/>
+      <xs:element minOccurs="0" name="manufacturerEng" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="nameEng" type="xs:string"/>
+      <xs:element minOccurs="0" name="serialNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="medicalCertificateData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hospitalizedBeginDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="hospitalizedEndDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="medicalName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="covid19VaccineData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="brand" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstDoseDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="secondDoseDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="thirdDoseDate" type="xs:dateTime"/>
+      <xs:element name="timeZone" type="xs:int"/>
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
+      <xs:element minOccurs="0" name="vaccineSerialNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10011_childrenBirthInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10011_childrenBirthInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10008_legalEntityGeneralInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10008_legalEntityGeneralInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityGeneralData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:generalDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="generalDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="assetQty" type="xs:string"/>
+      <xs:element minOccurs="0" name="changedComment" type="xs:string"/>
+      <xs:element minOccurs="0" name="changedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="companyLiability" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element name="founderCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="founderDecisionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="founderDecisionNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalEntityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="owhershipType" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerDecisionNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="regulationDate" type="xs:dateTime"/>
+      <xs:element name="shareHolderCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="taxOrg" type="xs:string"/>
+      <xs:element minOccurs="0" name="toWorkBeginDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="toWorkEndDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="toWorkPeriodChecked" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10023_notaryTrustInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:notaryRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10023_notaryTrustInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10024_notaryVehicleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:notaryRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10024_notaryVehicleInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="notaryVehicleData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="dataArray" nillable="true" type="tns:notaryVehicleDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="notaryVehicleDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bookDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="bookId" type="xs:string"/>
+      <xs:element minOccurs="0" name="bookNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="bookYear" type="xs:string"/>
+      <xs:element minOccurs="0" name="certificateDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="certificateNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="color" type="xs:string"/>
+      <xs:element minOccurs="0" name="customNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="employeeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="itemName" type="xs:string"/>
+      <xs:element minOccurs="0" name="manufacturedName" type="xs:string"/>
+      <xs:element minOccurs="0" name="modelNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="physicalPath" type="xs:string"/>
+      <xs:element minOccurs="0" name="stateSerialNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="vehicleName" type="xs:string"/>
+      <xs:element minOccurs="0" name="vinCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="wfmStatusName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10027_citizenBirthInfoEng">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenIDCardInfoEngRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10027_citizenBirthInfoEngResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenBirthInfoEngData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birthDateAsText" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthPlace" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="father" type="tns:citizenBriefData"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="gender" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="mother" type="tns:citizenBriefData"/>
+      <xs:element minOccurs="0" name="nationality" type="xs:string"/>
+      <xs:element minOccurs="0" name="registrationCity" type="xs:string"/>
+      <xs:element minOccurs="0" name="registrationDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="registrationDistrict" type="xs:string"/>
+      <xs:element minOccurs="0" name="registrationID" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenBriefData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="nationality" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10022_studentSoldierInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:studentSoldierRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="studentSoldierRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GS10022_studentSoldierInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="studentSoldierData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="academicLevel" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+      <xs:element minOccurs="0" name="cityCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="cityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="districtCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="districtName" type="xs:string"/>
+      <xs:element minOccurs="0" name="educationFieldCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="educationFieldName" type="xs:string"/>
+      <xs:element minOccurs="0" name="effectiveStartDate" type="xs:dateTime"/>
+      <xs:element name="enterpriseId" type="xs:long"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element name="institutionId" type="xs:long"/>
+      <xs:element minOccurs="0" name="institutionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="programName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="schoolCityCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="schoolCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="schoolDistrictCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="schoolDistrictName" type="xs:string"/>
+      <xs:element name="schoolId" type="xs:long"/>
+      <xs:element minOccurs="0" name="schoolName" type="xs:string"/>
+      <xs:element name="totalGpa" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10013_citizenChangeNameInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10013_citizenChangeNameInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10026_citizenIDCardInfoEng">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenIDCardInfoEngRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10026_citizenIDCardInfoEngResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenIDCardInfoEngData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressApartmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressDetail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="addressList" nillable="true" type="tns:citizenIdCardAddressDetailData"/>
+      <xs:element minOccurs="0" name="addressRegionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressTownName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthDateAsText" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthPlace" type="xs:string"/>
+      <xs:element minOccurs="0" name="cityCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="cityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="districtCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="districtName" type="xs:string"/>
+      <xs:element minOccurs="0" name="finger" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="gender" type="xs:string"/>
+      <xs:element minOccurs="0" name="idCardAddress" type="xs:string"/>
+      <xs:element name="idCardCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="idCardExpireDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="idCardIssueDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="image" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="nationality" type="xs:string"/>
+      <xs:element minOccurs="0" name="passportIssueDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="passportNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenIdCardAddressDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressApartmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressDetail" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressRegionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressTownName" type="xs:string"/>
+      <xs:element minOccurs="0" name="arrivedDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagName" type="xs:string"/>
+      <xs:element minOccurs="0" name="cityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="districtName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10030_citizenMarriageInfoEng">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenIDCardInfoEngRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10030_citizenMarriageInfoEngResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenMarriageInfoEngData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="husband" type="tns:citizenMarriageBriefData"/>
+      <xs:element name="married" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="marriedDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredCity" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredDistrict" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredId" type="xs:string"/>
+      <xs:element minOccurs="0" name="wife" type="tns:citizenMarriageBriefData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenMarriageBriefData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="nationality" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10009_legalEntityShareHolderInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10009_legalEntityShareHolderInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityShareHolderData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:shareHolderDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareHolderDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="changedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="classification" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyLiability" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="country" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalEntityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element name="sharePercent" type="xs:double"/>
+      <xs:element name="shareQty" type="xs:double"/>
+      <xs:element name="shareSumAmount" type="xs:double"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="taxOrg" type="xs:string"/>
+      <xs:element name="unitPrice" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10003_legalEntityBranchInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10003_legalEntityBranchInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityBranchData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:branchDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="branchDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element minOccurs="0" name="branchName" type="xs:string"/>
+      <xs:element minOccurs="0" name="changedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="companyLiability" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="leaderFirstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="leaderLastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="leaderRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalEntityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="taxOrg" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10018_foreignCitizenInternationalCert">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:foreignCitizenInternationalCertRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="foreignCitizenInternationalCertRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="passportNum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GS10018_foreignCitizenInternationalCertResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10010_legalEntityStakeHolderInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10010_legalEntityStakeHolderInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10016_covid19MedicalCertificateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:covid19MedicalCertificateRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="covid19MedicalCertificateRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GS10016_covid19MedicalCertificateInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="covid19MedicalCertificateData">
+    <xs:sequence>
+      <xs:element name="age" type="xs:int"/>
+      <xs:element minOccurs="0" name="aimagCityCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhoroo" type="xs:string"/>
+      <xs:element minOccurs="0" name="careHumanName" type="xs:string"/>
+      <xs:element minOccurs="0" name="diagnosisName" type="xs:string"/>
+      <xs:element minOccurs="0" name="dianosisCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="doctor" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="generalDoctor" type="xs:string"/>
+      <xs:element minOccurs="0" name="hospitalizedBeginDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="hospitalizedEndDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="medicalCertificateCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="medicalCertificateName" type="xs:string"/>
+      <xs:element minOccurs="0" name="medicalHistory" type="xs:string"/>
+      <xs:element minOccurs="0" name="medicalName" type="xs:string"/>
+      <xs:element minOccurs="0" name="professionCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="professionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="qrData" type="xs:string"/>
+      <xs:element minOccurs="0" name="reasonCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="reasonName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="sex" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+      <xs:element minOccurs="0" name="workPlaceCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="workPlaceName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10014_citizenChangeRegnumInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10014_citizenChangeRegnumInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GS10020_nonAdultCitizenInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:nonAdultCitizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonAdultCitizenRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="childrenRegnum" type="xs:string"/>
+          <xs:element minOccurs="0" name="momRegnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GS10020_nonAdultCitizenInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonAdultCitizenData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birthAimagCityCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="birthHeight" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthNCircle" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthPlaceCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthPlaceName" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthSoumDistrictCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthTCircle" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthWeight" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthweek" type="xs:string"/>
+      <xs:element minOccurs="0" name="childRegisterNum" type="xs:string"/>
+      <xs:element name="isAlive" type="xs:int"/>
+      <xs:element minOccurs="0" name="isTwin" type="xs:string"/>
+      <xs:element minOccurs="0" name="isTwinName" type="xs:string"/>
+      <xs:element minOccurs="0" name="momAimagCityCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="momAimagCityName" type="xs:string"/>
+      <xs:element name="momCivilId" type="xs:int"/>
+      <xs:element minOccurs="0" name="momFirstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="momFullAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="momLastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="momRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="momSoumDistrictCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="momSoumDistrictName" type="xs:string"/>
+      <xs:element minOccurs="0" name="sexCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="sexName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GS10020_nonAdultCitizenInfoResponse">
+    <wsdl:part element="tns:GS10020_nonAdultCitizenInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10007_legalEntityOwnerInfo">
+    <wsdl:part element="tns:GS10007_legalEntityOwnerInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10028_citizenNonPaymentEngInfoResponse">
+    <wsdl:part element="tns:GS10028_citizenNonPaymentEngInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10004_legalEntityClosuresInfo">
+    <wsdl:part element="tns:GS10004_legalEntityClosuresInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10029_citizenNoMarriageInfoData">
+    <wsdl:part element="tns:GS10029_citizenNoMarriageInfoData" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10031_ssoPhoneCheck">
+    <wsdl:part element="tns:GS10031_ssoPhoneCheck" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10001_citizenDiagnosisInfo">
+    <wsdl:part element="tns:GS10001_citizenDiagnosisInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10021_covidVaccineDoseCount">
+    <wsdl:part element="tns:GS10021_covidVaccineDoseCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10002_citizenCovid19EPass">
+    <wsdl:part element="tns:GS10002_citizenCovid19EPass" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10006_legalEntityIndustryInfo">
+    <wsdl:part element="tns:GS10006_legalEntityIndustryInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10019_firearmOwnerCertificateInfo">
+    <wsdl:part element="tns:GS10019_firearmOwnerCertificateInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10012_citizenAddressArrivedInfo">
+    <wsdl:part element="tns:GS10012_citizenAddressArrivedInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10017_citizenInternationalCert">
+    <wsdl:part element="tns:GS10017_citizenInternationalCert" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10026_citizenIDCardInfoEngResponse">
+    <wsdl:part element="tns:GS10026_citizenIDCardInfoEngResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10005_legalEntityFounderInfoResponse">
+    <wsdl:part element="tns:GS10005_legalEntityFounderInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10027_citizenBirthInfoEngResponse">
+    <wsdl:part element="tns:GS10027_citizenBirthInfoEngResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10021_covidVaccineDoseCountResponse">
+    <wsdl:part element="tns:GS10021_covidVaccineDoseCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10008_legalEntityGeneralInfoResponse">
+    <wsdl:part element="tns:GS10008_legalEntityGeneralInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10027_citizenBirthInfoEng">
+    <wsdl:part element="tns:GS10027_citizenBirthInfoEng" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10030_citizenMarriageInfoEngResponse">
+    <wsdl:part element="tns:GS10030_citizenMarriageInfoEngResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10012_citizenAddressArrivedInfoResponse">
+    <wsdl:part element="tns:GS10012_citizenAddressArrivedInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10010_legalEntityStakeHolderInfoResponse">
+    <wsdl:part element="tns:GS10010_legalEntityStakeHolderInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10029_citizenNoMarriageInfoDataResponse">
+    <wsdl:part element="tns:GS10029_citizenNoMarriageInfoDataResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10001_citizenDiagnosisInfoResponse">
+    <wsdl:part element="tns:GS10001_citizenDiagnosisInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10026_citizenIDCardInfoEng">
+    <wsdl:part element="tns:GS10026_citizenIDCardInfoEng" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10015_citizenIDCardFirstTimeInfoResponse">
+    <wsdl:part element="tns:GS10015_citizenIDCardFirstTimeInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10030_citizenMarriageInfoEng">
+    <wsdl:part element="tns:GS10030_citizenMarriageInfoEng" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10019_firearmOwnerCertificateInfoResponse">
+    <wsdl:part element="tns:GS10019_firearmOwnerCertificateInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10020_nonAdultCitizenInfo">
+    <wsdl:part element="tns:GS10020_nonAdultCitizenInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10014_citizenChangeRegnumInfoResponse">
+    <wsdl:part element="tns:GS10014_citizenChangeRegnumInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10022_studentSoldierInfoResponse">
+    <wsdl:part element="tns:GS10022_studentSoldierInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10003_legalEntityBranchInfoResponse">
+    <wsdl:part element="tns:GS10003_legalEntityBranchInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10015_citizenIDCardFirstTimeInfo">
+    <wsdl:part element="tns:GS10015_citizenIDCardFirstTimeInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10013_citizenChangeNameInfoResponse">
+    <wsdl:part element="tns:GS10013_citizenChangeNameInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10018_foreignCitizenInternationalCertResponse">
+    <wsdl:part element="tns:GS10018_foreignCitizenInternationalCertResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10028_citizenNonPaymentEngInfo">
+    <wsdl:part element="tns:GS10028_citizenNonPaymentEngInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10025_notaryTrustArchivedInfo">
+    <wsdl:part element="tns:GS10025_notaryTrustArchivedInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10005_legalEntityFounderInfo">
+    <wsdl:part element="tns:GS10005_legalEntityFounderInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10017_citizenInternationalCertResponse">
+    <wsdl:part element="tns:GS10017_citizenInternationalCertResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10011_childrenBirthInfo">
+    <wsdl:part element="tns:GS10011_childrenBirthInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10008_legalEntityGeneralInfo">
+    <wsdl:part element="tns:GS10008_legalEntityGeneralInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10023_notaryTrustInfo">
+    <wsdl:part element="tns:GS10023_notaryTrustInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10024_notaryVehicleInfo">
+    <wsdl:part element="tns:GS10024_notaryVehicleInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10031_ssoPhoneCheckResponse">
+    <wsdl:part element="tns:GS10031_ssoPhoneCheckResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10006_legalEntityIndustryInfoResponse">
+    <wsdl:part element="tns:GS10006_legalEntityIndustryInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10022_studentSoldierInfo">
+    <wsdl:part element="tns:GS10022_studentSoldierInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10024_notaryVehicleInfoResponse">
+    <wsdl:part element="tns:GS10024_notaryVehicleInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10013_citizenChangeNameInfo">
+    <wsdl:part element="tns:GS10013_citizenChangeNameInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10009_legalEntityShareHolderInfoResponse">
+    <wsdl:part element="tns:GS10009_legalEntityShareHolderInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10025_notaryTrustArchivedInfoResponse">
+    <wsdl:part element="tns:GS10025_notaryTrustArchivedInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10011_childrenBirthInfoResponse">
+    <wsdl:part element="tns:GS10011_childrenBirthInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10009_legalEntityShareHolderInfo">
+    <wsdl:part element="tns:GS10009_legalEntityShareHolderInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10003_legalEntityBranchInfo">
+    <wsdl:part element="tns:GS10003_legalEntityBranchInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10018_foreignCitizenInternationalCert">
+    <wsdl:part element="tns:GS10018_foreignCitizenInternationalCert" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10004_legalEntityClosuresInfoResponse">
+    <wsdl:part element="tns:GS10004_legalEntityClosuresInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10010_legalEntityStakeHolderInfo">
+    <wsdl:part element="tns:GS10010_legalEntityStakeHolderInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10002_citizenCovid19EPassResponse">
+    <wsdl:part element="tns:GS10002_citizenCovid19EPassResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10016_covid19MedicalCertificateInfoResponse">
+    <wsdl:part element="tns:GS10016_covid19MedicalCertificateInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10016_covid19MedicalCertificateInfo">
+    <wsdl:part element="tns:GS10016_covid19MedicalCertificateInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10014_citizenChangeRegnumInfo">
+    <wsdl:part element="tns:GS10014_citizenChangeRegnumInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10023_notaryTrustInfoResponse">
+    <wsdl:part element="tns:GS10023_notaryTrustInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GS10007_legalEntityOwnerInfoResponse">
+    <wsdl:part element="tns:GS10007_legalEntityOwnerInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="GovernmentService">
+    <wsdl:operation name="GS10007_legalEntityOwnerInfo">
+      <wsdl:input message="tns:GS10007_legalEntityOwnerInfo" name="GS10007_legalEntityOwnerInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10007_legalEntityOwnerInfoResponse" name="GS10007_legalEntityOwnerInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10015_citizenIDCardFirstTimeInfo">
+      <wsdl:input message="tns:GS10015_citizenIDCardFirstTimeInfo" name="GS10015_citizenIDCardFirstTimeInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10015_citizenIDCardFirstTimeInfoResponse" name="GS10015_citizenIDCardFirstTimeInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10028_citizenNonPaymentEngInfo">
+      <wsdl:input message="tns:GS10028_citizenNonPaymentEngInfo" name="GS10028_citizenNonPaymentEngInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10028_citizenNonPaymentEngInfoResponse" name="GS10028_citizenNonPaymentEngInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10004_legalEntityClosuresInfo">
+      <wsdl:input message="tns:GS10004_legalEntityClosuresInfo" name="GS10004_legalEntityClosuresInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10004_legalEntityClosuresInfoResponse" name="GS10004_legalEntityClosuresInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10029_citizenNoMarriageInfoData">
+      <wsdl:input message="tns:GS10029_citizenNoMarriageInfoData" name="GS10029_citizenNoMarriageInfoData">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10029_citizenNoMarriageInfoDataResponse" name="GS10029_citizenNoMarriageInfoDataResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10031_ssoPhoneCheck">
+      <wsdl:input message="tns:GS10031_ssoPhoneCheck" name="GS10031_ssoPhoneCheck">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10031_ssoPhoneCheckResponse" name="GS10031_ssoPhoneCheckResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10001_citizenDiagnosisInfo">
+      <wsdl:input message="tns:GS10001_citizenDiagnosisInfo" name="GS10001_citizenDiagnosisInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10001_citizenDiagnosisInfoResponse" name="GS10001_citizenDiagnosisInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10021_covidVaccineDoseCount">
+      <wsdl:input message="tns:GS10021_covidVaccineDoseCount" name="GS10021_covidVaccineDoseCount">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10021_covidVaccineDoseCountResponse" name="GS10021_covidVaccineDoseCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10025_notaryTrustArchivedInfo">
+      <wsdl:input message="tns:GS10025_notaryTrustArchivedInfo" name="GS10025_notaryTrustArchivedInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10025_notaryTrustArchivedInfoResponse" name="GS10025_notaryTrustArchivedInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10002_citizenCovid19EPass">
+      <wsdl:input message="tns:GS10002_citizenCovid19EPass" name="GS10002_citizenCovid19EPass">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10002_citizenCovid19EPassResponse" name="GS10002_citizenCovid19EPassResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10006_legalEntityIndustryInfo">
+      <wsdl:input message="tns:GS10006_legalEntityIndustryInfo" name="GS10006_legalEntityIndustryInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10006_legalEntityIndustryInfoResponse" name="GS10006_legalEntityIndustryInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10019_firearmOwnerCertificateInfo">
+      <wsdl:input message="tns:GS10019_firearmOwnerCertificateInfo" name="GS10019_firearmOwnerCertificateInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10019_firearmOwnerCertificateInfoResponse" name="GS10019_firearmOwnerCertificateInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10012_citizenAddressArrivedInfo">
+      <wsdl:input message="tns:GS10012_citizenAddressArrivedInfo" name="GS10012_citizenAddressArrivedInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10012_citizenAddressArrivedInfoResponse" name="GS10012_citizenAddressArrivedInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10005_legalEntityFounderInfo">
+      <wsdl:input message="tns:GS10005_legalEntityFounderInfo" name="GS10005_legalEntityFounderInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10005_legalEntityFounderInfoResponse" name="GS10005_legalEntityFounderInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10017_citizenInternationalCert">
+      <wsdl:input message="tns:GS10017_citizenInternationalCert" name="GS10017_citizenInternationalCert">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10017_citizenInternationalCertResponse" name="GS10017_citizenInternationalCertResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10011_childrenBirthInfo">
+      <wsdl:input message="tns:GS10011_childrenBirthInfo" name="GS10011_childrenBirthInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10011_childrenBirthInfoResponse" name="GS10011_childrenBirthInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10008_legalEntityGeneralInfo">
+      <wsdl:input message="tns:GS10008_legalEntityGeneralInfo" name="GS10008_legalEntityGeneralInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10008_legalEntityGeneralInfoResponse" name="GS10008_legalEntityGeneralInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10023_notaryTrustInfo">
+      <wsdl:input message="tns:GS10023_notaryTrustInfo" name="GS10023_notaryTrustInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10023_notaryTrustInfoResponse" name="GS10023_notaryTrustInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10024_notaryVehicleInfo">
+      <wsdl:input message="tns:GS10024_notaryVehicleInfo" name="GS10024_notaryVehicleInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10024_notaryVehicleInfoResponse" name="GS10024_notaryVehicleInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10027_citizenBirthInfoEng">
+      <wsdl:input message="tns:GS10027_citizenBirthInfoEng" name="GS10027_citizenBirthInfoEng">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10027_citizenBirthInfoEngResponse" name="GS10027_citizenBirthInfoEngResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10022_studentSoldierInfo">
+      <wsdl:input message="tns:GS10022_studentSoldierInfo" name="GS10022_studentSoldierInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10022_studentSoldierInfoResponse" name="GS10022_studentSoldierInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10013_citizenChangeNameInfo">
+      <wsdl:input message="tns:GS10013_citizenChangeNameInfo" name="GS10013_citizenChangeNameInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10013_citizenChangeNameInfoResponse" name="GS10013_citizenChangeNameInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10026_citizenIDCardInfoEng">
+      <wsdl:input message="tns:GS10026_citizenIDCardInfoEng" name="GS10026_citizenIDCardInfoEng">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10026_citizenIDCardInfoEngResponse" name="GS10026_citizenIDCardInfoEngResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10030_citizenMarriageInfoEng">
+      <wsdl:input message="tns:GS10030_citizenMarriageInfoEng" name="GS10030_citizenMarriageInfoEng">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10030_citizenMarriageInfoEngResponse" name="GS10030_citizenMarriageInfoEngResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10009_legalEntityShareHolderInfo">
+      <wsdl:input message="tns:GS10009_legalEntityShareHolderInfo" name="GS10009_legalEntityShareHolderInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10009_legalEntityShareHolderInfoResponse" name="GS10009_legalEntityShareHolderInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10003_legalEntityBranchInfo">
+      <wsdl:input message="tns:GS10003_legalEntityBranchInfo" name="GS10003_legalEntityBranchInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10003_legalEntityBranchInfoResponse" name="GS10003_legalEntityBranchInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10018_foreignCitizenInternationalCert">
+      <wsdl:input message="tns:GS10018_foreignCitizenInternationalCert" name="GS10018_foreignCitizenInternationalCert">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10018_foreignCitizenInternationalCertResponse" name="GS10018_foreignCitizenInternationalCertResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10010_legalEntityStakeHolderInfo">
+      <wsdl:input message="tns:GS10010_legalEntityStakeHolderInfo" name="GS10010_legalEntityStakeHolderInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10010_legalEntityStakeHolderInfoResponse" name="GS10010_legalEntityStakeHolderInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10016_covid19MedicalCertificateInfo">
+      <wsdl:input message="tns:GS10016_covid19MedicalCertificateInfo" name="GS10016_covid19MedicalCertificateInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10016_covid19MedicalCertificateInfoResponse" name="GS10016_covid19MedicalCertificateInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10014_citizenChangeRegnumInfo">
+      <wsdl:input message="tns:GS10014_citizenChangeRegnumInfo" name="GS10014_citizenChangeRegnumInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10014_citizenChangeRegnumInfoResponse" name="GS10014_citizenChangeRegnumInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10020_nonAdultCitizenInfo">
+      <wsdl:input message="tns:GS10020_nonAdultCitizenInfo" name="GS10020_nonAdultCitizenInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GS10020_nonAdultCitizenInfoResponse" name="GS10020_nonAdultCitizenInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GovernmentServiceServiceSoapBinding" type="tns:GovernmentService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GS10007_legalEntityOwnerInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10007_legalEntityOwnerInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10007_legalEntityOwnerInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10015_citizenIDCardFirstTimeInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10015_citizenIDCardFirstTimeInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10015_citizenIDCardFirstTimeInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10028_citizenNonPaymentEngInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10028_citizenNonPaymentEngInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10028_citizenNonPaymentEngInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10004_legalEntityClosuresInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10004_legalEntityClosuresInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10004_legalEntityClosuresInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10029_citizenNoMarriageInfoData">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10029_citizenNoMarriageInfoData">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10029_citizenNoMarriageInfoDataResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10031_ssoPhoneCheck">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10031_ssoPhoneCheck">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10031_ssoPhoneCheckResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10025_notaryTrustArchivedInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10025_notaryTrustArchivedInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10025_notaryTrustArchivedInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10021_covidVaccineDoseCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10021_covidVaccineDoseCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10021_covidVaccineDoseCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10001_citizenDiagnosisInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10001_citizenDiagnosisInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10001_citizenDiagnosisInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10002_citizenCovid19EPass">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10002_citizenCovid19EPass">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10002_citizenCovid19EPassResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10006_legalEntityIndustryInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10006_legalEntityIndustryInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10006_legalEntityIndustryInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10019_firearmOwnerCertificateInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10019_firearmOwnerCertificateInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10019_firearmOwnerCertificateInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10012_citizenAddressArrivedInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10012_citizenAddressArrivedInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10012_citizenAddressArrivedInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10005_legalEntityFounderInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10005_legalEntityFounderInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10005_legalEntityFounderInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10017_citizenInternationalCert">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10017_citizenInternationalCert">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10017_citizenInternationalCertResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10011_childrenBirthInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10011_childrenBirthInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10011_childrenBirthInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10008_legalEntityGeneralInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10008_legalEntityGeneralInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10008_legalEntityGeneralInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10023_notaryTrustInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10023_notaryTrustInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10023_notaryTrustInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10024_notaryVehicleInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10024_notaryVehicleInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10024_notaryVehicleInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10027_citizenBirthInfoEng">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10027_citizenBirthInfoEng">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10027_citizenBirthInfoEngResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10022_studentSoldierInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10022_studentSoldierInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10022_studentSoldierInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10013_citizenChangeNameInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10013_citizenChangeNameInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10013_citizenChangeNameInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10026_citizenIDCardInfoEng">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10026_citizenIDCardInfoEng">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10026_citizenIDCardInfoEngResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10030_citizenMarriageInfoEng">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10030_citizenMarriageInfoEng">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10030_citizenMarriageInfoEngResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10009_legalEntityShareHolderInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10009_legalEntityShareHolderInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10009_legalEntityShareHolderInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10003_legalEntityBranchInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10003_legalEntityBranchInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10003_legalEntityBranchInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10018_foreignCitizenInternationalCert">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10018_foreignCitizenInternationalCert">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10018_foreignCitizenInternationalCertResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10010_legalEntityStakeHolderInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10010_legalEntityStakeHolderInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10010_legalEntityStakeHolderInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10016_covid19MedicalCertificateInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10016_covid19MedicalCertificateInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10016_covid19MedicalCertificateInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10014_citizenChangeRegnumInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10014_citizenChangeRegnumInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10014_citizenChangeRegnumInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GS10020_nonAdultCitizenInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GS10020_nonAdultCitizenInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GS10020_nonAdultCitizenInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GovernmentServiceService">
+    <wsdl:port binding="tns:GovernmentServiceServiceSoapBinding" name="GovernmentServicePort">
+      <soap:address location="http://xyp.gov.mn/government-service-1.5.0/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

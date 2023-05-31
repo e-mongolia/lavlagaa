@@ -1,0 +1,1020 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://citizen.xyp.gov.mn/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="CitizenServiceService" targetNamespace="http://citizen.xyp.gov.mn/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://citizen.xyp.gov.mn/" elementFormDefault="unqualified" targetNamespace="http://citizen.xyp.gov.mn/" version="1.0">
+
+  <xs:element name="WS100101_getCitizenIDCardInfo" type="tns:WS100101_getCitizenIDCardInfo"/>
+
+  <xs:element name="WS100101_getCitizenIDCardInfoResponse" type="tns:WS100101_getCitizenIDCardInfoResponse"/>
+
+  <xs:element name="WS100102_getCitizenBirthInfo" type="tns:WS100102_getCitizenBirthInfo"/>
+
+  <xs:element name="WS100102_getCitizenBirthInfoResponse" type="tns:WS100102_getCitizenBirthInfoResponse"/>
+
+  <xs:element name="WS100103_getCitizenAddressInfo" type="tns:WS100103_getCitizenAddressInfo"/>
+
+  <xs:element name="WS100103_getCitizenAddressInfoResponse" type="tns:WS100103_getCitizenAddressInfoResponse"/>
+
+  <xs:element name="WS100104_getCitizenMarriageInfo" type="tns:WS100104_getCitizenMarriageInfo"/>
+
+  <xs:element name="WS100104_getCitizenMarriageInfoResponse" type="tns:WS100104_getCitizenMarriageInfoResponse"/>
+
+  <xs:element name="WS100105_getCitizenMarriageDivorceInfo" type="tns:WS100105_getCitizenMarriageDivorceInfo"/>
+
+  <xs:element name="WS100105_getCitizenMarriageDivorceInfoResponse" type="tns:WS100105_getCitizenMarriageDivorceInfoResponse"/>
+
+  <xs:element name="WS100106_authorizeCitizen" type="tns:WS100106_authorizeCitizen"/>
+
+  <xs:element name="WS100106_authorizeCitizenResponse" type="tns:WS100106_authorizeCitizenResponse"/>
+
+  <xs:element name="WS100107_checkCitizenInfo" type="tns:WS100107_checkCitizenInfo"/>
+
+  <xs:element name="WS100107_checkCitizenInfoResponse" type="tns:WS100107_checkCitizenInfoResponse"/>
+
+  <xs:element name="WS100110_passportInfo" type="tns:WS100110_passportInfo"/>
+
+  <xs:element name="WS100110_passportInfoResponse" type="tns:WS100110_passportInfoResponse"/>
+
+  <xs:element name="WS100117_checkCitizenAddressInfo" type="tns:WS100117_checkCitizenAddressInfo"/>
+
+  <xs:element name="WS100117_checkCitizenAddressInfoResponse" type="tns:WS100117_checkCitizenAddressInfoResponse"/>
+
+  <xs:element name="WS100125_checkCitizenRegnum" type="tns:WS100125_checkCitizenRegnum"/>
+
+  <xs:element name="WS100125_checkCitizenRegnumResponse" type="tns:WS100125_checkCitizenRegnumResponse"/>
+
+  <xs:element name="WS100128_getCitizenNoMarriageInfo" type="tns:WS100128_getCitizenNoMarriageInfo"/>
+
+  <xs:element name="WS100128_getCitizenNoMarriageInfoResponse" type="tns:WS100128_getCitizenNoMarriageInfoResponse"/>
+
+  <xs:element name="WS100134_getCitizenChangeNameInfo" type="tns:WS100134_getCitizenChangeNameInfo"/>
+
+  <xs:element name="WS100134_getCitizenChangeNameInfoResponse" type="tns:WS100134_getCitizenChangeNameInfoResponse"/>
+
+  <xs:element name="WS100138_getCitizenRegnumInfo" type="tns:WS100138_getCitizenRegnumInfo"/>
+
+  <xs:element name="WS100138_getCitizenRegnumInfoResponse" type="tns:WS100138_getCitizenRegnumInfoResponse"/>
+
+  <xs:element name="WS100139_getCitizenChangeRegnumInfo" type="tns:WS100139_getCitizenChangeRegnumInfo"/>
+
+  <xs:element name="WS100139_getCitizenChangeRegnumInfoResponse" type="tns:WS100139_getCitizenChangeRegnumInfoResponse"/>
+
+  <xs:element name="WS100140_firstTimePassportInfo" type="tns:WS100140_firstTimePassportInfo"/>
+
+  <xs:element name="WS100140_firstTimePassportInfoResponse" type="tns:WS100140_firstTimePassportInfoResponse"/>
+
+  <xs:element name="WS100141_passportInfoSecondTime" type="tns:WS100141_passportInfoSecondTime"/>
+
+  <xs:element name="WS100141_passportInfoSecondTimeResponse" type="tns:WS100141_passportInfoSecondTimeResponse"/>
+
+  <xs:complexType name="WS100125_checkCitizenRegnum">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:serviceCheckCitizenRegnumRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceCheckCitizenRegnumRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auth" type="tns:authorizationData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="citizen" type="tns:authorizationEntity"/>
+      <xs:element minOccurs="0" name="operator" type="tns:authorizationEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="certFingerprint" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="fingerprint" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="signature" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100125_checkCitizenRegnumResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="xs:anyType"/>
+      <xs:element minOccurs="0" name="requestId" type="xs:string"/>
+      <xs:element minOccurs="0" name="response" type="xs:anyType"/>
+      <xs:element name="resultCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="resultMessage" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkCitizenRegnumData">
+    <xs:sequence>
+      <xs:element name="valid" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100102_getCitizenBirthInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100102_getCitizenBirthInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenBirthData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birthDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="birthDateAsText" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthPlace" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="father" type="tns:citizenBriefData"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="gender" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="mother" type="tns:citizenBriefData"/>
+      <xs:element minOccurs="0" name="nationalityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="registrationCity" type="xs:string"/>
+      <xs:element minOccurs="0" name="registrationDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="registrationDistrict" type="xs:string"/>
+      <xs:element minOccurs="0" name="registrationId" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenBriefData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="nationalityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100106_authorizeCitizen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100106_authorizeCitizenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenAuthorizeResponse">
+    <xs:sequence>
+      <xs:element name="result" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100101_getCitizenIDCardInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100101_getCitizenIDCardInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressApartmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressDetail" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressRegionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressTownName" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="birthDateAsText" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthPlace" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="gender" type="xs:string"/>
+      <xs:element minOccurs="0" name="image" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listAddress" nillable="true" type="tns:citizenChangedAddressData"/>
+      <xs:element minOccurs="0" name="nationality" type="xs:string"/>
+      <xs:element minOccurs="0" name="passTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="passportAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="passportDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="passportExpireDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="passportIssueDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="passportNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="personId" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenChangedAddressData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressApartmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressDoor" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressRegionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressTownName" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100138_getCitizenRegnumInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100138_getCitizenRegnumInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenRegnumData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birthDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="citizenship" type="xs:string"/>
+      <xs:element minOccurs="0" name="forename" type="xs:string"/>
+      <xs:element minOccurs="0" name="givenname" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="sex" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100103_getCitizenAddressInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100103_getCitizenAddressInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenAddressData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressApartmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressDetail" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressRegionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressStreetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressTownName" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="aimagCityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagKhorooName" type="xs:string"/>
+      <xs:element minOccurs="0" name="citizenship" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="fullAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumDistrictName" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100140_firstTimePassportInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100140_firstTimePassportInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="firstTimePassportData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="citizenship" type="xs:string"/>
+      <xs:element minOccurs="0" name="forename" type="xs:string"/>
+      <xs:element minOccurs="0" name="givenname" type="xs:string"/>
+      <xs:element minOccurs="0" name="issuedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="passportNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100117_checkCitizenAddressInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:serviceCheckCitizenAddressInfoRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceCheckCitizenAddressInfoRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="aimagCityCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="apartmentId" type="xs:string"/>
+          <xs:element minOccurs="0" name="bagKhorooCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element minOccurs="0" name="soumDistrictCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="streetId" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100117_checkCitizenAddressInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkCitizenAddressInfoData">
+    <xs:sequence>
+      <xs:element name="valid" type="xs:boolean"/>
+      <xs:element name="validAimagCity" type="xs:boolean"/>
+      <xs:element name="validApartemnt" type="xs:boolean"/>
+      <xs:element name="validBagKhoroo" type="xs:boolean"/>
+      <xs:element name="validSoumDistrict" type="xs:boolean"/>
+      <xs:element name="validStreet" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100134_getCitizenChangeNameInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100134_getCitizenChangeNameInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenChangeNameData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="changeNameCertifNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="newFirstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="newLastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="newSurname" type="xs:string"/>
+      <xs:element minOccurs="0" name="regDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="registeredNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="registryUnitname" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100128_getCitizenNoMarriageInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100128_getCitizenNoMarriageInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenNoMarriageData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="citizenship" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="purpose" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="sex" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100139_getCitizenChangeRegnumInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100139_getCitizenChangeRegnumInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenChangeRegnumData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="causeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="causeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="citizenship" type="xs:string"/>
+      <xs:element minOccurs="0" name="forename" type="xs:string"/>
+      <xs:element minOccurs="0" name="givenname" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnumNew" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnumOld" type="xs:string"/>
+      <xs:element minOccurs="0" name="sex" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100110_passportInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:servicePassortInfoRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="servicePassortInfoRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100110_passportInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="passportInfoData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:passportInfoDataDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="passportInfoDataDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="expiryDateAsText" type="xs:string"/>
+      <xs:element minOccurs="0" name="extendDateAsText" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstnameEng" type="xs:string"/>
+      <xs:element minOccurs="0" name="image" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="issuedDateAsText" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastnameEng" type="xs:string"/>
+      <xs:element minOccurs="0" name="passportNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="passportStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnumEng" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100107_checkCitizenInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:checkCitizenInfoRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkCitizenInfoRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100107_checkCitizenInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkCitizenData">
+    <xs:sequence>
+      <xs:element name="matched" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100105_getCitizenMarriageDivorceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100105_getCitizenMarriageDivorceInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenMarriageDivorceData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cancelCity" type="xs:string"/>
+      <xs:element minOccurs="0" name="cancelDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="cancelDistrict" type="xs:string"/>
+      <xs:element minOccurs="0" name="cancelId" type="xs:string"/>
+      <xs:element minOccurs="0" name="courtCity" type="xs:string"/>
+      <xs:element minOccurs="0" name="courtDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="courtDistrict" type="xs:string"/>
+      <xs:element minOccurs="0" name="courtId" type="xs:string"/>
+      <xs:element minOccurs="0" name="divorceTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="husband" type="tns:citizenMarriageBriefData"/>
+      <xs:element minOccurs="0" name="marriedDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="wife" type="tns:citizenMarriageBriefData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenMarriageBriefData">
+    <xs:complexContent>
+      <xs:extension base="tns:citizenBriefData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="country" type="xs:string"/>
+          <xs:element minOccurs="0" name="marriageStatus" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100141_passportInfoSecondTime">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100141_passportInfoSecondTimeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="passportInfoSecondTimeData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birthDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="citizenship" type="xs:string"/>
+      <xs:element minOccurs="0" name="forename" type="xs:string"/>
+      <xs:element minOccurs="0" name="givenname" type="xs:string"/>
+      <xs:element minOccurs="0" name="invCauseName" type="xs:string"/>
+      <xs:element minOccurs="0" name="invIssuedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="invPassportNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="issuedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="passportNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="sex" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100104_getCitizenMarriageInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:citizenRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100104_getCitizenMarriageInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenMarriageData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="husband" type="tns:citizenMarriageBriefData"/>
+      <xs:element name="married" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="marriedDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredCity" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredDistrict" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredId" type="xs:string"/>
+      <xs:element minOccurs="0" name="wife" type="tns:citizenMarriageBriefData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WS100125_checkCitizenRegnumResponse">
+    <wsdl:part element="tns:WS100125_checkCitizenRegnumResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100104_getCitizenMarriageInfoResponse">
+    <wsdl:part element="tns:WS100104_getCitizenMarriageInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100102_getCitizenBirthInfo">
+    <wsdl:part element="tns:WS100102_getCitizenBirthInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100106_authorizeCitizen">
+    <wsdl:part element="tns:WS100106_authorizeCitizen" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100110_passportInfoResponse">
+    <wsdl:part element="tns:WS100110_passportInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100106_authorizeCitizenResponse">
+    <wsdl:part element="tns:WS100106_authorizeCitizenResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100134_getCitizenChangeNameInfoResponse">
+    <wsdl:part element="tns:WS100134_getCitizenChangeNameInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100139_getCitizenChangeRegnumInfoResponse">
+    <wsdl:part element="tns:WS100139_getCitizenChangeRegnumInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100107_checkCitizenInfoResponse">
+    <wsdl:part element="tns:WS100107_checkCitizenInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100139_getCitizenChangeRegnumInfo">
+    <wsdl:part element="tns:WS100139_getCitizenChangeRegnumInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100105_getCitizenMarriageDivorceInfoResponse">
+    <wsdl:part element="tns:WS100105_getCitizenMarriageDivorceInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100128_getCitizenNoMarriageInfoResponse">
+    <wsdl:part element="tns:WS100128_getCitizenNoMarriageInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100110_passportInfo">
+    <wsdl:part element="tns:WS100110_passportInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100141_passportInfoSecondTime">
+    <wsdl:part element="tns:WS100141_passportInfoSecondTime" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100140_firstTimePassportInfoResponse">
+    <wsdl:part element="tns:WS100140_firstTimePassportInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100101_getCitizenIDCardInfoResponse">
+    <wsdl:part element="tns:WS100101_getCitizenIDCardInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100103_getCitizenAddressInfoResponse">
+    <wsdl:part element="tns:WS100103_getCitizenAddressInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100117_checkCitizenAddressInfoResponse">
+    <wsdl:part element="tns:WS100117_checkCitizenAddressInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100125_checkCitizenRegnum">
+    <wsdl:part element="tns:WS100125_checkCitizenRegnum" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100101_getCitizenIDCardInfo">
+    <wsdl:part element="tns:WS100101_getCitizenIDCardInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100138_getCitizenRegnumInfo">
+    <wsdl:part element="tns:WS100138_getCitizenRegnumInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100102_getCitizenBirthInfoResponse">
+    <wsdl:part element="tns:WS100102_getCitizenBirthInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100103_getCitizenAddressInfo">
+    <wsdl:part element="tns:WS100103_getCitizenAddressInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100140_firstTimePassportInfo">
+    <wsdl:part element="tns:WS100140_firstTimePassportInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100117_checkCitizenAddressInfo">
+    <wsdl:part element="tns:WS100117_checkCitizenAddressInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100134_getCitizenChangeNameInfo">
+    <wsdl:part element="tns:WS100134_getCitizenChangeNameInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100138_getCitizenRegnumInfoResponse">
+    <wsdl:part element="tns:WS100138_getCitizenRegnumInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100128_getCitizenNoMarriageInfo">
+    <wsdl:part element="tns:WS100128_getCitizenNoMarriageInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100107_checkCitizenInfo">
+    <wsdl:part element="tns:WS100107_checkCitizenInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100105_getCitizenMarriageDivorceInfo">
+    <wsdl:part element="tns:WS100105_getCitizenMarriageDivorceInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100104_getCitizenMarriageInfo">
+    <wsdl:part element="tns:WS100104_getCitizenMarriageInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100141_passportInfoSecondTimeResponse">
+    <wsdl:part element="tns:WS100141_passportInfoSecondTimeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CitizenService">
+    <wsdl:operation name="WS100125_checkCitizenRegnum">
+      <wsdl:input message="tns:WS100125_checkCitizenRegnum" name="WS100125_checkCitizenRegnum">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100125_checkCitizenRegnumResponse" name="WS100125_checkCitizenRegnumResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100102_getCitizenBirthInfo">
+      <wsdl:input message="tns:WS100102_getCitizenBirthInfo" name="WS100102_getCitizenBirthInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100102_getCitizenBirthInfoResponse" name="WS100102_getCitizenBirthInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100106_authorizeCitizen">
+      <wsdl:input message="tns:WS100106_authorizeCitizen" name="WS100106_authorizeCitizen">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100106_authorizeCitizenResponse" name="WS100106_authorizeCitizenResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100101_getCitizenIDCardInfo">
+      <wsdl:input message="tns:WS100101_getCitizenIDCardInfo" name="WS100101_getCitizenIDCardInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100101_getCitizenIDCardInfoResponse" name="WS100101_getCitizenIDCardInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100138_getCitizenRegnumInfo">
+      <wsdl:input message="tns:WS100138_getCitizenRegnumInfo" name="WS100138_getCitizenRegnumInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100138_getCitizenRegnumInfoResponse" name="WS100138_getCitizenRegnumInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100103_getCitizenAddressInfo">
+      <wsdl:input message="tns:WS100103_getCitizenAddressInfo" name="WS100103_getCitizenAddressInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100103_getCitizenAddressInfoResponse" name="WS100103_getCitizenAddressInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100140_firstTimePassportInfo">
+      <wsdl:input message="tns:WS100140_firstTimePassportInfo" name="WS100140_firstTimePassportInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100140_firstTimePassportInfoResponse" name="WS100140_firstTimePassportInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100117_checkCitizenAddressInfo">
+      <wsdl:input message="tns:WS100117_checkCitizenAddressInfo" name="WS100117_checkCitizenAddressInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100117_checkCitizenAddressInfoResponse" name="WS100117_checkCitizenAddressInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100134_getCitizenChangeNameInfo">
+      <wsdl:input message="tns:WS100134_getCitizenChangeNameInfo" name="WS100134_getCitizenChangeNameInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100134_getCitizenChangeNameInfoResponse" name="WS100134_getCitizenChangeNameInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100128_getCitizenNoMarriageInfo">
+      <wsdl:input message="tns:WS100128_getCitizenNoMarriageInfo" name="WS100128_getCitizenNoMarriageInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100128_getCitizenNoMarriageInfoResponse" name="WS100128_getCitizenNoMarriageInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100139_getCitizenChangeRegnumInfo">
+      <wsdl:input message="tns:WS100139_getCitizenChangeRegnumInfo" name="WS100139_getCitizenChangeRegnumInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100139_getCitizenChangeRegnumInfoResponse" name="WS100139_getCitizenChangeRegnumInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100110_passportInfo">
+      <wsdl:input message="tns:WS100110_passportInfo" name="WS100110_passportInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100110_passportInfoResponse" name="WS100110_passportInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100107_checkCitizenInfo">
+      <wsdl:input message="tns:WS100107_checkCitizenInfo" name="WS100107_checkCitizenInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100107_checkCitizenInfoResponse" name="WS100107_checkCitizenInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100105_getCitizenMarriageDivorceInfo">
+      <wsdl:input message="tns:WS100105_getCitizenMarriageDivorceInfo" name="WS100105_getCitizenMarriageDivorceInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100105_getCitizenMarriageDivorceInfoResponse" name="WS100105_getCitizenMarriageDivorceInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100141_passportInfoSecondTime">
+      <wsdl:input message="tns:WS100141_passportInfoSecondTime" name="WS100141_passportInfoSecondTime">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100141_passportInfoSecondTimeResponse" name="WS100141_passportInfoSecondTimeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100104_getCitizenMarriageInfo">
+      <wsdl:input message="tns:WS100104_getCitizenMarriageInfo" name="WS100104_getCitizenMarriageInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100104_getCitizenMarriageInfoResponse" name="WS100104_getCitizenMarriageInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CitizenServiceServiceSoapBinding" type="tns:CitizenService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WS100125_checkCitizenRegnum">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100125_checkCitizenRegnum">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100125_checkCitizenRegnumResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100102_getCitizenBirthInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100102_getCitizenBirthInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100102_getCitizenBirthInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100106_authorizeCitizen">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100106_authorizeCitizen">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100106_authorizeCitizenResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100138_getCitizenRegnumInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100138_getCitizenRegnumInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100138_getCitizenRegnumInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100101_getCitizenIDCardInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100101_getCitizenIDCardInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100101_getCitizenIDCardInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100103_getCitizenAddressInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100103_getCitizenAddressInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100103_getCitizenAddressInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100140_firstTimePassportInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100140_firstTimePassportInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100140_firstTimePassportInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100117_checkCitizenAddressInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100117_checkCitizenAddressInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100117_checkCitizenAddressInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100134_getCitizenChangeNameInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100134_getCitizenChangeNameInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100134_getCitizenChangeNameInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100128_getCitizenNoMarriageInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100128_getCitizenNoMarriageInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100128_getCitizenNoMarriageInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100139_getCitizenChangeRegnumInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100139_getCitizenChangeRegnumInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100139_getCitizenChangeRegnumInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100110_passportInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100110_passportInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100110_passportInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100107_checkCitizenInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100107_checkCitizenInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100107_checkCitizenInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100105_getCitizenMarriageDivorceInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100105_getCitizenMarriageDivorceInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100105_getCitizenMarriageDivorceInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100141_passportInfoSecondTime">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100141_passportInfoSecondTime">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100141_passportInfoSecondTimeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100104_getCitizenMarriageInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100104_getCitizenMarriageInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100104_getCitizenMarriageInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CitizenServiceService">
+    <wsdl:port binding="tns:CitizenServiceServiceSoapBinding" name="CitizenServicePort">
+      <soap:address location="http://xyp.gov.mn/citizen-1.4.0/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

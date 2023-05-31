@@ -1,0 +1,1190 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://health.xyp.gov.mn/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="HealthServiceService" targetNamespace="http://health.xyp.gov.mn/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://health.xyp.gov.mn/" elementFormDefault="unqualified" targetNamespace="http://health.xyp.gov.mn/" version="1.0">
+
+  <xs:element name="WS300101_getInsuranceFee" type="tns:WS300101_getInsuranceFee"/>
+
+  <xs:element name="WS300101_getInsuranceFeeResponse" type="tns:WS300101_getInsuranceFeeResponse"/>
+
+  <xs:element name="WS300102_eHealthGetHospitals" type="tns:WS300102_eHealthGetHospitals"/>
+
+  <xs:element name="WS300102_eHealthGetHospitalsResponse" type="tns:WS300102_eHealthGetHospitalsResponse"/>
+
+  <xs:element name="WS300103_eHealthGetAnalysisResult" type="tns:WS300103_eHealthGetAnalysisResult"/>
+
+  <xs:element name="WS300103_eHealthGetAnalysisResultResponse" type="tns:WS300103_eHealthGetAnalysisResultResponse"/>
+
+  <xs:element name="WS300104_eHealthGetAnalysisDates" type="tns:WS300104_eHealthGetAnalysisDates"/>
+
+  <xs:element name="WS300104_eHealthGetAnalysisDatesResponse" type="tns:WS300104_eHealthGetAnalysisDatesResponse"/>
+
+  <xs:element name="WS300105_eHealthCheckPatientExists" type="tns:WS300105_eHealthCheckPatientExists"/>
+
+  <xs:element name="WS300105_eHealthCheckPatientExistsResponse" type="tns:WS300105_eHealthCheckPatientExistsResponse"/>
+
+  <xs:element name="WS300106_eHealthCreatePatient" type="tns:WS300106_eHealthCreatePatient"/>
+
+  <xs:element name="WS300106_eHealthCreatePatientResponse" type="tns:WS300106_eHealthCreatePatientResponse"/>
+
+  <xs:element name="WS300107_eHealthGetMedicalServices" type="tns:WS300107_eHealthGetMedicalServices"/>
+
+  <xs:element name="WS300107_eHealthGetMedicalServicesResponse" type="tns:WS300107_eHealthGetMedicalServicesResponse"/>
+
+  <xs:element name="WS300108_eHealthGetFreeTimeList" type="tns:WS300108_eHealthGetFreeTimeList"/>
+
+  <xs:element name="WS300108_eHealthGetFreeTimeListResponse" type="tns:WS300108_eHealthGetFreeTimeListResponse"/>
+
+  <xs:element name="WS300109_eHealthOnlineTimeOrderList" type="tns:WS300109_eHealthOnlineTimeOrderList"/>
+
+  <xs:element name="WS300109_eHealthOnlineTimeOrderListResponse" type="tns:WS300109_eHealthOnlineTimeOrderListResponse"/>
+
+  <xs:element name="WS300110_eHealthOnlineAppointmentOrder" type="tns:WS300110_eHealthOnlineAppointmentOrder"/>
+
+  <xs:element name="WS300110_eHealthOnlineAppointmentOrderResponse" type="tns:WS300110_eHealthOnlineAppointmentOrderResponse"/>
+
+  <xs:element name="WS300111_eHealthTimeOrderApprove" type="tns:WS300111_eHealthTimeOrderApprove"/>
+
+  <xs:element name="WS300111_eHealthTimeOrderApproveResponse" type="tns:WS300111_eHealthTimeOrderApproveResponse"/>
+
+  <xs:element name="WS300112_eHealthTimeOrderCancel" type="tns:WS300112_eHealthTimeOrderCancel"/>
+
+  <xs:element name="WS300112_eHealthTimeOrderCancelResponse" type="tns:WS300112_eHealthTimeOrderCancelResponse"/>
+
+  <xs:element name="WS300113_eHealthCitizenAnalisysInfo" type="tns:WS300113_eHealthCitizenAnalisysInfo"/>
+
+  <xs:element name="WS300113_eHealthCitizenAnalisysInfoResponse" type="tns:WS300113_eHealthCitizenAnalisysInfoResponse"/>
+
+  <xs:element name="WS300114_eHealthListService" type="tns:WS300114_eHealthListService"/>
+
+  <xs:element name="WS300114_eHealthListServiceResponse" type="tns:WS300114_eHealthListServiceResponse"/>
+
+  <xs:element name="WS300115_pcrPositiveInfo" type="tns:WS300115_pcrPositiveInfo"/>
+
+  <xs:element name="WS300115_pcrPositiveInfoResponse" type="tns:WS300115_pcrPositiveInfoResponse"/>
+
+  <xs:element name="WS300116_getBloodTypeService" type="tns:WS300116_getBloodTypeService"/>
+
+  <xs:element name="WS300116_getBloodTypeServiceResponse" type="tns:WS300116_getBloodTypeServiceResponse"/>
+
+  <xs:element name="WS300117_earlyDetectionService" type="tns:WS300117_earlyDetectionService"/>
+
+  <xs:element name="WS300117_earlyDetectionServiceResponse" type="tns:WS300117_earlyDetectionServiceResponse"/>
+
+  <xs:element name="WS300118_covidPCRLastResultInfo" type="tns:WS300118_covidPCRLastResultInfo"/>
+
+  <xs:element name="WS300118_covidPCRLastResultInfoResponse" type="tns:WS300118_covidPCRLastResultInfoResponse"/>
+
+  <xs:element name="WS300119_medicineImportInsert" type="tns:WS300119_medicineImportInsert"/>
+
+  <xs:element name="WS300119_medicineImportInsertResponse" type="tns:WS300119_medicineImportInsertResponse"/>
+
+  <xs:complexType name="WS300110_eHealthOnlineAppointmentOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:eHealthAppointmentOrderRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthAppointmentOrderRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="date" type="xs:string"/>
+          <xs:element name="hospitalId" type="xs:int"/>
+          <xs:element name="num" type="xs:int"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element minOccurs="0" name="serviceId" type="xs:string"/>
+          <xs:element minOccurs="0" name="time" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auth" type="tns:authorizationData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="citizen" type="tns:authorizationEntity"/>
+      <xs:element minOccurs="0" name="operator" type="tns:authorizationEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appAuthToken" type="xs:string"/>
+      <xs:element minOccurs="0" name="authAppName" type="xs:string"/>
+      <xs:element minOccurs="0" name="certFingerprint" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="fingerprint" type="xs:base64Binary"/>
+      <xs:element name="otp" type="xs:int"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="signature" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300110_eHealthOnlineAppointmentOrderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="xs:anyType"/>
+      <xs:element minOccurs="0" name="requestId" type="xs:string"/>
+      <xs:element minOccurs="0" name="response" type="xs:anyType"/>
+      <xs:element name="resultCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="resultMessage" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthAppointmentOrderData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="result" type="xs:string"/>
+      <xs:element minOccurs="0" name="resultMessage" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300103_eHealthGetAnalysisResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:eHealthGetAnalysisResultRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthGetAnalysisResultRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="analysisDate" type="xs:dateTime"/>
+          <xs:element name="hospitalId" type="xs:int"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS300103_eHealthGetAnalysisResultResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthGetAnalysisResultData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="analysisResult" type="xs:base64Binary"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300114_eHealthListService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:eHealthListRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthListRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="hospitalId" type="xs:int"/>
+          <xs:element minOccurs="0" name="pid" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS300114_eHealthListServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthListData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resultData" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300111_eHealthTimeOrderApprove">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:eHealthTimeOrderApproveRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthTimeOrderApproveRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="hospitalId" type="xs:int"/>
+          <xs:element minOccurs="0" name="verifyCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS300111_eHealthTimeOrderApproveResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthCheckData">
+    <xs:sequence>
+      <xs:element name="checkCode" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300108_eHealthGetFreeTimeList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:eHealthGetFreeTimeRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthGetFreeTimeRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="endDate" type="xs:string"/>
+          <xs:element name="hospitalId" type="xs:int"/>
+          <xs:element minOccurs="0" name="serviceId" type="xs:string"/>
+          <xs:element minOccurs="0" name="startDate" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS300108_eHealthGetFreeTimeListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthGetFreeTimeData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:eHealthGetFreeTimeDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthGetFreeTimeDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date" type="xs:string"/>
+      <xs:element name="num" type="xs:int"/>
+      <xs:element minOccurs="0" name="time" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300117_earlyDetectionService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:earlyDetectionRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="earlyDetectionRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element minOccurs="0" name="report" type="xs:string"/>
+          <xs:element name="type" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS300117_earlyDetectionServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="earlyDetectionData">
+    <xs:sequence>
+      <xs:element name="status" type="xs:int"/>
+      <xs:element minOccurs="0" name="url" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300101_getInsuranceFee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:registerRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="registerRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS300101_getInsuranceFeeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insuranceFeeData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:insuranceFeeDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insuranceFeeDetailData">
+    <xs:sequence>
+      <xs:element name="createdDate" type="xs:int"/>
+      <xs:element minOccurs="0" name="govCode" type="xs:string"/>
+      <xs:element name="govCodeId" type="xs:int"/>
+      <xs:element name="govGroup" type="xs:int"/>
+      <xs:element name="month" type="xs:int"/>
+      <xs:element minOccurs="0" name="officeCode" type="xs:string"/>
+      <xs:element name="officeId" type="xs:int"/>
+      <xs:element minOccurs="0" name="officeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="subOfficeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="subOfficeName" type="xs:string"/>
+      <xs:element name="year" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300106_eHealthCreatePatient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:eHealthCreatePatientRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthCreatePatientRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="xs:string"/>
+          <xs:element name="addressCode" type="xs:int"/>
+          <xs:element minOccurs="0" name="birthDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+          <xs:element name="hospitalId" type="xs:int"/>
+          <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element name="sex" type="xs:int"/>
+          <xs:element minOccurs="0" name="surname" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS300106_eHealthCreatePatientResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300109_eHealthOnlineTimeOrderList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:ehealtBasicRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ehealtBasicRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="hospitalId" type="xs:int"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS300109_eHealthOnlineTimeOrderListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthOnlineTimeOrderData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:eHealthOnlineTimeOrderDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthOnlineTimeOrderDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cabinet" type="xs:string"/>
+      <xs:element minOccurs="0" name="date" type="xs:string"/>
+      <xs:element minOccurs="0" name="desc" type="xs:string"/>
+      <xs:element minOccurs="0" name="id" type="xs:string"/>
+      <xs:element name="insuranceDiscount" type="xs:int"/>
+      <xs:element minOccurs="0" name="location" type="xs:string"/>
+      <xs:element name="num" type="xs:int"/>
+      <xs:element name="price" type="xs:int"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="time" type="xs:string"/>
+      <xs:element name="typeId" type="xs:int"/>
+      <xs:element minOccurs="0" name="typeName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300116_getBloodTypeService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:registerRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300116_getBloodTypeServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="bloodTypeData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bloodGroup" type="xs:string"/>
+      <xs:element minOccurs="0" name="kell" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="rhesus" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300107_eHealthGetMedicalServices">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:eHealthGetMedicalServicesRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthGetMedicalServicesRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="hospitalId" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS300107_eHealthGetMedicalServicesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthGetMedicalServiceData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:eHealthGetMedicalServiceDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthGetMedicalServiceDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cabinet" type="xs:string"/>
+      <xs:element minOccurs="0" name="desc" type="xs:string"/>
+      <xs:element minOccurs="0" name="location" type="xs:string"/>
+      <xs:element minOccurs="0" name="serviceId" type="xs:string"/>
+      <xs:element name="typeId" type="xs:int"/>
+      <xs:element minOccurs="0" name="typeName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300118_covidPCRLastResultInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:registerRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300118_covidPCRLastResultInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="covidPCRLastResultData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="barcode" type="xs:string"/>
+      <xs:element minOccurs="0" name="birthDay" type="xs:string"/>
+      <xs:element minOccurs="0" name="doctorDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="hospitalName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="resultDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="sex" type="xs:string"/>
+      <xs:element minOccurs="0" name="testResult" type="xs:string"/>
+      <xs:element minOccurs="0" name="testType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300119_medicineImportInsert">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:medicineImportInsertRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="medicineImportInsertRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="licenseNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="orgRegister" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="products" nillable="true" type="tns:medicineImportInsertRequestDetailData"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="medicineImportInsertRequestDetailData">
+    <xs:sequence>
+      <xs:element name="importedAmount" type="xs:int"/>
+      <xs:element name="importedBaseAmount" type="xs:int"/>
+      <xs:element name="importedQty" type="xs:int"/>
+      <xs:element minOccurs="0" name="productId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300119_medicineImportInsertResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="medicineImportInsertData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300115_pcrPositiveInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:pcrPositiveRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pcrPositiveRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="aimagCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="bagCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="endDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="pageNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="pageSize" type="xs:string"/>
+          <xs:element minOccurs="0" name="requestOrgId" type="xs:string"/>
+          <xs:element minOccurs="0" name="searchText" type="xs:string"/>
+          <xs:element minOccurs="0" name="soumCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="startDate" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS300115_pcrPositiveInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pcrPositiveData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:pcrPositiveDetailData"/>
+      <xs:element name="totalPage" type="xs:int"/>
+      <xs:element name="totalRow" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pcrPositiveDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aimagCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="bagCode" type="xs:string"/>
+      <xs:element name="barcode" type="xs:double"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="resultDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="soumCode" type="xs:string"/>
+      <xs:element name="specimensType" type="xs:int"/>
+      <xs:element minOccurs="0" name="testLocation" type="xs:string"/>
+      <xs:element name="testResult" type="xs:int"/>
+      <xs:element name="testType" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300102_eHealthGetHospitals">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:registerRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300102_eHealthGetHospitalsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthGetHospitalsData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:eHealthGetHospitalsDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthGetHospitalsDetailData">
+    <xs:sequence>
+      <xs:element name="hospitalId" type="xs:int"/>
+      <xs:element minOccurs="0" name="hospitalName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300112_eHealthTimeOrderCancel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:eHealthTimeOrderApproveRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300112_eHealthTimeOrderCancelResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300105_eHealthCheckPatientExists">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:ehealtBasicRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300105_eHealthCheckPatientExistsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300113_eHealthCitizenAnalisysInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:eHealthCitizenAnalysisRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthCitizenAnalysisRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="beginDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="endDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS300113_eHealthCitizenAnalisysInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthCitizenAnalysisData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listCitizenAnalisysData" nillable="true" type="tns:eHealthCitizenAnalysisDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthCitizenAnalysisDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birthDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listAnalysisData" nillable="true" type="tns:eHealthAnalysisData"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="sex" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthAnalysisData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="analisysResult" type="xs:string"/>
+      <xs:element minOccurs="0" name="analysisName" type="xs:string"/>
+      <xs:element minOccurs="0" name="barcode" type="xs:string"/>
+      <xs:element minOccurs="0" name="deviceName" type="xs:string"/>
+      <xs:element minOccurs="0" name="doctor" type="xs:string"/>
+      <xs:element minOccurs="0" name="doctorDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="flag" type="xs:string"/>
+      <xs:element minOccurs="0" name="laborant" type="xs:string"/>
+      <xs:element minOccurs="0" name="max" type="xs:string"/>
+      <xs:element minOccurs="0" name="min" type="xs:string"/>
+      <xs:element minOccurs="0" name="probe" type="xs:string"/>
+      <xs:element minOccurs="0" name="specimensDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="typeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="unit" type="xs:string"/>
+      <xs:element minOccurs="0" name="rDate" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300104_eHealthGetAnalysisDates">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:ehealtBasicRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS300104_eHealthGetAnalysisDatesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eHealthGetAnalysisDatesData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listDates" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WS300115_pcrPositiveInfoResponse">
+    <wsdl:part element="tns:WS300115_pcrPositiveInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300109_eHealthOnlineTimeOrderListResponse">
+    <wsdl:part element="tns:WS300109_eHealthOnlineTimeOrderListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300109_eHealthOnlineTimeOrderList">
+    <wsdl:part element="tns:WS300109_eHealthOnlineTimeOrderList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300116_getBloodTypeService">
+    <wsdl:part element="tns:WS300116_getBloodTypeService" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300113_eHealthCitizenAnalisysInfoResponse">
+    <wsdl:part element="tns:WS300113_eHealthCitizenAnalisysInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300101_getInsuranceFeeResponse">
+    <wsdl:part element="tns:WS300101_getInsuranceFeeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300107_eHealthGetMedicalServices">
+    <wsdl:part element="tns:WS300107_eHealthGetMedicalServices" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300117_earlyDetectionServiceResponse">
+    <wsdl:part element="tns:WS300117_earlyDetectionServiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300104_eHealthGetAnalysisDatesResponse">
+    <wsdl:part element="tns:WS300104_eHealthGetAnalysisDatesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300115_pcrPositiveInfo">
+    <wsdl:part element="tns:WS300115_pcrPositiveInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300112_eHealthTimeOrderCancel">
+    <wsdl:part element="tns:WS300112_eHealthTimeOrderCancel" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300105_eHealthCheckPatientExists">
+    <wsdl:part element="tns:WS300105_eHealthCheckPatientExists" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300113_eHealthCitizenAnalisysInfo">
+    <wsdl:part element="tns:WS300113_eHealthCitizenAnalisysInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300118_covidPCRLastResultInfoResponse">
+    <wsdl:part element="tns:WS300118_covidPCRLastResultInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300104_eHealthGetAnalysisDates">
+    <wsdl:part element="tns:WS300104_eHealthGetAnalysisDates" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300110_eHealthOnlineAppointmentOrder">
+    <wsdl:part element="tns:WS300110_eHealthOnlineAppointmentOrder" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300106_eHealthCreatePatientResponse">
+    <wsdl:part element="tns:WS300106_eHealthCreatePatientResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300103_eHealthGetAnalysisResult">
+    <wsdl:part element="tns:WS300103_eHealthGetAnalysisResult" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300114_eHealthListService">
+    <wsdl:part element="tns:WS300114_eHealthListService" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300107_eHealthGetMedicalServicesResponse">
+    <wsdl:part element="tns:WS300107_eHealthGetMedicalServicesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300119_medicineImportInsertResponse">
+    <wsdl:part element="tns:WS300119_medicineImportInsertResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300111_eHealthTimeOrderApprove">
+    <wsdl:part element="tns:WS300111_eHealthTimeOrderApprove" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300108_eHealthGetFreeTimeList">
+    <wsdl:part element="tns:WS300108_eHealthGetFreeTimeList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300111_eHealthTimeOrderApproveResponse">
+    <wsdl:part element="tns:WS300111_eHealthTimeOrderApproveResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300117_earlyDetectionService">
+    <wsdl:part element="tns:WS300117_earlyDetectionService" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300112_eHealthTimeOrderCancelResponse">
+    <wsdl:part element="tns:WS300112_eHealthTimeOrderCancelResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300110_eHealthOnlineAppointmentOrderResponse">
+    <wsdl:part element="tns:WS300110_eHealthOnlineAppointmentOrderResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300101_getInsuranceFee">
+    <wsdl:part element="tns:WS300101_getInsuranceFee" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300116_getBloodTypeServiceResponse">
+    <wsdl:part element="tns:WS300116_getBloodTypeServiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300106_eHealthCreatePatient">
+    <wsdl:part element="tns:WS300106_eHealthCreatePatient" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300114_eHealthListServiceResponse">
+    <wsdl:part element="tns:WS300114_eHealthListServiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300108_eHealthGetFreeTimeListResponse">
+    <wsdl:part element="tns:WS300108_eHealthGetFreeTimeListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300118_covidPCRLastResultInfo">
+    <wsdl:part element="tns:WS300118_covidPCRLastResultInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300119_medicineImportInsert">
+    <wsdl:part element="tns:WS300119_medicineImportInsert" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300102_eHealthGetHospitals">
+    <wsdl:part element="tns:WS300102_eHealthGetHospitals" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300102_eHealthGetHospitalsResponse">
+    <wsdl:part element="tns:WS300102_eHealthGetHospitalsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300103_eHealthGetAnalysisResultResponse">
+    <wsdl:part element="tns:WS300103_eHealthGetAnalysisResultResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS300105_eHealthCheckPatientExistsResponse">
+    <wsdl:part element="tns:WS300105_eHealthCheckPatientExistsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="HealthService">
+    <wsdl:operation name="WS300110_eHealthOnlineAppointmentOrder">
+      <wsdl:input message="tns:WS300110_eHealthOnlineAppointmentOrder" name="WS300110_eHealthOnlineAppointmentOrder">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300110_eHealthOnlineAppointmentOrderResponse" name="WS300110_eHealthOnlineAppointmentOrderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300103_eHealthGetAnalysisResult">
+      <wsdl:input message="tns:WS300103_eHealthGetAnalysisResult" name="WS300103_eHealthGetAnalysisResult">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300103_eHealthGetAnalysisResultResponse" name="WS300103_eHealthGetAnalysisResultResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300114_eHealthListService">
+      <wsdl:input message="tns:WS300114_eHealthListService" name="WS300114_eHealthListService">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300114_eHealthListServiceResponse" name="WS300114_eHealthListServiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300111_eHealthTimeOrderApprove">
+      <wsdl:input message="tns:WS300111_eHealthTimeOrderApprove" name="WS300111_eHealthTimeOrderApprove">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300111_eHealthTimeOrderApproveResponse" name="WS300111_eHealthTimeOrderApproveResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300108_eHealthGetFreeTimeList">
+      <wsdl:input message="tns:WS300108_eHealthGetFreeTimeList" name="WS300108_eHealthGetFreeTimeList">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300108_eHealthGetFreeTimeListResponse" name="WS300108_eHealthGetFreeTimeListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300117_earlyDetectionService">
+      <wsdl:input message="tns:WS300117_earlyDetectionService" name="WS300117_earlyDetectionService">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300117_earlyDetectionServiceResponse" name="WS300117_earlyDetectionServiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300101_getInsuranceFee">
+      <wsdl:input message="tns:WS300101_getInsuranceFee" name="WS300101_getInsuranceFee">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300101_getInsuranceFeeResponse" name="WS300101_getInsuranceFeeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300106_eHealthCreatePatient">
+      <wsdl:input message="tns:WS300106_eHealthCreatePatient" name="WS300106_eHealthCreatePatient">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300106_eHealthCreatePatientResponse" name="WS300106_eHealthCreatePatientResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300109_eHealthOnlineTimeOrderList">
+      <wsdl:input message="tns:WS300109_eHealthOnlineTimeOrderList" name="WS300109_eHealthOnlineTimeOrderList">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300109_eHealthOnlineTimeOrderListResponse" name="WS300109_eHealthOnlineTimeOrderListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300116_getBloodTypeService">
+      <wsdl:input message="tns:WS300116_getBloodTypeService" name="WS300116_getBloodTypeService">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300116_getBloodTypeServiceResponse" name="WS300116_getBloodTypeServiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300107_eHealthGetMedicalServices">
+      <wsdl:input message="tns:WS300107_eHealthGetMedicalServices" name="WS300107_eHealthGetMedicalServices">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300107_eHealthGetMedicalServicesResponse" name="WS300107_eHealthGetMedicalServicesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300118_covidPCRLastResultInfo">
+      <wsdl:input message="tns:WS300118_covidPCRLastResultInfo" name="WS300118_covidPCRLastResultInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300118_covidPCRLastResultInfoResponse" name="WS300118_covidPCRLastResultInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300119_medicineImportInsert">
+      <wsdl:input message="tns:WS300119_medicineImportInsert" name="WS300119_medicineImportInsert">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300119_medicineImportInsertResponse" name="WS300119_medicineImportInsertResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300115_pcrPositiveInfo">
+      <wsdl:input message="tns:WS300115_pcrPositiveInfo" name="WS300115_pcrPositiveInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300115_pcrPositiveInfoResponse" name="WS300115_pcrPositiveInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300102_eHealthGetHospitals">
+      <wsdl:input message="tns:WS300102_eHealthGetHospitals" name="WS300102_eHealthGetHospitals">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300102_eHealthGetHospitalsResponse" name="WS300102_eHealthGetHospitalsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300112_eHealthTimeOrderCancel">
+      <wsdl:input message="tns:WS300112_eHealthTimeOrderCancel" name="WS300112_eHealthTimeOrderCancel">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300112_eHealthTimeOrderCancelResponse" name="WS300112_eHealthTimeOrderCancelResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300105_eHealthCheckPatientExists">
+      <wsdl:input message="tns:WS300105_eHealthCheckPatientExists" name="WS300105_eHealthCheckPatientExists">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300105_eHealthCheckPatientExistsResponse" name="WS300105_eHealthCheckPatientExistsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300113_eHealthCitizenAnalisysInfo">
+      <wsdl:input message="tns:WS300113_eHealthCitizenAnalisysInfo" name="WS300113_eHealthCitizenAnalisysInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300113_eHealthCitizenAnalisysInfoResponse" name="WS300113_eHealthCitizenAnalisysInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300104_eHealthGetAnalysisDates">
+      <wsdl:input message="tns:WS300104_eHealthGetAnalysisDates" name="WS300104_eHealthGetAnalysisDates">
+    </wsdl:input>
+      <wsdl:output message="tns:WS300104_eHealthGetAnalysisDatesResponse" name="WS300104_eHealthGetAnalysisDatesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HealthServiceServiceSoapBinding" type="tns:HealthService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WS300110_eHealthOnlineAppointmentOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300110_eHealthOnlineAppointmentOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300110_eHealthOnlineAppointmentOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300103_eHealthGetAnalysisResult">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300103_eHealthGetAnalysisResult">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300103_eHealthGetAnalysisResultResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300114_eHealthListService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300114_eHealthListService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300114_eHealthListServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300111_eHealthTimeOrderApprove">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300111_eHealthTimeOrderApprove">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300111_eHealthTimeOrderApproveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300108_eHealthGetFreeTimeList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300108_eHealthGetFreeTimeList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300108_eHealthGetFreeTimeListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300117_earlyDetectionService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300117_earlyDetectionService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300117_earlyDetectionServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300101_getInsuranceFee">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300101_getInsuranceFee">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300101_getInsuranceFeeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300106_eHealthCreatePatient">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300106_eHealthCreatePatient">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300106_eHealthCreatePatientResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300109_eHealthOnlineTimeOrderList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300109_eHealthOnlineTimeOrderList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300109_eHealthOnlineTimeOrderListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300116_getBloodTypeService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300116_getBloodTypeService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300116_getBloodTypeServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300107_eHealthGetMedicalServices">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300107_eHealthGetMedicalServices">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300107_eHealthGetMedicalServicesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300118_covidPCRLastResultInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300118_covidPCRLastResultInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300118_covidPCRLastResultInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300119_medicineImportInsert">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300119_medicineImportInsert">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300119_medicineImportInsertResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300115_pcrPositiveInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300115_pcrPositiveInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300115_pcrPositiveInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300102_eHealthGetHospitals">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300102_eHealthGetHospitals">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300102_eHealthGetHospitalsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300112_eHealthTimeOrderCancel">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300112_eHealthTimeOrderCancel">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300112_eHealthTimeOrderCancelResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300105_eHealthCheckPatientExists">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300105_eHealthCheckPatientExists">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300105_eHealthCheckPatientExistsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300113_eHealthCitizenAnalisysInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300113_eHealthCitizenAnalisysInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300113_eHealthCitizenAnalisysInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS300104_eHealthGetAnalysisDates">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS300104_eHealthGetAnalysisDates">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS300104_eHealthGetAnalysisDatesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HealthServiceService">
+    <wsdl:port binding="tns:HealthServiceServiceSoapBinding" name="HealthServicePort">
+      <soap:address location="http://xyp.gov.mn/health-1.5.0/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,2109 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://les.xyp.gov.mn/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="LesServiceService" targetNamespace="http://les.xyp.gov.mn/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://les.xyp.gov.mn/" elementFormDefault="unqualified" targetNamespace="http://les.xyp.gov.mn/" version="1.0">
+
+  <xs:element name="WS100301_getLegalEntityInfo" type="tns:WS100301_getLegalEntityInfo"/>
+
+  <xs:element name="WS100301_getLegalEntityInfoResponse" type="tns:WS100301_getLegalEntityInfoResponse"/>
+
+  <xs:element name="WS100302_getLegalEntityChangeInfo" type="tns:WS100302_getLegalEntityChangeInfo"/>
+
+  <xs:element name="WS100302_getLegalEntityChangeInfoResponse" type="tns:WS100302_getLegalEntityChangeInfoResponse"/>
+
+  <xs:element name="WS100303_getLegalEntityLiquidationInfo" type="tns:WS100303_getLegalEntityLiquidationInfo"/>
+
+  <xs:element name="WS100303_getLegalEntityLiquidationInfoResponse" type="tns:WS100303_getLegalEntityLiquidationInfoResponse"/>
+
+  <xs:element name="WS100304_getLegalEntityNewlyCreatedInfo" type="tns:WS100304_getLegalEntityNewlyCreatedInfo"/>
+
+  <xs:element name="WS100304_getLegalEntityNewlyCreatedInfoResponse" type="tns:WS100304_getLegalEntityNewlyCreatedInfoResponse"/>
+
+  <xs:element name="WS100305_searchLegalEntityName" type="tns:WS100305_searchLegalEntityName"/>
+
+  <xs:element name="WS100305_searchLegalEntityNameResponse" type="tns:WS100305_searchLegalEntityNameResponse"/>
+
+  <xs:element name="WS100306_getNonLegalEntityInfo" type="tns:WS100306_getNonLegalEntityInfo"/>
+
+  <xs:element name="WS100306_getNonLegalEntityInfoResponse" type="tns:WS100306_getNonLegalEntityInfoResponse"/>
+
+  <xs:element name="WS100307_getLegalEntityInfoWithRegnum" type="tns:WS100307_getLegalEntityInfoWithRegnum"/>
+
+  <xs:element name="WS100307_getLegalEntityInfoWithRegnumResponse" type="tns:WS100307_getLegalEntityInfoWithRegnumResponse"/>
+
+  <xs:element name="WS100308_legalEntityDoingCriminalLiability" type="tns:WS100308_legalEntityDoingCriminalLiability"/>
+
+  <xs:element name="WS100308_legalEntityDoingCriminalLiabilityResponse" type="tns:WS100308_legalEntityDoingCriminalLiabilityResponse"/>
+
+  <xs:element name="WS100309_legalEntityWasCriminalLiability" type="tns:WS100309_legalEntityWasCriminalLiability"/>
+
+  <xs:element name="WS100309_legalEntityWasCriminalLiabilityResponse" type="tns:WS100309_legalEntityWasCriminalLiabilityResponse"/>
+
+  <xs:element name="WS100310_legalEntityReorganizedInfo" type="tns:WS100310_legalEntityReorganizedInfo"/>
+
+  <xs:element name="WS100310_legalEntityReorganizedInfoResponse" type="tns:WS100310_legalEntityReorganizedInfoResponse"/>
+
+  <xs:element name="WS100311_getLegalEntityInfoToTax" type="tns:WS100311_getLegalEntityInfoToTax"/>
+
+  <xs:element name="WS100311_getLegalEntityInfoToTaxResponse" type="tns:WS100311_getLegalEntityInfoToTaxResponse"/>
+
+  <xs:element name="WS100312_checkDebtOfCustomsInfo" type="tns:WS100312_checkDebtOfCustomsInfo"/>
+
+  <xs:element name="WS100312_checkDebtOfCustomsInfoResponse" type="tns:WS100312_checkDebtOfCustomsInfoResponse"/>
+
+  <xs:element name="WS100313_citizenLegalEntityList" type="tns:WS100313_citizenLegalEntityList"/>
+
+  <xs:element name="WS100313_citizenLegalEntityListResponse" type="tns:WS100313_citizenLegalEntityListResponse"/>
+
+  <xs:element name="WS100314_citizenShareHolderCompanyInfo" type="tns:WS100314_citizenShareHolderCompanyInfo"/>
+
+  <xs:element name="WS100314_citizenShareHolderCompanyInfoResponse" type="tns:WS100314_citizenShareHolderCompanyInfoResponse"/>
+
+  <xs:element name="WS100315_checkLegalEntityDirector" type="tns:WS100315_checkLegalEntityDirector"/>
+
+  <xs:element name="WS100315_checkLegalEntityDirectorResponse" type="tns:WS100315_checkLegalEntityDirectorResponse"/>
+
+  <xs:element name="WS100316_legalEntityOpenData" type="tns:WS100316_legalEntityOpenData"/>
+
+  <xs:element name="WS100316_legalEntityOpenDataResponse" type="tns:WS100316_legalEntityOpenDataResponse"/>
+
+  <xs:element name="WS100317_findLesNameInfo" type="tns:WS100317_findLesNameInfo"/>
+
+  <xs:element name="WS100317_findLesNameInfoResponse" type="tns:WS100317_findLesNameInfoResponse"/>
+
+  <xs:element name="WS100318_legalEntityOfficialNamesInfo" type="tns:WS100318_legalEntityOfficialNamesInfo"/>
+
+  <xs:element name="WS100318_legalEntityOfficialNamesInfoResponse" type="tns:WS100318_legalEntityOfficialNamesInfoResponse"/>
+
+  <xs:element name="WS100319_legalEntityIndustryInfo" type="tns:WS100319_legalEntityIndustryInfo"/>
+
+  <xs:element name="WS100319_legalEntityIndustryInfoResponse" type="tns:WS100319_legalEntityIndustryInfoResponse"/>
+
+  <xs:element name="WS100320_createInqCustoms" type="tns:WS100320_createInqCustoms"/>
+
+  <xs:element name="WS100320_createInqCustomsResponse" type="tns:WS100320_createInqCustomsResponse"/>
+
+  <xs:element name="WS100321_getCustomsInqInfo" type="tns:WS100321_getCustomsInqInfo"/>
+
+  <xs:element name="WS100321_getCustomsInqInfoResponse" type="tns:WS100321_getCustomsInqInfoResponse"/>
+
+  <xs:element name="WS100322_legalEntityIndustryLicenseInfo" type="tns:WS100322_legalEntityIndustryLicenseInfo"/>
+
+  <xs:element name="WS100322_legalEntityIndustryLicenseInfoResponse" type="tns:WS100322_legalEntityIndustryLicenseInfoResponse"/>
+
+  <xs:element name="WS100323_legalEntityNonPaymentInfo" type="tns:WS100323_legalEntityNonPaymentInfo"/>
+
+  <xs:element name="WS100323_legalEntityNonPaymentInfoResponse" type="tns:WS100323_legalEntityNonPaymentInfoResponse"/>
+
+  <xs:element name="WS100324_legalEntityGeneralInfo" type="tns:WS100324_legalEntityGeneralInfo"/>
+
+  <xs:element name="WS100324_legalEntityGeneralInfoResponse" type="tns:WS100324_legalEntityGeneralInfoResponse"/>
+
+  <xs:element name="WS100325_legalEntityFinalOwnerInfo" type="tns:WS100325_legalEntityFinalOwnerInfo"/>
+
+  <xs:element name="WS100325_legalEntityFinalOwnerInfoResponse" type="tns:WS100325_legalEntityFinalOwnerInfoResponse"/>
+
+  <xs:element name="WS100326_legalEntityStampInfo" type="tns:WS100326_legalEntityStampInfo"/>
+
+  <xs:element name="WS100326_legalEntityStampInfoResponse" type="tns:WS100326_legalEntityStampInfoResponse"/>
+
+  <xs:element name="WS100327_getCustomsOffnsInfo" type="tns:WS100327_getCustomsOffnsInfo"/>
+
+  <xs:element name="WS100327_getCustomsOffnsInfoResponse" type="tns:WS100327_getCustomsOffnsInfoResponse"/>
+
+  <xs:element name="WS100328_checkLegalEntityNameInfo" type="tns:WS100328_checkLegalEntityNameInfo"/>
+
+  <xs:element name="WS100328_checkLegalEntityNameInfoResponse" type="tns:WS100328_checkLegalEntityNameInfoResponse"/>
+
+  <xs:element name="WS100329_energyLicenseCertificateInfo" type="tns:WS100329_energyLicenseCertificateInfo"/>
+
+  <xs:element name="WS100329_energyLicenseCertificateInfoResponse" type="tns:WS100329_energyLicenseCertificateInfoResponse"/>
+
+  <xs:element name="WS100330_liquidationInfoService" type="tns:WS100330_liquidationInfoService"/>
+
+  <xs:element name="WS100330_liquidationInfoServiceResponse" type="tns:WS100330_liquidationInfoServiceResponse"/>
+
+  <xs:complexType name="WS100314_citizenShareHolderCompanyInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:nonLegalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonLegalEntityRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auth" type="tns:authorizationData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="citizen" type="tns:authorizationEntity"/>
+      <xs:element minOccurs="0" name="operator" type="tns:authorizationEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorizationEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appAuthToken" type="xs:string"/>
+      <xs:element minOccurs="0" name="authAppName" type="xs:string"/>
+      <xs:element minOccurs="0" name="certFingerprint" type="xs:string"/>
+      <xs:element minOccurs="0" name="civilId" type="xs:string"/>
+      <xs:element minOccurs="0" name="fingerprint" type="xs:base64Binary"/>
+      <xs:element name="otp" type="xs:int"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="signature" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100314_citizenShareHolderCompanyInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="xs:anyType"/>
+      <xs:element minOccurs="0" name="requestId" type="xs:string"/>
+      <xs:element minOccurs="0" name="response" type="xs:anyType"/>
+      <xs:element name="resultCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="resultMessage" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenShareHolderCompanyData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:citizenShareHolderCompanyDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenShareHolderCompanyDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element name="sharePercent" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100329_energyLicenseCertificateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:energyLicenseCertRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="energyLicenseCertRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orgRegnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100329_energyLicenseCertificateInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="energyLicenseCertificateData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:energyLicenseCertificateDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="energyLicenseCertificateDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="certificateId" type="xs:string"/>
+      <xs:element minOccurs="0" name="certificateValidDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="licenseCategory" type="xs:string"/>
+      <xs:element minOccurs="0" name="orgName" type="xs:string"/>
+      <xs:element minOccurs="0" name="orgRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="requestType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100325_legalEntityFinalOwnerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityFinalOwnerRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityFinalOwnerRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100325_legalEntityFinalOwnerInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityFinalOwnerData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:legalEntityFinalOwnerDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityFinalOwnerDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="active" type="xs:string"/>
+      <xs:element name="child" type="xs:int"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="importByTax" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownerType" type="xs:string"/>
+      <xs:element minOccurs="0" name="percentOfAsset" type="xs:double"/>
+      <xs:element minOccurs="0" name="privateFileNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="real" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="sumAsset" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100310_legalEntityReorganizedInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:entityNumberData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="entityNumberData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="legalEntityNumber" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100310_legalEntityReorganizedInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityReorganizedData">
+    <xs:sequence>
+      <xs:element name="amount" type="xs:int"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyNameNew" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegisterNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegisterNumberNew" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyStatusNew" type="xs:string"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element minOccurs="0" name="descriptionNew" type="xs:string"/>
+      <xs:element name="percentage" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100304_getLegalEntityNewlyCreatedInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:entityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="entityRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="endDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="startDate" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100304_getLegalEntityNewlyCreatedInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listWrapper">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="list" nillable="true" type="xs:anyType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityNewData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyTitle" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="indutyCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="indutyTitle" type="xs:string"/>
+      <xs:element name="lesNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="nationRegNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="regDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="statusCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="statusName" type="xs:string"/>
+      <xs:element minOccurs="0" name="taxofcCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="taxofcName" type="xs:string"/>
+      <xs:element minOccurs="0" name="telnoOne" type="xs:string"/>
+      <xs:element minOccurs="0" name="telnoTwo" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100322_legalEntityIndustryLicenseInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="legalEntityNumber" type="xs:int"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100322_legalEntityIndustryLicenseInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityIndustryLicenseData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:legalEntityIndustryLicenseDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityIndustryLicenseDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="beginDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="endDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="industryCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100330_liquidationInfoService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:entityNumberData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100330_liquidationInfoServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="liquidationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdUserName" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="newspaperName" type="xs:string"/>
+      <xs:element minOccurs="0" name="newspaperNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="newspaperPrintedDate" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100328_checkLegalEntityNameInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100328_checkLegalEntityNameInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkLegalEntityNameData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="legalEntityName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100305_searchLegalEntityName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:serviceSearchLegalEntityNameRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serviceSearchLegalEntityNameRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element name="status" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100305_searchLegalEntityNameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalEntityNameData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:searchLegalEntityNameDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchLegalEntityNameDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cprName" type="xs:string"/>
+      <xs:element minOccurs="0" name="date" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="repName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100320_createInqCustoms">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:createInqCustomsRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createInqCustomsRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="endDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element minOccurs="0" name="startDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100320_createInqCustomsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createInqCustomsData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="inqNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100311_getLegalEntityInfoToTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:entityNumberData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100311_getLegalEntityInfoToTaxResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityDataToTax">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="address" nillable="true" type="tns:addressDataToTax"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="branch" nillable="true" type="tns:branchDataToTax"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="founder" nillable="true" type="tns:founderDataToTax"/>
+      <xs:element minOccurs="0" name="general" type="tns:generalDataToTax"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="generalR" nillable="true" type="tns:generalRDataToTax"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="induty" nillable="true" type="tns:indutyDataToTax"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addressDataToTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressName" type="xs:string"/>
+      <xs:element minOccurs="0" name="apartmentCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="apartmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="districtCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="districtName" type="xs:string"/>
+      <xs:element minOccurs="0" name="doorNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="faxNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="microDiscrictCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="microDistrictName" type="xs:string"/>
+      <xs:element minOccurs="0" name="phoneNumber1" type="xs:string"/>
+      <xs:element minOccurs="0" name="phoneNumber2" type="xs:string"/>
+      <xs:element minOccurs="0" name="proviceCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="provinceName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regionCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="regionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="registrationDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="streetCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="streetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="townName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="branchDataToTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressName" type="xs:string"/>
+      <xs:element minOccurs="0" name="apartmentCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="apartmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="branchName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="districtCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="districtName" type="xs:string"/>
+      <xs:element minOccurs="0" name="doorNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="microDiscrictCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="microDistrictName" type="xs:string"/>
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="proviceCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="provinceName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="regionCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="regionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="streetCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="streetName" type="xs:string"/>
+      <xs:element minOccurs="0" name="townName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="founderDataToTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="countryCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="countryName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="phone" type="xs:string"/>
+      <xs:element minOccurs="0" name="quota" type="xs:string"/>
+      <xs:element minOccurs="0" name="regDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="shareQty" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="generalDataToTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bsnEndDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="bsnPdType" type="xs:string"/>
+      <xs:element minOccurs="0" name="bsnStartDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="dutyType" type="xs:string"/>
+      <xs:element minOccurs="0" name="foundationDecName" type="xs:string"/>
+      <xs:element minOccurs="0" name="foundationDecNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="nationRegNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownershipType" type="xs:string"/>
+      <xs:element minOccurs="0" name="regDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+      <xs:element minOccurs="0" name="totalCapital" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="generalRDataToTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="countryCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="countryName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="position" type="xs:string"/>
+      <xs:element minOccurs="0" name="regDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="indutyDataToTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="indutyCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="indutyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="permissionEndDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="permissionInstt" type="xs:string"/>
+      <xs:element minOccurs="0" name="permissionIssuer" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="permissionNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="permissionStartDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="regDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100324_legalEntityGeneralInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100324_legalEntityGeneralInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityGeneralData">
+    <xs:sequence>
+      <xs:element name="companyFounderCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdUserName" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="departmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element minOccurs="0" name="descriptionCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="founderDecisionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="founderDecisionNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="founderDocumentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownershipTypeCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownershipTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="profitTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regulationDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="stateRegnum" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100313_citizenLegalEntityList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:nonLegalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100313_citizenLegalEntityListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenLegalEntityListData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:citizenLegalEntityListDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="citizenLegalEntityListDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lesNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100317_findLesNameInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:findLesNameRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="findLesNameRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="lesname" type="xs:string"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100317_findLesNameInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="findLesNameData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:findLesNameDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="findLesNameDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="certifiedNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="legalEntityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="registeredDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="validDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100312_checkDebtOfCustomsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:checkDebtOfCustomsRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkDebtOfCustomsRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100312_checkDebtOfCustomsInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkDebtOfCustomsData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100306_getNonLegalEntityInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:nonLegalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100306_getNonLegalEntityInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonLegalEntityData">
+    <xs:sequence>
+      <xs:element name="checked" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100326_legalEntityStampInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100326_legalEntityStampInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityStampData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="checkNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="comment" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="privateNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="stamp" type="xs:string"/>
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100323_legalEntityNonPaymentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100323_legalEntityNonPaymentInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityNonPaymentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="caseNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="caseStatusId" type="xs:string"/>
+      <xs:element minOccurs="0" name="caseStatusName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="decisionNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="receivedDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="sheetNum" type="xs:string"/>
+      <xs:element minOccurs="0" name="tollBalance" type="xs:string"/>
+      <xs:element minOccurs="0" name="tollValue" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100307_getLegalEntityInfoWithRegnum">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100307_getLegalEntityInfoWithRegnumResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="address" nillable="true" type="tns:address"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="branch" nillable="true" type="tns:branch"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="capital" nillable="true" type="tns:capital"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="changeFond" nillable="true" type="tns:changeFond"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="changeName" nillable="true" type="tns:changeName"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="founder" nillable="true" type="tns:founder"/>
+      <xs:element minOccurs="0" name="general" type="tns:general"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="generalR" nillable="true" type="tns:generalR"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="induty" nillable="true" type="tns:induty"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="liquidation" type="tns:liquidationData"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="shareHolders" nillable="true" type="tns:shareHolder"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="stakeHolders" nillable="true" type="tns:stakeHolder"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressType" type="tns:addressUnit"/>
+      <xs:element minOccurs="0" name="apartment" type="tns:addressUnit"/>
+      <xs:element minOccurs="0" name="bagKhoroo" type="tns:addressUnit"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdUserName" type="xs:string"/>
+      <xs:element minOccurs="0" name="door" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="fax" type="xs:string"/>
+      <xs:element minOccurs="0" name="mobileNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="postBox" type="xs:string"/>
+      <xs:element minOccurs="0" name="region" type="tns:addressUnit"/>
+      <xs:element minOccurs="0" name="soumDistrict" type="tns:addressUnit"/>
+      <xs:element minOccurs="0" name="stateCity" type="tns:addressUnit"/>
+      <xs:element minOccurs="0" name="street" type="tns:addressUnit"/>
+      <xs:element minOccurs="0" name="town" type="tns:addressUnit"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addressUnit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="branch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="branchName" type="xs:string"/>
+      <xs:element minOccurs="0" name="branchStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdUserName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="fullAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="stateRegnum" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="capital">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdUserName" type="xs:string"/>
+      <xs:element minOccurs="0" name="rowStatusName" type="xs:string"/>
+      <xs:element minOccurs="0" name="totalAmount" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="changeFond">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyNameNew" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnumNew" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="changeName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyType" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdUserName" type="xs:string"/>
+      <xs:element minOccurs="0" name="requestedName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="founder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyStateRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="countryName" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdUserName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="sharePercent" type="xs:string"/>
+      <xs:element minOccurs="0" name="shareQty" type="xs:string"/>
+      <xs:element name="shareTotalAmount" type="xs:double"/>
+      <xs:element minOccurs="0" name="shareUnitPrice" type="xs:string"/>
+      <xs:element minOccurs="0" name="stakeHolderRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="stakeHolderTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="general">
+    <xs:sequence>
+      <xs:element name="companyFounderCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="contractDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdUserName" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="decisionNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="departmentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element minOccurs="0" name="founderDecisionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="founderDecisionNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="founderDocumentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="ownershipTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="profitTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regulationDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="stateRegnum" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="generalR">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="countryName" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdUserName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="positionId" type="xs:string"/>
+      <xs:element minOccurs="0" name="positionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="induty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdUserName" type="xs:string"/>
+      <xs:element minOccurs="0" name="industryCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="industryName" type="xs:string"/>
+      <xs:element minOccurs="0" name="industryStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="issuedBy" type="xs:string"/>
+      <xs:element minOccurs="0" name="issuedDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="licenseNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareHolder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="countryName" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdUserName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="stakeholderTypeName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="stakeHolder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="createdUserName" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstname" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastname" type="xs:string"/>
+      <xs:element minOccurs="0" name="positionName" type="xs:string"/>
+      <xs:element minOccurs="0" name="stateRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100302_getLegalEntityChangeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:entityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100302_getLegalEntityChangeInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityChangeData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyNameNew" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnumNew" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyStatusNew" type="xs:string"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element minOccurs="0" name="descriptionNew" type="xs:string"/>
+      <xs:element minOccurs="0" name="per" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100316_legalEntityOpenData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100316_legalEntityOpenDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityOpenData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="address" nillable="true" type="tns:address"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="founder" nillable="true" type="tns:founder"/>
+      <xs:element minOccurs="0" name="general" type="tns:general"/>
+      <xs:element minOccurs="0" name="generalR" type="tns:generalR"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="induty" nillable="true" type="tns:induty"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100309_legalEntityWasCriminalLiability">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:entityNumberData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100309_legalEntityWasCriminalLiabilityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityWasCriminalLiabilityData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:legalEntityWasCriminalLiabilityDetailData"/>
+      <xs:element name="punishmentCount" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityWasCriminalLiabilityDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegister" type="xs:string"/>
+      <xs:element minOccurs="0" name="courtName" type="xs:string"/>
+      <xs:element minOccurs="0" name="decreeNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element minOccurs="0" name="endPunishment" type="xs:string"/>
+      <xs:element minOccurs="0" name="exemptDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="legalAct" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="property" type="xs:string"/>
+      <xs:element minOccurs="0" name="punishmentDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="punishmentLevel" type="xs:string"/>
+      <xs:element minOccurs="0" name="punishmentTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="punishmentType" type="xs:string"/>
+      <xs:element minOccurs="0" name="statusId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100319_legalEntityIndustryInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:nonLegalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100319_legalEntityIndustryInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityIndustryData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:legalEntityIndustryDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityIndustryDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="industryCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="industryName" type="xs:string"/>
+      <xs:element minOccurs="0" name="industryNameDesc" type="xs:string"/>
+      <xs:element minOccurs="0" name="isLicense" type="xs:string"/>
+      <xs:element minOccurs="0" name="patentId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100318_legalEntityOfficialNamesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:nonLegalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100318_legalEntityOfficialNamesInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityOfficialNamesData">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:legalEntityOfficialNamesDetailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityOfficialNamesDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="officialName" type="xs:string"/>
+      <xs:element minOccurs="0" name="registerNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100315_checkLegalEntityDirector">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:legalEntityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100315_checkLegalEntityDirectorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkLegalEntityData">
+    <xs:sequence>
+      <xs:element name="validDirector" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100301_getLegalEntityInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:entityNumberData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100301_getLegalEntityInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100308_legalEntityDoingCriminalLiability">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:entityNumberData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100308_legalEntityDoingCriminalLiabilityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityDoingCriminalLiabilityData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegister" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="property" type="xs:string"/>
+      <xs:element minOccurs="0" name="statusId" type="xs:string"/>
+      <xs:element minOccurs="0" name="statusName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100303_getLegalEntityLiquidationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:entityRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100303_getLegalEntityLiquidationInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="legalEntityLiquidationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyTitle" type="xs:string"/>
+      <xs:element minOccurs="0" name="indutyCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="indutyTitle" type="xs:string"/>
+      <xs:element name="lesNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="regDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="sttemntDe" type="xs:string"/>
+      <xs:element minOccurs="0" name="sttemntInstt" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100327_getCustomsOffnsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getCustomsOffnsRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCustomsOffnsRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="endDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element minOccurs="0" name="startDate" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100327_getCustomsOffnsInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCustomsOffnsData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="companyAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="count" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listData" nillable="true" type="tns:getCustomsOffnsDetailData"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCustomsOffnsDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fineAmt" type="xs:string"/>
+      <xs:element minOccurs="0" name="offDesc" type="xs:string"/>
+      <xs:element minOccurs="0" name="offndDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="offnsLaw" type="xs:string"/>
+      <xs:element minOccurs="0" name="offnsNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="offnsType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WS100321_getCustomsInqInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getCustomsInqRequestData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCustomsInqRequestData">
+    <xs:complexContent>
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="endDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="regnum" type="xs:string"/>
+          <xs:element minOccurs="0" name="startDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WS100321_getCustomsInqInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCustomsInqData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="commission" type="xs:double"/>
+      <xs:element minOccurs="0" name="companyAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+      <xs:element minOccurs="0" name="companyRegnum" type="xs:string"/>
+      <xs:element minOccurs="0" name="customAMT" type="xs:double"/>
+      <xs:element minOccurs="0" name="dclrCount" type="xs:string"/>
+      <xs:element minOccurs="0" name="dclrTypes" type="xs:string"/>
+      <xs:element minOccurs="0" name="endDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="exciseAMT" type="xs:double"/>
+      <xs:element minOccurs="0" name="formulaAMT" type="xs:double"/>
+      <xs:element minOccurs="0" name="inquiryNumber" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listItems" nillable="true" type="tns:getCustomsInqDetailData"/>
+      <xs:element minOccurs="0" name="regDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="startDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="statValueMNT" type="xs:double"/>
+      <xs:element minOccurs="0" name="statValueUSD" type="xs:double"/>
+      <xs:element minOccurs="0" name="totalAMT" type="xs:double"/>
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
+      <xs:element minOccurs="0" name="vatAMT" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCustomsInqDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="commission" type="xs:double"/>
+      <xs:element minOccurs="0" name="customAMT" type="xs:double"/>
+      <xs:element minOccurs="0" name="dclrDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="dclrNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="dclrType" type="xs:string"/>
+      <xs:element minOccurs="0" name="exciseAMT" type="xs:double"/>
+      <xs:element minOccurs="0" name="formulaAMT" type="xs:double"/>
+      <xs:element minOccurs="0" name="goodsMakeYear" type="xs:string"/>
+      <xs:element minOccurs="0" name="goodsModelNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="goodsName" type="xs:string"/>
+      <xs:element minOccurs="0" name="hsQTY" type="xs:double"/>
+      <xs:element minOccurs="0" name="hscd" type="xs:string"/>
+      <xs:element minOccurs="0" name="inquiryNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="itemNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="originCenter" type="xs:string"/>
+      <xs:element minOccurs="0" name="statValueMNT" type="xs:double"/>
+      <xs:element minOccurs="0" name="statValueUSD" type="xs:double"/>
+      <xs:element minOccurs="0" name="totalAMT" type="xs:double"/>
+      <xs:element minOccurs="0" name="unit" type="xs:string"/>
+      <xs:element minOccurs="0" name="vatAMT" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WS100314_citizenShareHolderCompanyInfo">
+    <wsdl:part element="tns:WS100314_citizenShareHolderCompanyInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100325_legalEntityFinalOwnerInfo">
+    <wsdl:part element="tns:WS100325_legalEntityFinalOwnerInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100310_legalEntityReorganizedInfo">
+    <wsdl:part element="tns:WS100310_legalEntityReorganizedInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100312_checkDebtOfCustomsInfoResponse">
+    <wsdl:part element="tns:WS100312_checkDebtOfCustomsInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100323_legalEntityNonPaymentInfoResponse">
+    <wsdl:part element="tns:WS100323_legalEntityNonPaymentInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100322_legalEntityIndustryLicenseInfo">
+    <wsdl:part element="tns:WS100322_legalEntityIndustryLicenseInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100308_legalEntityDoingCriminalLiabilityResponse">
+    <wsdl:part element="tns:WS100308_legalEntityDoingCriminalLiabilityResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100328_checkLegalEntityNameInfoResponse">
+    <wsdl:part element="tns:WS100328_checkLegalEntityNameInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100305_searchLegalEntityName">
+    <wsdl:part element="tns:WS100305_searchLegalEntityName" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100311_getLegalEntityInfoToTaxResponse">
+    <wsdl:part element="tns:WS100311_getLegalEntityInfoToTaxResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100305_searchLegalEntityNameResponse">
+    <wsdl:part element="tns:WS100305_searchLegalEntityNameResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100324_legalEntityGeneralInfo">
+    <wsdl:part element="tns:WS100324_legalEntityGeneralInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100313_citizenLegalEntityList">
+    <wsdl:part element="tns:WS100313_citizenLegalEntityList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100312_checkDebtOfCustomsInfo">
+    <wsdl:part element="tns:WS100312_checkDebtOfCustomsInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100310_legalEntityReorganizedInfoResponse">
+    <wsdl:part element="tns:WS100310_legalEntityReorganizedInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100313_citizenLegalEntityListResponse">
+    <wsdl:part element="tns:WS100313_citizenLegalEntityListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100306_getNonLegalEntityInfo">
+    <wsdl:part element="tns:WS100306_getNonLegalEntityInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100326_legalEntityStampInfo">
+    <wsdl:part element="tns:WS100326_legalEntityStampInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100307_getLegalEntityInfoWithRegnum">
+    <wsdl:part element="tns:WS100307_getLegalEntityInfoWithRegnum" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100316_legalEntityOpenData">
+    <wsdl:part element="tns:WS100316_legalEntityOpenData" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100309_legalEntityWasCriminalLiability">
+    <wsdl:part element="tns:WS100309_legalEntityWasCriminalLiability" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100326_legalEntityStampInfoResponse">
+    <wsdl:part element="tns:WS100326_legalEntityStampInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100325_legalEntityFinalOwnerInfoResponse">
+    <wsdl:part element="tns:WS100325_legalEntityFinalOwnerInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100329_energyLicenseCertificateInfoResponse">
+    <wsdl:part element="tns:WS100329_energyLicenseCertificateInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100322_legalEntityIndustryLicenseInfoResponse">
+    <wsdl:part element="tns:WS100322_legalEntityIndustryLicenseInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100330_liquidationInfoServiceResponse">
+    <wsdl:part element="tns:WS100330_liquidationInfoServiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100318_legalEntityOfficialNamesInfo">
+    <wsdl:part element="tns:WS100318_legalEntityOfficialNamesInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100302_getLegalEntityChangeInfoResponse">
+    <wsdl:part element="tns:WS100302_getLegalEntityChangeInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100315_checkLegalEntityDirectorResponse">
+    <wsdl:part element="tns:WS100315_checkLegalEntityDirectorResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100321_getCustomsInqInfoResponse">
+    <wsdl:part element="tns:WS100321_getCustomsInqInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100315_checkLegalEntityDirector">
+    <wsdl:part element="tns:WS100315_checkLegalEntityDirector" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100301_getLegalEntityInfo">
+    <wsdl:part element="tns:WS100301_getLegalEntityInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100303_getLegalEntityLiquidationInfoResponse">
+    <wsdl:part element="tns:WS100303_getLegalEntityLiquidationInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100314_citizenShareHolderCompanyInfoResponse">
+    <wsdl:part element="tns:WS100314_citizenShareHolderCompanyInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100320_createInqCustomsResponse">
+    <wsdl:part element="tns:WS100320_createInqCustomsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100303_getLegalEntityLiquidationInfo">
+    <wsdl:part element="tns:WS100303_getLegalEntityLiquidationInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100327_getCustomsOffnsInfo">
+    <wsdl:part element="tns:WS100327_getCustomsOffnsInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100329_energyLicenseCertificateInfo">
+    <wsdl:part element="tns:WS100329_energyLicenseCertificateInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100304_getLegalEntityNewlyCreatedInfo">
+    <wsdl:part element="tns:WS100304_getLegalEntityNewlyCreatedInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100330_liquidationInfoService">
+    <wsdl:part element="tns:WS100330_liquidationInfoService" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100328_checkLegalEntityNameInfo">
+    <wsdl:part element="tns:WS100328_checkLegalEntityNameInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100320_createInqCustoms">
+    <wsdl:part element="tns:WS100320_createInqCustoms" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100311_getLegalEntityInfoToTax">
+    <wsdl:part element="tns:WS100311_getLegalEntityInfoToTax" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100306_getNonLegalEntityInfoResponse">
+    <wsdl:part element="tns:WS100306_getNonLegalEntityInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100316_legalEntityOpenDataResponse">
+    <wsdl:part element="tns:WS100316_legalEntityOpenDataResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100319_legalEntityIndustryInfoResponse">
+    <wsdl:part element="tns:WS100319_legalEntityIndustryInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100317_findLesNameInfo">
+    <wsdl:part element="tns:WS100317_findLesNameInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100317_findLesNameInfoResponse">
+    <wsdl:part element="tns:WS100317_findLesNameInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100324_legalEntityGeneralInfoResponse">
+    <wsdl:part element="tns:WS100324_legalEntityGeneralInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100323_legalEntityNonPaymentInfo">
+    <wsdl:part element="tns:WS100323_legalEntityNonPaymentInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100302_getLegalEntityChangeInfo">
+    <wsdl:part element="tns:WS100302_getLegalEntityChangeInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100309_legalEntityWasCriminalLiabilityResponse">
+    <wsdl:part element="tns:WS100309_legalEntityWasCriminalLiabilityResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100318_legalEntityOfficialNamesInfoResponse">
+    <wsdl:part element="tns:WS100318_legalEntityOfficialNamesInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100319_legalEntityIndustryInfo">
+    <wsdl:part element="tns:WS100319_legalEntityIndustryInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100327_getCustomsOffnsInfoResponse">
+    <wsdl:part element="tns:WS100327_getCustomsOffnsInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100301_getLegalEntityInfoResponse">
+    <wsdl:part element="tns:WS100301_getLegalEntityInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100308_legalEntityDoingCriminalLiability">
+    <wsdl:part element="tns:WS100308_legalEntityDoingCriminalLiability" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100321_getCustomsInqInfo">
+    <wsdl:part element="tns:WS100321_getCustomsInqInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100304_getLegalEntityNewlyCreatedInfoResponse">
+    <wsdl:part element="tns:WS100304_getLegalEntityNewlyCreatedInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS100307_getLegalEntityInfoWithRegnumResponse">
+    <wsdl:part element="tns:WS100307_getLegalEntityInfoWithRegnumResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="LesService">
+    <wsdl:operation name="WS100314_citizenShareHolderCompanyInfo">
+      <wsdl:input message="tns:WS100314_citizenShareHolderCompanyInfo" name="WS100314_citizenShareHolderCompanyInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100314_citizenShareHolderCompanyInfoResponse" name="WS100314_citizenShareHolderCompanyInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100329_energyLicenseCertificateInfo">
+      <wsdl:input message="tns:WS100329_energyLicenseCertificateInfo" name="WS100329_energyLicenseCertificateInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100329_energyLicenseCertificateInfoResponse" name="WS100329_energyLicenseCertificateInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100325_legalEntityFinalOwnerInfo">
+      <wsdl:input message="tns:WS100325_legalEntityFinalOwnerInfo" name="WS100325_legalEntityFinalOwnerInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100325_legalEntityFinalOwnerInfoResponse" name="WS100325_legalEntityFinalOwnerInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100310_legalEntityReorganizedInfo">
+      <wsdl:input message="tns:WS100310_legalEntityReorganizedInfo" name="WS100310_legalEntityReorganizedInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100310_legalEntityReorganizedInfoResponse" name="WS100310_legalEntityReorganizedInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100304_getLegalEntityNewlyCreatedInfo">
+      <wsdl:input message="tns:WS100304_getLegalEntityNewlyCreatedInfo" name="WS100304_getLegalEntityNewlyCreatedInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100304_getLegalEntityNewlyCreatedInfoResponse" name="WS100304_getLegalEntityNewlyCreatedInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100322_legalEntityIndustryLicenseInfo">
+      <wsdl:input message="tns:WS100322_legalEntityIndustryLicenseInfo" name="WS100322_legalEntityIndustryLicenseInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100322_legalEntityIndustryLicenseInfoResponse" name="WS100322_legalEntityIndustryLicenseInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100330_liquidationInfoService">
+      <wsdl:input message="tns:WS100330_liquidationInfoService" name="WS100330_liquidationInfoService">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100330_liquidationInfoServiceResponse" name="WS100330_liquidationInfoServiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100328_checkLegalEntityNameInfo">
+      <wsdl:input message="tns:WS100328_checkLegalEntityNameInfo" name="WS100328_checkLegalEntityNameInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100328_checkLegalEntityNameInfoResponse" name="WS100328_checkLegalEntityNameInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100305_searchLegalEntityName">
+      <wsdl:input message="tns:WS100305_searchLegalEntityName" name="WS100305_searchLegalEntityName">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100305_searchLegalEntityNameResponse" name="WS100305_searchLegalEntityNameResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100320_createInqCustoms">
+      <wsdl:input message="tns:WS100320_createInqCustoms" name="WS100320_createInqCustoms">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100320_createInqCustomsResponse" name="WS100320_createInqCustomsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100311_getLegalEntityInfoToTax">
+      <wsdl:input message="tns:WS100311_getLegalEntityInfoToTax" name="WS100311_getLegalEntityInfoToTax">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100311_getLegalEntityInfoToTaxResponse" name="WS100311_getLegalEntityInfoToTaxResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100324_legalEntityGeneralInfo">
+      <wsdl:input message="tns:WS100324_legalEntityGeneralInfo" name="WS100324_legalEntityGeneralInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100324_legalEntityGeneralInfoResponse" name="WS100324_legalEntityGeneralInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100313_citizenLegalEntityList">
+      <wsdl:input message="tns:WS100313_citizenLegalEntityList" name="WS100313_citizenLegalEntityList">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100313_citizenLegalEntityListResponse" name="WS100313_citizenLegalEntityListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100317_findLesNameInfo">
+      <wsdl:input message="tns:WS100317_findLesNameInfo" name="WS100317_findLesNameInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100317_findLesNameInfoResponse" name="WS100317_findLesNameInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100312_checkDebtOfCustomsInfo">
+      <wsdl:input message="tns:WS100312_checkDebtOfCustomsInfo" name="WS100312_checkDebtOfCustomsInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100312_checkDebtOfCustomsInfoResponse" name="WS100312_checkDebtOfCustomsInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100306_getNonLegalEntityInfo">
+      <wsdl:input message="tns:WS100306_getNonLegalEntityInfo" name="WS100306_getNonLegalEntityInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100306_getNonLegalEntityInfoResponse" name="WS100306_getNonLegalEntityInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100326_legalEntityStampInfo">
+      <wsdl:input message="tns:WS100326_legalEntityStampInfo" name="WS100326_legalEntityStampInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100326_legalEntityStampInfoResponse" name="WS100326_legalEntityStampInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100323_legalEntityNonPaymentInfo">
+      <wsdl:input message="tns:WS100323_legalEntityNonPaymentInfo" name="WS100323_legalEntityNonPaymentInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100323_legalEntityNonPaymentInfoResponse" name="WS100323_legalEntityNonPaymentInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100307_getLegalEntityInfoWithRegnum">
+      <wsdl:input message="tns:WS100307_getLegalEntityInfoWithRegnum" name="WS100307_getLegalEntityInfoWithRegnum">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100307_getLegalEntityInfoWithRegnumResponse" name="WS100307_getLegalEntityInfoWithRegnumResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100302_getLegalEntityChangeInfo">
+      <wsdl:input message="tns:WS100302_getLegalEntityChangeInfo" name="WS100302_getLegalEntityChangeInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100302_getLegalEntityChangeInfoResponse" name="WS100302_getLegalEntityChangeInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100316_legalEntityOpenData">
+      <wsdl:input message="tns:WS100316_legalEntityOpenData" name="WS100316_legalEntityOpenData">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100316_legalEntityOpenDataResponse" name="WS100316_legalEntityOpenDataResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100309_legalEntityWasCriminalLiability">
+      <wsdl:input message="tns:WS100309_legalEntityWasCriminalLiability" name="WS100309_legalEntityWasCriminalLiability">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100309_legalEntityWasCriminalLiabilityResponse" name="WS100309_legalEntityWasCriminalLiabilityResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100319_legalEntityIndustryInfo">
+      <wsdl:input message="tns:WS100319_legalEntityIndustryInfo" name="WS100319_legalEntityIndustryInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100319_legalEntityIndustryInfoResponse" name="WS100319_legalEntityIndustryInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100318_legalEntityOfficialNamesInfo">
+      <wsdl:input message="tns:WS100318_legalEntityOfficialNamesInfo" name="WS100318_legalEntityOfficialNamesInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100318_legalEntityOfficialNamesInfoResponse" name="WS100318_legalEntityOfficialNamesInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100315_checkLegalEntityDirector">
+      <wsdl:input message="tns:WS100315_checkLegalEntityDirector" name="WS100315_checkLegalEntityDirector">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100315_checkLegalEntityDirectorResponse" name="WS100315_checkLegalEntityDirectorResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100301_getLegalEntityInfo">
+      <wsdl:input message="tns:WS100301_getLegalEntityInfo" name="WS100301_getLegalEntityInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100301_getLegalEntityInfoResponse" name="WS100301_getLegalEntityInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100308_legalEntityDoingCriminalLiability">
+      <wsdl:input message="tns:WS100308_legalEntityDoingCriminalLiability" name="WS100308_legalEntityDoingCriminalLiability">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100308_legalEntityDoingCriminalLiabilityResponse" name="WS100308_legalEntityDoingCriminalLiabilityResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100303_getLegalEntityLiquidationInfo">
+      <wsdl:input message="tns:WS100303_getLegalEntityLiquidationInfo" name="WS100303_getLegalEntityLiquidationInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100303_getLegalEntityLiquidationInfoResponse" name="WS100303_getLegalEntityLiquidationInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100327_getCustomsOffnsInfo">
+      <wsdl:input message="tns:WS100327_getCustomsOffnsInfo" name="WS100327_getCustomsOffnsInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100327_getCustomsOffnsInfoResponse" name="WS100327_getCustomsOffnsInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100321_getCustomsInqInfo">
+      <wsdl:input message="tns:WS100321_getCustomsInqInfo" name="WS100321_getCustomsInqInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:WS100321_getCustomsInqInfoResponse" name="WS100321_getCustomsInqInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LesServiceServiceSoapBinding" type="tns:LesService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WS100314_citizenShareHolderCompanyInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100314_citizenShareHolderCompanyInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100314_citizenShareHolderCompanyInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100329_energyLicenseCertificateInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100329_energyLicenseCertificateInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100329_energyLicenseCertificateInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100325_legalEntityFinalOwnerInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100325_legalEntityFinalOwnerInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100325_legalEntityFinalOwnerInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100310_legalEntityReorganizedInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100310_legalEntityReorganizedInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100310_legalEntityReorganizedInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100304_getLegalEntityNewlyCreatedInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100304_getLegalEntityNewlyCreatedInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100304_getLegalEntityNewlyCreatedInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100322_legalEntityIndustryLicenseInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100322_legalEntityIndustryLicenseInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100322_legalEntityIndustryLicenseInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100330_liquidationInfoService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100330_liquidationInfoService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100330_liquidationInfoServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100328_checkLegalEntityNameInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100328_checkLegalEntityNameInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100328_checkLegalEntityNameInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100305_searchLegalEntityName">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100305_searchLegalEntityName">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100305_searchLegalEntityNameResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100320_createInqCustoms">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100320_createInqCustoms">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100320_createInqCustomsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100311_getLegalEntityInfoToTax">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100311_getLegalEntityInfoToTax">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100311_getLegalEntityInfoToTaxResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100324_legalEntityGeneralInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100324_legalEntityGeneralInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100324_legalEntityGeneralInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100313_citizenLegalEntityList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100313_citizenLegalEntityList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100313_citizenLegalEntityListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100317_findLesNameInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100317_findLesNameInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100317_findLesNameInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100312_checkDebtOfCustomsInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100312_checkDebtOfCustomsInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100312_checkDebtOfCustomsInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100306_getNonLegalEntityInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100306_getNonLegalEntityInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100306_getNonLegalEntityInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100326_legalEntityStampInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100326_legalEntityStampInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100326_legalEntityStampInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100323_legalEntityNonPaymentInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100323_legalEntityNonPaymentInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100323_legalEntityNonPaymentInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100307_getLegalEntityInfoWithRegnum">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100307_getLegalEntityInfoWithRegnum">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100307_getLegalEntityInfoWithRegnumResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100302_getLegalEntityChangeInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100302_getLegalEntityChangeInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100302_getLegalEntityChangeInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100316_legalEntityOpenData">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100316_legalEntityOpenData">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100316_legalEntityOpenDataResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100309_legalEntityWasCriminalLiability">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100309_legalEntityWasCriminalLiability">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100309_legalEntityWasCriminalLiabilityResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100319_legalEntityIndustryInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100319_legalEntityIndustryInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100319_legalEntityIndustryInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100318_legalEntityOfficialNamesInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100318_legalEntityOfficialNamesInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100318_legalEntityOfficialNamesInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100315_checkLegalEntityDirector">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100315_checkLegalEntityDirector">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100315_checkLegalEntityDirectorResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100301_getLegalEntityInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100301_getLegalEntityInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100301_getLegalEntityInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100308_legalEntityDoingCriminalLiability">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100308_legalEntityDoingCriminalLiability">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100308_legalEntityDoingCriminalLiabilityResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100303_getLegalEntityLiquidationInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100303_getLegalEntityLiquidationInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100303_getLegalEntityLiquidationInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100327_getCustomsOffnsInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100327_getCustomsOffnsInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100327_getCustomsOffnsInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS100321_getCustomsInqInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS100321_getCustomsInqInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS100321_getCustomsInqInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LesServiceService">
+    <wsdl:port binding="tns:LesServiceServiceSoapBinding" name="LesServicePort">
+      <soap:address location="http://xyp.gov.mn/legal-entity-1.5.0/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
